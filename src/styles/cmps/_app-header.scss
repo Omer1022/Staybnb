@@ -1,7 +1,11 @@
 .header {
+  height: rem(80px);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: groove;
+  align-items: center;
 }
 
 .logo-text {

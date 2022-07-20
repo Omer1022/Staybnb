@@ -1,31 +1,21 @@
 <template>
   <div class="header-search">
-    <button @click="openSerach">Anywhere</button>
+    <button @click="openSearch">Anywhere</button>
     <span>|</span>
-    <button @click="openSerach">Any week</button>
+    <button @click="openSearch">Any week</button>
     <span>|</span>
-    <button class="flex justify-center space-between" @click="openSerach">add guests
-    <span class="filter-search-icon">
-      <img src="../styles/icons/search_icon.svg" alt="">
-    </span>
+    <button class="search-header flex space-between" @click="openSearch">
+      add guests
+      <span class="filter-search-icon">
+        <img src="../styles/icons/search_icon.svg" alt="" />
+      </span>
     </button>
-
-    
   </div>
 </template>
 <script>
-export default {
-  
-}
+export default {};
 </script>
-<style lang="">
-  
-</style>
-
-
-
-
-
+<style lang=""></style>
 
 <!-- <template>
   <section class="filter">
