@@ -4,10 +4,24 @@
   justify-content: center;
   flex-direction: column;
   align-content: center;
+  width: rem(300px);
 }
 
 .preview-img {
   border-radius: 20px;
   height: 300px;
   aspect-ratio: 1/1;
+}
+
+.card-img{
+  position: relative;
+  width: 50%;
+}
+
+.card-img .like-btn{
+  position: absolute;
+  top: 35%;
+  left: 170%;
+  font-size: 1rem;
+  cursor: pointer;
 }
