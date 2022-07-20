@@ -131,7 +131,7 @@ function _createStays() {
             "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
         },
         loc: {
-          country: "United States",
+          country: "US",
           countryCode: "US",
           city: "Brooklyn",
           address: "Brooklyn, NY",

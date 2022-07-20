@@ -2,14 +2,19 @@
   <div class="stay-app">
     <stay-list @removeStay="removeStay" :stays="stays" />
   </div>
+
+
+  <!-- <carouse-app/> -->
 </template>
 
 <script>
 import stayList from "../components/stay-list.vue";
+import carouseApp from "../components/carousel/carouse-app.vue";
 export default {
   template: ``,
   components: {
     stayList,
+    carouseApp,
   },
   data() {
     return {};
