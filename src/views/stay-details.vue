@@ -2,19 +2,31 @@
   <section class="stay-details" v-if="stay">
     <div class="stay-info">
       <h2>{{ stay.name }}</h2>
-      <img class="details-img" src="../../img/010.jpeg" alt="" />
-      <h3>{{ stay.price }}$ Night</h3>
+      <h5>
+        {{ stay.reviews.length }} reviews · {{ stay.loc.address }},
+        {{ stay.loc.city }}, {{ stay.loc.country }}
+      </h5>
+      <section class="details-gallery grid">
+        <li
+          v-for="(imgUrl, idx) in stay.imgUrls"
+          :key="idx"
+          class="gallery-list"
+        >
+          <img v-bind:src="`../../img/${imgUrl}`" />
+        </li>
+      </section>
+      <h3>{{ stay.type }} Hosted by {{ stay.host.fullname }}</h3>
+      <p class="host-details">{{ stay.numOfBeds }} bedroom</p>
+      <p class="summary">{{ stay.summary }}</p>
     </div>
     <div class="stay-amenities">
-      <h3>Amenities:</h3>
+      <h3>What this place offers</h3>
       <ul>
         <li v-for="(amenities, idx) in stay.amenities" :key="idx">
           {{ amenities }}
         </li>
       </ul>
     </div>
-    <p>Summary: {{ stay.summary }}</p>
-    <p>{{ stay.type }}</p>
     <div class="stay-reviews">
       <h3>Reviews:</h3>
       <ol>
@@ -24,7 +36,7 @@
       </ol>
     </div>
     <router-link to="/">Back</router-link>
-    <button @click="removeStay">Delete</button>
+    <!-- <button @click="removeStay">Delete</button> -->
   </section>
 </template>
 <script>
