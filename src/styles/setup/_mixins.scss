@@ -113,6 +113,10 @@
 // Type
 
 @mixin type($type: bold) {
+  // type options:
+  // 1.bold
+  // 2.boldCondensed
+  // 3.condensed
   @if $type == bold {
     font-variation-settings: "wght" 430;
   } @else if $type == boldCondensed {

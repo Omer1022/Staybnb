@@ -1,6 +1,5 @@
 <template>
   <div class="stay-app">
-    <router-link class="add-stay-btn" to="/stay/edit">Add Stay</router-link>
     <stay-filter @setFilter="setFilter" />
     <stay-list @removeStay="removeStay" :stays="stays" />
   </div>

@@ -7,8 +7,8 @@
       <p class="stay-type">Type: {{ stay.type }}</p>
     </div>
     <div class="actions">
-      <router-link :to="'/stay/' + stay._id">Details</router-link>
-      <router-link :to="'/stay/edit/' + stay._id">Edit</router-link>
+      <router-link :to="'/' + stay._id">Details</router-link>
+      <router-link :to="'/edit/' + stay._id">Edit</router-link>
     </div>
   </section>
 </template>
