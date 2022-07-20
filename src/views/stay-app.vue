@@ -1,18 +1,15 @@
 <template>
   <div class="stay-app">
-    <stay-filter @setFilter="setFilter" />
     <stay-list @removeStay="removeStay" :stays="stays" />
   </div>
 </template>
 
 <script>
 import stayList from "../components/stay-list.vue";
-import stayFilter from "../components/stay-filter.vue";
 export default {
   template: ``,
   components: {
     stayList,
-    stayFilter,
   },
   data() {
     return {};

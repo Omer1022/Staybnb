@@ -1,43 +1,40 @@
 .header-search {
-    display: inline-flex;
+  display: inline-flex;
+  border-radius: 3.2rem;
+  overflow: hidden;
+  align-items: center;
+  border: 1px solid lightgray;
+  color: var(clr1);
+  width: rem(452px);
+  height: rem(48px);
+  transition: box-shadow 2s;
+  box-shadow: 1px 1px 6px -1px #000000;
+  &:hover {
+    box-shadow: 1px 1px 8px 1px #000000;
+  }
+  button {
+    // flex-direction:row ;
+    background: transparent;
+    height: 3rem;
+    width: 10rem;
+    padding: 0 1rem;
     border-radius: 3.2rem;
-    overflow: hidden;
+    border: none;
     align-items: center;
-    border: 1px solid lightgray;
-    color: var(clr1);
-    width: rem(452px);
-    transition: box-shadow 2s;
-    box-shadow: 1px 1px 6px -1px #000000;
-    &:hover {
-        box-shadow: 1px 1px 8px 1px #000000
-      }
-    button {
-       
-        // flex-direction:row ;
-        background: transparent;
-        height: 3rem;
-        width: 10rem;
-        padding: 0 1rem;
-        border-radius: 3.2rem;
-        border: none;
-        .filter-search-icon {
-        justify-content: center; 
-        align-items: center;
-        width: 2rem;
-        height: 2rem;
-        border-radius: 50%;
-        background-color:rgb(216, 70, 94);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        }
-
+    .filter-search-icon {
+      justify-content: center;
+      align-items: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background-color: rgb(216, 70, 94);
+      display: flex;
     }
+  }
 }
 
-
 .filter-search-icon img {
-    color: black;
-    width: 0.75rem;
-    height: 0.75rem;
+  color: black;
+  width: 0.75rem;
+  height: 0.75rem;
 }
