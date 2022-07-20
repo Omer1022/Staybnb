@@ -1,24 +1,25 @@
 .header-search {
     display: inline-flex;
-    border-radius: 40px;
+    border-radius: 3.2rem;
     overflow: hidden;
     align-items: center;
     border: 1px solid lightgray;
     color: var(clr1);
+    width: 18rem;
     button { 
         flex-direction:row ;
         background: transparent;
         height: 3rem;
         padding: 0 1rem;
+
         .filter-search-icon { 
-         width: 2rem;
+        width: 2rem;
         height: 2rem;
         border-radius: 50%;
         background-color:rgb(216, 70, 94);
         display: flex;
         align-items: center;
         justify-content: center;
-        
         }
 
     }
