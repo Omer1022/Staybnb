@@ -35,6 +35,7 @@
   button:nth-of-type(3) {
     width: 11rem;
     justify-content: space-between;
+    color: lightgray;
     img{
         color: white;
     }
@@ -48,8 +49,8 @@
 .filter-search-icon img {
     margin-inline-end: 0;
     color: white;
-    width: 2rem;
-    height: 0.75rem;
+    width: 1rem;
+    height: 1rem;
 }
 
 .add-btn{

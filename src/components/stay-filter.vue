@@ -7,7 +7,7 @@
     <button class=" search-header flex space-between add-btn" @click="openSearch">
       add guests
       <span class="filter-search-icon">
-        <img src="../styles/icons/search_icon.svg" alt="" />
+        <img src="../styles/icons/search_white.png" alt="" />
       </span>
     </button>
   </div>
