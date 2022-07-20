@@ -16,7 +16,7 @@
         placeholder="Enter Stay price"
       />
       <button>{{ stay._id ? "Save" : "Add" }}</button>
-      <router-link to="/stay">Back</router-link>
+      <router-link to="/">Back</router-link>
     </form>
   </section>
 </template>

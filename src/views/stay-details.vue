@@ -1,8 +1,8 @@
 <template>
   <section class="stay-details" v-if="stay">
     <div class="stay-info">
-      <h2>Name: {{ stay.name }}</h2>
-      <h3>Price: {{ stay.price }}$</h3>
+      <h2>{{ stay.name }}</h2>
+      <h3>{{ stay.price }}$ Night</h3>
     </div>
     <div class="stay-amenities">
       <h3>Amenities:</h3>
@@ -13,7 +13,7 @@
       </ul>
     </div>
     <p>Summary: {{ stay.summary }}</p>
-    <p>Type: {{ stay.type }}</p>
+    <p>{{ stay.type }}</p>
     <div class="stay-reviews">
       <h3>Reviews:</h3>
       <ol>
@@ -22,7 +22,7 @@
         </li>
       </ol>
     </div>
-    <router-link to="/stay">Back</router-link>
+    <router-link to="/">Back</router-link>
     <button @click="removeStay">Delete</button>
   </section>
 </template>
