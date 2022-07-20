@@ -49,6 +49,7 @@ function _createStays() {
     stays = [
       {
         _id: "10006546",
+        numOfBeds: 6,
         name: "Ribeira Charming Duplex",
         type: "House",
         imgUrls: ["075.jpeg", "079.jpeg", "061.jpeg", "111.jpeg", "087.jpeg"],
@@ -93,6 +94,7 @@ function _createStays() {
       },
       {
         _id: "10006547",
+        numOfBeds: 5,
         name: "Fresh and modern 1BR in Bed-Stuy",
         type: "Apartment",
         imgUrls: ["101.jpeg", "037.jpeg", "038.jpeg", "043.jpeg", "113.jpeg"],
@@ -123,6 +125,7 @@ function _createStays() {
         ],
         host: {
           _id: "622f3402e36c59e6164fac46",
+          numOfBeds: 4,
           fullname: "Shaila & Alex",
           imgUrl:
             "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
@@ -170,6 +173,7 @@ function _createStays() {
       },
       {
         _id: "10006548",
+        numOfBeds: 8,
         name: "Belle chambre à côté Metro Papineau",
         type: "Apartment",
         imgUrls: ["074.jpeg", "077.jpeg", "060.jpeg", "110.jpeg", "086.jpeg"],
@@ -253,6 +257,7 @@ function _createStays() {
       },
       {
         _id: "10006549",
+        numOfBeds: 2,
         name: "Nice Cosy Room In Taksim",
         type: "Apartment",
         imgUrls: ["042.jpeg", "110.jpeg", "037.jpeg", "005.jpeg", "075.jpeg"],
