@@ -7,7 +7,15 @@
       </div>
     </router-link>
     <stay-filter class="filter-header" @setFilter="setFilter" />
-    <router-link :to="'/'" class="host-header link">Become a Host</router-link>
+    <section class="user-actions">
+      <div>
+        <router-link :to="'/'" class="host-header link">Become a Host</router-link>
+       <button class=" btn drop-dwon menu">
+         <img src="../../public/footer-imgs/menu.png" alt="">
+        </button>
+        <img class="user-img" src="../../public/footer-imgs/user.png" alt="">
+      </div>
+    </section>
   </main>
 </template>
 <script>

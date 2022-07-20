@@ -1,16 +1,21 @@
 <template>
   <section class="stay-previews" v-if="stay">
     <div class="stay-preview-card">
-      <router-link :to="'/' + stay._id" class="link">
-        <div class="card-img">
-          <img class="preview-img" src="../../img/010.jpeg" alt="" />
+      <!-- <router-link :to="'/' + stay._id" class="link"> -->
+        <div @click="$router.push(`/${stay._id}`)">
+          <div class="card-img">
+            <img class="preview-img" src="../../img/010.jpeg" alt="" />
+            <button class="btn like-btn" @click.stop="LikeStay()">
+              <img src="../../public/footer-imgs/like.png" alt="" />
+            </button>
+          </div>
+          <div class="card-details">
+            <h3 class="stay-name">{{ stay.loc.city }}, {{stay.loc.country}}</h3>
+            <p class="stay-price">{{ stay.price }}$ Night</p>
+            <p class="stay-type">{{ stay.type }}</p>
+          </div>
         </div>
-        <div class="card-details">
-          <h2 class="stay-name">{{ stay.name }}</h2>
-          <p class="stay-price">{{ stay.price }}$ Night</p>
-          <p class="stay-type">{{ stay.type }}</p>
-        </div>
-      </router-link>
+      <!-- </router-link> -->
       <div class="actions">
         <router-link :to="'/edit/' + stay._id" class="link">Edit</router-link>
       </div>
@@ -23,11 +28,15 @@ export default {
     stay: Object,
   },
   data() {
-    return {};
+    return {}
   },
-  methods: {},
+  methods: {
+    LikeStay() {
+      console.log("likedddd")
+    },
+  },
   computed: {},
   created() {},
   unmounted() {},
-};
+}
 </script>
