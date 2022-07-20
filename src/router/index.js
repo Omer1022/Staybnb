@@ -1,6 +1,9 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import home from "../views/home-page.vue";
-import about from "../views/about-page.vue";
+import homePage from "../views/home-page.vue";
+import aboutPage from "../views/about-page.vue";
+import stayApp from "../views/stay-app.vue";
+import stayEdit from "../views/stay-edit.vue";
+import stayDetails from "../views/stay-details.vue";
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -8,12 +11,27 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: home,
+      component: homePage,
+    },
+    {
+      path: "/stay",
+      name: "stay-app",
+      component: stayApp,
+    },
+    {
+      path: "/stay/:stayId",
+      name: "stay-details",
+      component: stayDetails,
+    },
+    {
+      path: "/stay/edit/:stayId?",
+      name: "stay-edit",
+      component: stayEdit,
     },
     {
       path: "/about",
       name: "about",
-      component: about,
+      component: aboutPage,
     },
   ],
 });

@@ -2,6 +2,7 @@
   <main class="header">
     <nav class="main-nav">
       <router-link class="link-btn" to="/">Home</router-link>
+      <router-link class="link-btn" to="/stay">Stay</router-link>
       <router-link class="link-btn" to="/about">About</router-link>
     </nav>
   </main>
