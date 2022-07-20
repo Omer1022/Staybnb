@@ -1,4 +1,32 @@
 <template>
+  <div class="header-search">
+    
+    <button>Anywhere</button>
+    <span></span>
+    <button>Any week</button>
+    <span></span>
+    <button>add guests <div class="filter-search-icon">
+      <img src="../styles/icons/search_icon.svg" alt="">
+    </div></button>
+
+    
+  </div>
+</template>
+<script>
+export default {
+  
+}
+</script>
+<style lang="">
+  
+</style>
+
+
+
+
+
+
+<!-- <template>
   <section class="filter">
     <input
       @input="setFilter"
@@ -61,4 +89,4 @@ export default {
   computed: {},
   created() {},
 };
-</script>
+</script> -->
