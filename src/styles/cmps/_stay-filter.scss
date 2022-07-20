@@ -6,6 +6,7 @@
     border: 1px solid lightgray;
     color: var(clr1);
     width: rem(452px);
+    height: rem(48px);
     transition: box-shadow 2s;
     box-shadow: 1px 1px 6px -1px #000000;
     &:hover {
@@ -20,6 +21,7 @@
         padding: 0 1rem;
         border-radius: 3.2rem;
         border: none;
+        align-items: center;
         .filter-search-icon {
         justify-content: center; 
         align-items: center;
@@ -28,8 +30,6 @@
         border-radius: 50%;
         background-color:rgb(216, 70, 94);
         display: flex;
-        align-items: center;
-        justify-content: center;
         }
 
     }
