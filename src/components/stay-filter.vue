@@ -1,10 +1,10 @@
 <template>
   <div class="header-search">
     <button @click="openSerach">Anywhere</button>
-    <span></span>
+    <span>|</span>
     <button @click="openSerach">Any week</button>
-    <span></span>
-    <button @click="openSerach">add guests
+    <span>|</span>
+    <button class="flex justify-center space-between" @click="openSerach">add guests
     <span class="filter-search-icon">
       <img src="../styles/icons/search_icon.svg" alt="">
     </span>

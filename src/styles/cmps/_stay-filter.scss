@@ -5,14 +5,24 @@
     align-items: center;
     border: 1px solid lightgray;
     color: var(clr1);
-    width: 18rem;
-    button { 
-        flex-direction:row ;
+    width: rem(452px);
+    transition: box-shadow 2s;
+    box-shadow: 1px 1px 6px -1px #000000;
+    &:hover {
+        box-shadow: 1px 1px 8px 1px #000000
+      }
+    button {
+       
+        // flex-direction:row ;
         background: transparent;
         height: 3rem;
+        width: 10rem;
         padding: 0 1rem;
-
-        .filter-search-icon { 
+        border-radius: 3.2rem;
+        border: none;
+        .filter-search-icon {
+        justify-content: center; 
+        align-items: center;
         width: 2rem;
         height: 2rem;
         border-radius: 50%;
