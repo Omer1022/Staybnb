@@ -1,11 +1,21 @@
-.flex{
-    display: flex;
+// Flex
+.flex {
+  display: flex;
+}
+.flex.inline-flex {
+  display: inline-flex;
+}
+.align-self-center {
+  align-self: center;
+}
+.flex {
+  display: flex;
 }
 
-.space-around{
-    justify-content: space-around;
+.space-around {
+  justify-content: space-around;
 }
 
-.align-items{
-    align-items: center;
+.align-items {
+  align-items: center;
 }

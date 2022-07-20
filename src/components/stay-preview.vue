@@ -1,9 +1,10 @@
 <template>
   <section class="stay-preview" v-if="stay">
     <div class="stay-details">
+      <img class="preview-img" src="../../img/010.jpeg" alt="" />
       <h2 class="stay-name">Name: {{ stay.name }}</h2>
       <p class="stay-price">Price: {{ stay.price }}$</p>
-      <p class="stay-type">type: {{ stay.type }}</p>
+      <p class="stay-type">Type: {{ stay.type }}</p>
     </div>
     <div class="actions">
       <router-link :to="'/stay/' + stay._id">Details</router-link>
