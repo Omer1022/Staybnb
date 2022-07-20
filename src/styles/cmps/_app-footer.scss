@@ -1,0 +1,28 @@
+.footer{
+    position: sticky;
+    display: grid;
+    grid-template-areas:
+    "action . nav"
+    }
+    
+    .footer-action{
+    grid-area: action;
+    }
+    
+    .footer-nav{
+    grid-area: nav;
+    }
+    
+    
+    .btn{
+            background-color: transparent;
+            background-repeat: no-repeat;
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+            outline: none;
+    }
+    
+    .btn img{
+        height: 20px;
+    }
