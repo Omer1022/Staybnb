@@ -4,7 +4,7 @@
     <span>|</span>
     <button @click="openSearch">Any week</button>
     <span>|</span>
-    <button class="search-header flex space-between" @click="openSearch">
+    <button class=" search-header flex space-between add-btn" @click="openSearch">
       add guests
       <span class="filter-search-icon">
         <img src="../styles/icons/search_icon.svg" alt="" />
