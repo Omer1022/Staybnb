@@ -1,8 +1,10 @@
 .header {
   height: rem(80px);
+  // grid-template-columns: 33% 33% 33%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: $layoutPadding;
   margin-bottom: 20px;
   border-bottom: groove;
   align-items: center;
