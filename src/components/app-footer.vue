@@ -1,7 +1,26 @@
 <template>
-  <main class="footer">
-    <h1 class="footer-header">&copy; Copyright</h1>
-  </main>
+<section class="footer ">
+  <div class="footer-action flex space-around">
+    <a herf="#">Support</a>
+    <!-- <a herf="#" >Currency</a>
+    <a herf="#" >Language</a> -->
+      <button class="btn flex align-items">
+      <img src="/footer-imgs/dollar.png" alt="">
+      Currency</button>
+    <button class="btn flex align-items">
+      <img src="/footer-imgs/lan.png" alt="">
+      Language</button>
+
+  </div>
+
+   <div class="footer-nav flex space-around">
+    <a herf="#" >Site map</a>
+    <a herf="#" >Conditions</a>
+    <a herf="#" >Privacy</a>
+    <a>&copy; 2022 Staybnb, inc.</a>
+  </div>
+
+</section>
 </template>
 
 <script>
