@@ -1,17 +1,14 @@
-// .stay-previews{
-//   display: grid;
-//   grid-template-columns: repeat(4,1fr);
-// }
-
-
-
-// .stay-preview-card{
-//   display: grid;
-// }
+.stay-preview-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+}
 
 
 .preview-img {
   border-radius: 20px;
-  height: 250px;
+  height: 300px;
   aspect-ratio: 1/1;
 }
