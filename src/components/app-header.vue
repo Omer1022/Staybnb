@@ -1,9 +1,13 @@
 <template>
   <main class="header">
-    <div class="logo align-center flex">
-      <img src="../styles/icons/logo.png" />
-      <h1 class="logo-text">Staybnb</h1>
-    </div>
+    <router-link :to="'/'" class="link">
+      <div class="logo align-center flex">
+        <img src="../styles/icons/logo.png" />
+        <h1 class="logo-text">Staybnb</h1>
+      </div>
+    </router-link>
+    <p class="filter-header">Filter</p>
+    <router-link :to="'/'" class="host-header link">Become a Host</router-link>
   </main>
 </template>
 <script>

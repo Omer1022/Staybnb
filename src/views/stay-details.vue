@@ -2,6 +2,7 @@
   <section class="stay-details" v-if="stay">
     <div class="stay-info">
       <h2>{{ stay.name }}</h2>
+      <img class="details-img" src="../../img/010.jpeg" alt="" />
       <h3>{{ stay.price }}$ Night</h3>
     </div>
     <div class="stay-amenities">

@@ -1,7 +1,18 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .logo-text {
   margin: 0;
 }
 
 .logo {
-  height: 40px;
+  height: 35px;
+}
+
+.link {
+  color: black;
+  text-decoration: none;
 }
