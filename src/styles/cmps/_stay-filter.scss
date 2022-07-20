@@ -1,0 +1,27 @@
+.header-search {
+    display: inline-flex;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    align-items: center;
+    border: 1px solid var(clr1);
+    color: var(clr1);
+    button { 
+        background: transparent;
+        height: 3rem;
+        padding: 0 1rem;
+        filter-search-icon{
+            width: 2rem;
+            height: 5rem;
+            border-radius: 50%;
+            background-color: var(clr7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 0.75rem;
+                height: 0.75rem;
+    
+            }
+    }
+    }
+}

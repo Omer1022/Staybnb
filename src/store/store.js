@@ -28,7 +28,7 @@ const store = createStore({
         // name
         if (sort[0] === "Name") {
           console.log(1);
-          if (sort[1] === "Increasing")
+          if (sעןאort[1] === "Increasing")
             filteredStays = filteredStays.sort((t1, t2) =>
               t1.name.localeCompare(t2.name)
             );
