@@ -1,5 +1,10 @@
 <template>
-  <main class="header"></main>
+  <main class="header">
+    <div class="logo align-center flex">
+      <img src="../styles/icons/logo.png" />
+      <h1 class="logo-text">Staybnb</h1>
+    </div>
+  </main>
 </template>
 <script>
 export default {
