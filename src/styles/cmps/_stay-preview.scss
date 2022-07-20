@@ -1,6 +1,5 @@
 .stay-preview-card {
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-direction: column;
   align-content: center;
@@ -13,12 +12,12 @@
   aspect-ratio: 1/1;
 }
 
-.card-img{
+.card-img {
   position: relative;
   width: 50%;
 }
 
-.card-img .like-btn{
+.card-img .like-btn {
   position: absolute;
   top: 5%;
   left: 170%;

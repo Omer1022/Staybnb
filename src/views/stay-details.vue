@@ -12,7 +12,7 @@
           :key="idx"
           class="gallery-list"
         >
-          <img v-bind:src="`../../img/${imgUrl}`" />
+          <img v-bind:src="`../../img/${imgUrl}`" class="img-gallery" />
         </li>
       </section>
       <h3>{{ stay.type }} Hosted by {{ stay.host.fullname }}</h3>
