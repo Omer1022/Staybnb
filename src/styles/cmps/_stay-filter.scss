@@ -1,27 +1,32 @@
 .header-search {
     display: inline-flex;
-    border-radius: 1.5rem;
+    border-radius: 40px;
     overflow: hidden;
     align-items: center;
-    border: 1px solid var(clr1);
+    border: 1px solid lightgray;
     color: var(clr1);
     button { 
+        flex-direction:row ;
         background: transparent;
         height: 3rem;
         padding: 0 1rem;
-        filter-search-icon{
-            width: 2rem;
-            height: 5rem;
-            border-radius: 50%;
-            background-color: var(clr7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            img {
-                width: 0.75rem;
-                height: 0.75rem;
-    
-            }
+        .filter-search-icon { 
+         width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background-color:rgb(216, 70, 94);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        }
+
     }
-    }
+}
+
+
+.filter-search-icon img {
+    color: black;
+    width: 0.75rem;
+    height: 0.75rem;
 }
