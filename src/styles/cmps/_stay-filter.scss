@@ -30,7 +30,7 @@
       width: 2rem;
       height: 2rem;
       border-radius: 50%;
-      background-color: rgb(216, 70, 94);
+      background-color: $clr1;
       display: flex;
     }
   }
@@ -87,7 +87,7 @@
     color: var(clr1);
     border: none;
     font-size: rem(14px);
-    color: var($clr8);
+    color: var($clr5);
   }
 
   .large-filter-search {
@@ -101,7 +101,7 @@
     border-radius: 3.2rem;
     display: inline-flex;
     color: white;
-    background-color: rgb(216, 70, 94);
+    background-color: $clr1;
 
     img {
       margin-inline-end: 0;
@@ -127,4 +127,10 @@
     border: hidden;
     width: rem(125px);
     &:focus{outline:none;}
+  }
+
+
+  .gusets-modal {
+    background-color:teal ;
+    z-index: 1;
   }

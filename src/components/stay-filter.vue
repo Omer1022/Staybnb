@@ -23,43 +23,80 @@
     <span>|</span>
     <div class="checkIn-input">
       <label for="checkIn-input">Check in</label>
-      <button v-if="checkinDisplayed" :class="{ active: checkinDisplayed }" @click="checkinDisplayed = !checkinDisplayed">Add
+      <button v-if="checkinDisplayed" :class="{ active: checkinDisplayed }"
+        @click="checkinDisplayed = !checkinDisplayed">Add
         Dates </button>
       <flat-pickr class="checkIn-input-picker" v-else v-model="date.checkIn"></flat-pickr>
     </div>
-      <span>|</span>
+    <span>|</span>
     <div class="checkOut-input">
       <label for="checkOut-input">Check out</label>
-      <button v-if="checkOutDisplayed" :class="{ active: checkOutDisplayed }" @click="checkOutDisplayed = !checkOutDisplayed">Add
+      <button v-if="checkOutDisplayed" :class="{ active: checkOutDisplayed }"
+        @click="checkOutDisplayed = !checkOutDisplayed">Add
         Dates </button>
       <flat-pickr v-else v-model="date.checkOut"></flat-pickr>
     </div>
+
     <span>|</span>
     <div class="gusets-input flex">
-      <div class="gusets-btn-warper">
-        <label for="gusets-input">Who</label>
-        <button class="gusets-input">Add gusets</button>
-      <button class="large-filter-search"><img src="../styles/icons/search_white.png" alt="">Search</button>
-    </div>
+ <Popper>
+   <div class="gusets-btn-warper">
+          <label for="gusets-input">Who</label>
+          <button class="gusets-input">Add gusets</button>
+        </div>
+    <template #content>
+      <div class="gusets-modal">
+          <num-input></num-input>
+          <ul>input</ul>
+          <!-- <ul>input</ul> -->
+          <!-- <ul>input</ul> -->
       </div>
+<<<<<<< HEAD
   </form> -->
   <!-- <div class="add-modal">
+=======
+    </template>
+  </Popper>
+          <!--
+     
+>>>>>>> 0b48be71554aeb7b7d6730dc8446ce026196e618
           <div>
-            content of the popover
-  <ul>input</ul>
-  <ul>input</ul>
-  <ul>input</ul>
-          </div>
-        </div> -->
+          <ul>input</ul>
+          <ul>input</ul>
+          <ul>input</ul> -->
+    </div>
+
+      
+
+      <button class="large-filter-search"><img src="../styles/icons/search_white.png" alt="">Search</button>
+   
+  </form>
+
+
 </template>
 <script>
+<<<<<<< HEAD
 import flatPickr from "vue-flatpickr-component";
 import "flatpickr/dist/flatpickr.css";
+=======
+import flatPickr from 'vue-flatpickr-component';
+import 'flatpickr/dist/flatpickr.css';
+import { defineComponent } from "vue";
+import Popper from "vue3-popper";
+import numInput from "./num-input.vue"
+
+>>>>>>> 0b48be71554aeb7b7d6730dc8446ce026196e618
 
 export default {
   props: {},
   components: {
     flatPickr,
+<<<<<<< HEAD
+=======
+    Popper,
+    numInput
+
+>>>>>>> 0b48be71554aeb7b7d6730dc8446ce026196e618
   },
   data() {
     return {
@@ -73,6 +110,10 @@ export default {
       },
       checkinDisplayed: true,
       checkOutDisplayed: true,
+<<<<<<< HEAD
+=======
+      modalActive: true,
+>>>>>>> 0b48be71554aeb7b7d6730dc8446ce026196e618
     };
   },
   methods: {},
