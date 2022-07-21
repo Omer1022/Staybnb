@@ -2,33 +2,91 @@
   <section class="stay-details" v-if="stay">
     <div class="stay-info">
       <h2>{{ stay.name }}</h2>
-      <h5>
-        {{ stay.reviews.length }} reviews · {{ stay.loc.address }},
-        {{ stay.loc.city }}, {{ stay.loc.country }}
-      </h5>
+      <section class="short-info flex">
+        <section class="flex">
+          <h5 class="reviews-rating">★ 4.7</h5>
+          ·
+          <h5 class="reviews-number">{{ stay.reviews.length }} reviews</h5>
+          ·
+          <h5 class="location">
+            {{ stay.loc.city }},
+            {{ stay.loc.country }}
+          </h5>
+        </section>
+        <section class="flex">
+          <button class="info-btn">
+            <span>Share</span>
+          </button>
+          <button class="info-btn">
+            <span>Save</span>
+          </button>
+        </section>
+      </section>
       <section class="details-gallery grid">
-        <li
+        <img
+          v-bind:src="`../../img/${imgUrl}`"
           v-for="(imgUrl, idx) in stay.imgUrls"
           :key="idx"
-          class="gallery-list"
-        >
-          <img v-bind:src="`../../img/${imgUrl}`" class="img-gallery" />
-        </li>
+          class="img-gallery"
+        />
       </section>
-      <h3>{{ stay.type }} Hosted by {{ stay.host.fullname }}</h3>
-      <p class="host-details">{{ stay.numOfBeds }} bedroom</p>
-      <p class="summary">{{ stay.summary }}</p>
     </div>
-    <div class="stay-amenities">
-      <h3>What this place offers</h3>
-      <ul>
-        <li v-for="(amenities, idx) in stay.amenities" :key="idx">
-          {{ amenities }}
-        </li>
-      </ul>
-    </div>
+    <section class="stay-display flex">
+      <div class="stay-info">
+        <h3>{{ stay.type }} Hosted by {{ stay.host.fullname }}</h3>
+        <p class="host-details">{{ stay.numOfBeds }} bedroom</p>
+        <p class="summary">{{ stay.summary }}</p>
+        <h3>What this place offers</h3>
+        <div class="stay-amenities">
+          <ul>
+            <li v-for="(amenities, idx) in stay.amenities" :key="idx">
+              {{ amenities }}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="stay-order">
+        <div class="order-modal-container">
+          <div class="order-modal flex">
+            <div class="mini-modal-container">
+              <div class="order-form-header flex">
+                <div><span class="bold">$500</span>Night</div>
+                <div class="reviews-preview flex">
+                  <div class="star-preview">
+                    <span class="star-icon">★</span>
+                  </div>
+                  <span class="review-avg">4.7</span>
+                  <span class="total-reviews">3 Reviews</span>
+                </div>
+              </div>
+            </div>
+            <form class="order-form">
+              <section class="dates-pick"></section>
+              <label class="check-in">CHECK-IN|</label>
+              <label class="check-out">CHECK-OUT</label>
+              <div class="guest-input">
+                <label
+                  >Guests
+                  <div class="guest-btn">
+                    <span class="expand-more"></span>
+                  </div>
+                  <input
+                    placeholder="1 Guest"
+                    disabled="disabled"
+                    class="input-guest"
+                  />
+                </label>
+              </div>
+              <button class="reserve-btn">
+                <span>Reserve</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
     <div class="stay-reviews">
-      <h3>Reviews:</h3>
+      <h3>{{ stay.reviews.length }} Reviews</h3>
       <ol>
         <li v-for="(review, idx) in stay.reviews" :key="idx">
           {{ review }}
