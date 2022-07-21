@@ -14,13 +14,11 @@
       <div @click="$router.push(`/${stay._id}`)">
         <div class="card-details">
           <div class="stay-header">
-            <p class="stay-rate">
-              <img src="../../public/footer-imgs/star.png" /> 4.3
-            </p>
+            <span class="star-rate">★4.3</span>
             <p class="stay-name">{{ stay.loc.city }}, {{ stay.loc.country }}</p>
           </div>
           <p class="stay-price">
-            <span>{{ stay.price }}$ </span>per Night
+            <span>${{ stay.price }} night</span>
           </p>
           <p class="stay-type">{{ stay.type }}</p>
         </div>
