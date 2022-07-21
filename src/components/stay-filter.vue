@@ -24,20 +24,10 @@
       </label>
     </div>
     <span>|</span>
-    <div class="checkIn-input">
-      <label for="checkIn-input">Check in</label>
-      <button v-if="!checkinDisplayed" :class="{ active: checkinDisplayed }"
-        @click="checkinDisplayed = !checkinDisplayed">Add
-        Dates </button>
-      <flat-pickr class="checkIn-input-picker" v-else v-model="date.checkIn"></flat-pickr>
-    </div>
-    <span>|</span>
-    <div class="checkOut-input">
-      <label for="checkOut-input">Check out</label>
-      <button v-if="!checkOutDisplayed" :class="{ active: checkOutDisplayed }"
-        @click="checkOutDisplayed = !checkOutDisplayed">Add
-        Dates </button>
-      <flat-pickr v-else v-model="date.checkOut"></flat-pickr>
+    <div class="date-picker">
+    
+
+
     </div>
     <span>|</span>
     <div class="gusets-input flex">
