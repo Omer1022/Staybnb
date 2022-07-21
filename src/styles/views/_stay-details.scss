@@ -1,3 +1,34 @@
+.short-info {
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+h5 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-left: 5px;
+  color: rgb(14, 14, 14);
+  margin-block: 0;
+}
+
+.reviews-number {
+  text-decoration: underline;
+}
+
+.location {
+  text-decoration: underline;
+}
+
+.info-btn {
+  align-items: center;
+  display: flex;
+  border: none;
+  font-size: 1rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .details-gallery {
   display: grid;
   grid-template-columns: repeat(4, minmax(180px, 1fr));
@@ -15,16 +46,16 @@
 .details-gallery :first-child {
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
-  border-bottom-left-radius: 13px;
-  border-top-left-radius: 13px;
+  border-start-start-radius: 13px;
+  border-end-start-radius: 13px;
 }
 
 .details-gallery :nth-child(3) {
-  border-top-right-radius: 13px;
+  border-start-end-radius: 13px;
 }
 
 .details-gallery :nth-child(5) {
-  border-bottom-right-radius: 13px;
+  border-end-end-radius: 13px;
 }
 
 .host-details {
@@ -35,6 +66,81 @@
   border-bottom: ridge;
 }
 
-.gallery-list {
-  list-style: none;
+.stay-info {
+  flex-basis: 75%;
+}
+
+.stay-order {
+  margin-left: 80px;
+  width: 339px;
+  flex-basis: 40%;
+}
+
+.order-modal-container {
+  position: sticky;
+  top: 20px;
+}
+
+.order-modal {
+  margin-top: 48px;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  box-shadow: 0 6px 16px rgb(0 0 0 / 12%);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mini-modal-container {
+  width: 100%;
+}
+
+.order-form-header {
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.order-form {
+  text-align: center;
+}
+
+.container label {
+  display: block;
+}
+
+.order-modal label {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.order-modal input {
+  display: block;
+  border: none;
+  box-shadow: none !important;
+  font-family: inherit;
+  background-color: transparent;
+  width: 100%;
+}
+
+.order-modal .reserve-btn {
+  background-color: #ff385c;
+  border: none;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.05rem;
+  width: 100%;
+  height: 48px;
+  min-width: 200px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
 }
