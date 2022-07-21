@@ -1,5 +1,7 @@
 .stay-name {
-  margin: 5px;
+  font-size: 1.5em;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .short-info {
@@ -12,15 +14,52 @@ h5 {
   font-size: 0.875rem;
   line-height: 1.25rem;
   margin-left: 5px;
-  color: rgb(14, 14, 14);
+  color: rgb(34, 34, 34);
   margin-block: 0;
 }
 
+.save-btn {
+  color: rgb(34, 34, 34);
+  border-radius: 5px;
+  align-items: center;
+  text-decoration: underline;
+}
+
+.info-btn :hover {
+  background-color: gray;
+}
+
+.save-icon {
+  font-size: 1.5rem;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 20px;
+  margin-right: 4px;
+}
+
+.share-btn {
+  color: rgb(34, 34, 34);
+  margin-right: 10px;
+  border-radius: 5px;
+  align-items: center;
+  text-decoration: underline;
+}
+
+.share-icon {
+  height: auto;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 20px;
+  margin-right: 4px;
+}
+
 .reviews-number {
+  color: rgb(34, 34, 34);
   text-decoration: underline;
 }
 
 .location {
+  color: rgb(34, 34, 34);
   text-decoration: underline;
 }
 
@@ -35,8 +74,8 @@ h5 {
 
 .details-gallery {
   display: grid;
-  grid-template-columns: repeat(4, minmax(180px, 1fr));
-  grid-template-rows: 180px 180px;
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  grid-template-rows: 150px 150px;
   grid-gap: 8px;
   gap: 8px;
 }
@@ -62,12 +101,19 @@ h5 {
   border-end-end-radius: 13px;
 }
 
+.host-name {
+  margin-top: 3rem;
+}
+
 .host-details {
-  border-bottom: ridge;
+  padding: 5px 0 24px 0;
+  box-shadow: inset 0 -0.5px 0 0 #ddd;
 }
 
 .summary {
-  border-bottom: ridge;
+  padding: 48px 0 24px 0;
+  box-shadow: inset 0 -0.5px 0 0 #ddd;
+  margin-bottom: 2rem;
 }
 
 .stay-info {
@@ -149,8 +195,26 @@ h5 {
   border-radius: 8px;
 }
 
+.amenitie-container {
+  padding-bottom: 16px;
+  margin: 0;
+}
+
+.amenities-header {
+  margin: 0;
+  padding-bottom: 24px;
+}
+
+.stay-amenities {
+  padding-bottom: 32px;
+  box-shadow: inset 0 -0.5px 0 0 #ddd;
+}
+
+.amenities-list {
+  flex-wrap: wrap;
+}
+
 .stay-reviews {
-  border-top: ridge;
   padding-block: 48px;
 }
 
@@ -165,6 +229,7 @@ h5 {
 }
 
 .review-stats {
+  margin-bottom: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px 100px;
@@ -205,4 +270,36 @@ h5 {
 
 .review-txt {
   font-size: 1rem;
+}
+
+.gray-scale {
+  background-color: #a3a3a3;
+  width: 135px;
+  height: 4px;
+  align-self: center;
+  border-radius: 10px;
+}
+
+.review-stats .gray-scale .black {
+  background-color: #000;
+}
+
+.review-stats .gray-scale .scale {
+  width: 27px;
+  height: 4px;
+  color: gray;
+}
+
+.review-stats .gray-scale :first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.review-stats .score {
+  margin-left: 10px;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  vertical-align: middle;
+  text-align: center;
+  font-family: airbnb-medium;
 }

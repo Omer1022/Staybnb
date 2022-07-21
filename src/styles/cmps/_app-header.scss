@@ -4,8 +4,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: groove;
+  box-shadow: inset 0 -0.5px 0 0 #ddd;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 .logo-text {

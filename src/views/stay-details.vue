@@ -4,8 +4,7 @@
       <h2 class="stay-name">{{ stay.name }}</h2>
       <section class="short-info flex">
         <section class="flex">
-          <h5 class="reviews-rating">★ 4.7</h5>
-          ·
+          <h5 class="reviews-rating">★ 4.7 ·</h5>
           <h5 class="reviews-number">{{ stay.reviews.length }} reviews</h5>
           ·
           <h5 class="location">
@@ -15,10 +14,16 @@
         </section>
         <section class="flex">
           <button class="info-btn">
-            <span>Share</span>
+            <img
+              class="share-icon"
+              src="../styles/icons/share-icon.svg"
+              alt=""
+            />
+            <h5 class="share-btn">Share</h5>
           </button>
           <button class="info-btn">
-            <span>Save</span>
+            <span class="save-icon">♡</span>
+            <h5 class="save-btn">Save</h5>
           </button>
         </section>
       </section>
@@ -34,13 +39,20 @@
     <section class="stay-display flex">
       <div class="stay-info">
         <div class="stay-summary"></div>
-        <h3>{{ stay.type }} Hosted by {{ stay.host.fullname }}</h3>
+        <h2 class="host-name">
+          {{ stay.type }} Hosted by {{ stay.host.fullname }}
+        </h2>
+        <!-- <img v-bind:src="`${stays.host.imgUrl}`" class="host-img" /> -->
         <p class="host-details">{{ stay.numOfBeds }} bedroom</p>
         <p class="summary">{{ stay.summary }}</p>
-        <h3>What this place offers</h3>
         <div class="stay-amenities">
-          <ul>
-            <li v-for="(amenities, idx) in stay.amenities" :key="idx">
+          <h2 class="amenities-header">What this place offers</h2>
+          <ul class="amenities-list">
+            <li
+              class="amenitie-container flex"
+              v-for="(amenities, idx) in stay.amenities"
+              :key="idx"
+            >
               {{ amenities }}
             </li>
           </ul>
@@ -91,27 +103,81 @@
       <div class="review-stats grid">
         <div class="review-ctg flex space-between">
           <label>Cleanliness</label>
-          <span class="score">4.7</span>
+          <div class="flex">
+            <div class="gray-scale flex">
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale"></div>
+            </div>
+            <span class="score">4.7</span>
+          </div>
         </div>
         <div class="review-ctg flex space-between">
           <label>Communication</label>
-          <span class="score">5.0</span>
+          <div class="flex">
+            <div class="gray-scale flex">
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale"></div>
+            </div>
+            <span class="score">4.4</span>
+          </div>
         </div>
         <div class="review-ctg flex space-between">
           <label>Check-in</label>
-          <span class="score">4.6</span>
+          <div class="flex">
+            <div class="gray-scale flex">
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale"></div>
+            </div>
+            <span class="score">4.5</span>
+          </div>
         </div>
         <div class="review-ctg flex space-between">
           <label>Accuracy</label>
-          <span class="score">4.3</span>
+          <div class="flex">
+            <div class="gray-scale flex">
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale"></div>
+              <div class="scale"></div>
+            </div>
+            <span class="score">4.2</span>
+          </div>
         </div>
         <div class="review-ctg flex space-between">
           <label>Location</label>
-          <span class="score">4.9</span>
+          <div class="flex">
+            <div class="gray-scale flex">
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+            </div>
+            <span class="score">5.0</span>
+          </div>
         </div>
         <div class="review-ctg flex space-between">
           <label>Value</label>
-          <span class="score">5.0</span>
+          <div class="flex">
+            <div class="gray-scale flex">
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale"></div>
+            </div>
+            <span class="score">4.8</span>
+          </div>
         </div>
       </div>
       <div class="review-list">
@@ -135,7 +201,7 @@
         </ul>
       </div>
     </div>
-    <router-link to="/">Back</router-link>
+    <!-- <router-link to="/">Back</router-link> -->
     <!-- <button @click="removeStay">Delete</button> -->
   </section>
 </template>

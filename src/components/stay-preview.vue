@@ -1,6 +1,6 @@
 <template>
   <section class="stay-previews" v-if="stay">
-    <div  @click="$router.push(`/${stay._id}`)" class="stay-preview-card">
+    <div @click="$router.push(`/${stay._id}`)" class="stay-preview-card">
       <div
         class="card-img"
         @mouseover="hover = true"
@@ -8,10 +8,10 @@
       >
         <carouse-app class="preview-img" :slides="stay.imgUrls" />
         <button class="btn like-btn" @click.stop="LikeStay()">
-          <img src="../../public/footer-imgs/like.png" alt="" />
+          <img src="../styles/icons/save-icon.svg" alt="" />
         </button>
       </div>
-      <div >
+      <div>
         <div class="card-details">
           <div class="stay-header">
             <span class="star-rate">★4.3</span>

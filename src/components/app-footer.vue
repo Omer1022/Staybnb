@@ -1,19 +1,18 @@
 <template>
   <section class="footer">
     <div class="footer-action flex space-around">
-      <a herf="#">Support</a>
-      <button class="btn flex align-items">
-        <img src="/footer-imgs/dollar.png" alt="" />
-        Currency
-      </button>
+      <a>&copy; 2022 Staybnb, inc.</a> · <a herf="#">Privacy</a> ·
+      <a herf="#">Conditions</a> ·
+      <a herf="#">Site map</a>
       <button class="btn flex align-items">
         <img src="/footer-imgs/lan.png" alt="" />
         Language
       </button>
-      <a herf="#">Site map</a>
-      <a herf="#">Conditions</a>
-      <a herf="#">Privacy</a>
-      <a>&copy; 2022 Staybnb, inc.</a>
+      <button class="btn flex align-items">
+        <img src="/footer-imgs/dollar.png" alt="" />
+        Currency
+      </button>
+      <a herf="#">Support</a>
     </div>
   </section>
 </template>
