@@ -10,6 +10,7 @@
   border-radius: 20px;
   height: 300px;
   aspect-ratio: 1/1;
+  object-fit: cover
 }
 
 .card-img {
@@ -24,3 +25,11 @@
   background: none;
   cursor: pointer;
 }
+
+// .card-img .liked{
+//   position: absolute;
+//   top: 5%;
+//   left: 170%;
+//   background: none;
+//   cursor: pointer;
+// }

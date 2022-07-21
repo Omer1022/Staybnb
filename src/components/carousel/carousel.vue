@@ -17,7 +17,7 @@
         @mouseenter="stopSlideTimer"
         @mouseout="startSlideTimer"
       ></carousel-item>
-      <carousel-controls
+      <carousel-controls 
         v-if="controls"
         @prev="prev"
         @next="next"
@@ -66,7 +66,6 @@ export default {
           : this.slides.length - 1;
       this.setCurrentSlide(index);
       this.direction = "left";
-      // this.startSlideTimer();
     },
     _next(step = 1) {
       const index =
@@ -78,17 +77,8 @@ export default {
     },
     next(step = 1) {
       this._next(step);
-      // this.startSlideTimer();
     },
-    // startSlideTimer() {
-    //   this.stopSlideTimer();
-    //   this.slideInterval = setInterval(() => {
-    //     this._next();
-    //   }, this.interval);
-    // },
-    // stopSlideTimer() {
-    //   clearInterval(this.slideInterval);
-    // },
+    
     switchSlide(index) {
       const step = index - this.currentSlide;
       if (step > 0) {
@@ -99,23 +89,8 @@ export default {
     },
   },
   mounted() {
-    // this.startSlideTimer();
   },
   beforeUnmount() {
-    // this.stopSlideTimer();
   },
 };
 </script>
-
-<!-- <style scoped>
-.carousel {
-  display: flex;
-  justify-content: center;
-}
-.carousel-inner {
-  position: relative;
-  width: 900px;
-  height: 400px;
-  overflow: hidden;
-}
-</style> -->

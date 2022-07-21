@@ -20,27 +20,3 @@ export default {
 
 
 
-
-
-
-
-
-
-
-<!-- <template>
-  
-</template>
-<script>
-
-export default {
-  props: {},
-  components: {},
-  data() {
-    return {};
-  },
-  methods: {},
-  computed: {},
-  created() {},
-  unmounted() {},
-};
-</script> -->

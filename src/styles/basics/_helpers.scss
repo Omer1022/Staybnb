@@ -20,6 +20,36 @@
   align-items: center;
 }
 
+.hiden{
+  display: none;
+}
+p{
+  margin-block-start: 0px;
+  margin-block-end: 0.5rem;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-size: 1rem;
+}
+
+.stay-name{
+  margin-block-start: 0.5rem;
+ font-weight: bold;
+ font-size: 1.2rem;
+}
+
+.stay-price span{
+  font-weight: bold;
+}
+
+.stay-rate img{
+  height: 1.5rem
+}
+
+.stay-header{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
 // Aspect ratios
 
 .ratio-16-9 {

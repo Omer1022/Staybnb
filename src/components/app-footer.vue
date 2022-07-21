@@ -2,8 +2,6 @@
 <section class="footer ">
   <div class="footer-action flex space-around">
     <a herf="#">Support</a>
-    <!-- <a herf="#" >Currency</a>
-    <a herf="#" >Language</a> -->
       <button class="btn flex align-items">
       <img src="/footer-imgs/dollar.png" alt="">
       Currency</button>

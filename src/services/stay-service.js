@@ -141,13 +141,14 @@ function _createStays() {
         reviews: [
           {
             at: "2013-05-27T04:00:00.000Z",
+            txt: "Shaila's place is amazing! It's new, it's clean and it's big! And Shaila is very accommodating, we found everything we needed (cooking, coffee) and more. Given that we were the first guests she hosted through airbnb I can say that she did an amazing job! \r\n",
+            rate: 3.7,
             by: {
               _id: "622f3407e36c59e6164fbfd2",
               fullname: "Nicolas",
               imgUrl: "https://robohash.org/4523027?set=set1",
               id: "4523027",
             },
-            txt: "Shaila's place is amazing! It's new, it's clean and it's big! And Shaila is very accommodating, we found everything we needed (cooking, coffee) and more. Given that we were the first guests she hosted through airbnb I can say that she did an amazing job! \r\n",
           },
           {
             at: "2013-06-04T04:00:00.000Z",
@@ -215,6 +216,7 @@ function _createStays() {
         reviews: [
           {
             at: "2016-07-07T04:00:00.000Z",
+            rate: 4.6,
             by: {
               _id: "622f3407e36c59e6164fc058",
               fullname: "Rowan",
@@ -294,6 +296,7 @@ function _createStays() {
         reviews: [
           {
             at: "2014-04-06T04:00:00.000Z",
+            rate: 3.9,
             by: {
               _id: "622f3406e36c59e6164fbcc7",
               fullname: "Quentin",
