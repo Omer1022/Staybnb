@@ -13,7 +13,7 @@
   &:hover {
     box-shadow: 1px 1px 8px 1px #000000;
   }
-
+ 
   button {
     background: transparent;
     height: 3rem;
@@ -74,7 +74,9 @@
   &:hover {
     box-shadow: 1px 1px 10px 1px #000000;
   }
-
+  div label { 
+    font-size: rem(12px);
+  }
   button {
     display: inline;
     background: transparent;
@@ -84,7 +86,8 @@
     align-items: center;
     color: var(clr1);
     border: none;
-
+    font-size: rem(14px);
+    color: var($clr8);
   }
 
   .large-filter-search {
@@ -116,5 +119,12 @@
   .destination-input input {
     border: hidden;
     
+    &:focus{outline:none;}
+  }
+
+
+  .flatpickr-input{
+    border: hidden;
+    width: rem(125px);
     &:focus{outline:none;}
   }
