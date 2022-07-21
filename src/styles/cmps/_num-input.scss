@@ -1,9 +1,20 @@
 .num-input-cmp{
+
+    display: flex; 
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem; 
+
     .item-label{
         .title{
             color: $clr8;
-            font-size:14px;
+            font-size:rem(14px);
             line-height: 1.43;
+        }
+        .sub-title{
+            color: $clr5;
+            font-weight: 400;
+            font-size:rem(14px);
         }
 
     } 
@@ -31,8 +42,7 @@
             }
         }
     }
-    background-color: white;
-    width: rem(104px);
+    background-color: transparent;
     input{
         width: 2rem;
         height: 2rem;

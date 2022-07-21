@@ -1,9 +1,10 @@
 <template>
 <section class="num-input-cmp">
-   <!-- <div class="item-label">
-    <span class="title">{{subject.title}}test</span>
-    <span class="sub-title">{{subject.subTitle}}</span>
-   </div> -->
+   <div class="item-label">
+       <span class="title">test-title</span>
+       <br>
+    <span class="sub-title">test-subtitle</span>
+   </div>
     <div class="plus-minus-btn">
         <button @click="updateNumOfitems(-1)" :disabled="numOfItems === 0">-</button>
         <input type="number" v-model="numOfItems">
