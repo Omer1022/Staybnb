@@ -1,5 +1,5 @@
 <template>
-  <div class="header-search">
+  <!-- <div class="header-search">
     <button @click="openSearch">Anywhere</button>
     <span>|</span>
     <button @click="openSearch">Any week</button>
@@ -10,10 +10,79 @@
         <img src="../styles/icons/search_white.png" alt="" />
       </span>
     </button>
-  </div>
+  </div> -->
+
+  <form class="large-header-filter flex">
+    <div class="destination-input">
+      <label for="destination-input">Where</label>
+      <input v-model="filter.destination" name="destination-input" type="text" placeholder="Search detinations">
+    </div>
+    <span>|</span>
+    <div class="checkIn-input">
+      <label for="checkIn-input">Check in</label>
+      <button v-if="checkinDisplayed" :class="{ active: checkinDisplayed }" @click="checkinDisplayed = !checkinDisplayed">Add
+        Dates </button>
+      <flat-pickr class="checkIn-input-picker" v-else v-model="date.checkIn"></flat-pickr>
+    </div>
+      <span>|</span>
+    <div class="checkOut-input">
+      <label for="checkOut-input">Check out</label>
+      <button v-if="checkOutDisplayed" :class="{ active: checkOutDisplayed }" @click="checkOutDisplayed = !checkOutDisplayed">Add
+        Dates </button>
+      <flat-pickr v-else v-model="date.checkOut"></flat-pickr>
+    </div>
+    <span>|</span>
+    <div class="gusets-input flex">
+      <div class="gusets-btn-warper">
+        <label for="gusets-input">Who</label>
+        <button class="gusets-input">Add gusets</button>
+      <button class="large-filter-search"><img src="../styles/icons/search_white.png" alt="">Search</button>
+    </div>
+      </div>
+  </form>
+        <!-- <div class="add-modal">
+          <div>
+            content of the popover
+  <ul>input</ul>
+  <ul>input</ul>
+  <ul>input</ul>
+          </div>
+        </div> -->
 </template>
 <script>
-export default {};
+import flatPickr from 'vue-flatpickr-component';
+import 'flatpickr/dist/flatpickr.css';
+
+export default {
+  props: {
+
+  },
+  components: {
+    flatPickr
+
+  },
+  data() {
+    return {
+      filter: {
+        destination: '',
+        numOfBeds: 0,
+      },
+      date:{
+        checkIn: null,
+        checkOut: null,
+      },
+      checkinDisplayed: true,
+      checkOutDisplayed: true
+    };
+  },
+  methods: {
+
+  },
+  actions: {},
+  computed: {},
+  created() { },
+  unmounted() { },
+};
 </script>
 <style lang=""></style>
 
