@@ -1,3 +1,7 @@
+.stay-name {
+  margin: 5px;
+}
+
 .short-info {
   align-items: center;
   justify-content: space-between;
@@ -143,4 +147,62 @@ h5 {
   font-size: 16px;
   font-weight: 600;
   border-radius: 8px;
+}
+
+.stay-reviews {
+  border-top: ridge;
+  padding-block: 48px;
+}
+
+.stay-reviews h2 {
+  display: inline-block;
+  margin: 0;
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.625rem;
+  padding-bottom: 32px;
+  margin-left: 3px;
+}
+
+.review-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px 100px;
+  gap: 10px 100px;
+  width: 100%;
+}
+
+.reviews-list-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px 1px;
+}
+
+.review-preview {
+  margin-right: 100.25px;
+}
+
+.review-img {
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.review-name {
+  margin: 0;
+  padding: 0;
+}
+
+.review-time {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: #717171;
+}
+
+.review-txt {
+  font-size: 1rem;
 }

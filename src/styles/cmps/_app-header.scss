@@ -4,8 +4,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: $layoutPadding;
-  margin-bottom: 20px;
   border-bottom: groove;
   align-items: center;
 }
@@ -23,7 +21,7 @@
   text-decoration: none;
 }
 
-.user-img{
+.user-img {
   height: 30px;
   border-radius: 20px;
 }

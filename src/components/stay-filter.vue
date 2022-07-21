@@ -1,17 +1,20 @@
 <template>
-  <!-- <div class="header-search">
+  <div class="header-search">
     <button @click="openSearch">Anywhere</button>
     <span>|</span>
     <button @click="openSearch">Any week</button>
     <span>|</span>
-    <button class=" search-header flex space-between add-btn" @click="openSearch">
+    <button
+      class="search-header flex space-between add-btn"
+      @click="openSearch"
+    >
       add guests
       <span class="filter-search-icon">
         <img src="../styles/icons/search_white.png" alt="" />
       </span>
     </button>
-  </div> -->
-
+  </div>
+  <!-- 
   <form class="large-header-filter flex">
     <div class="destination-input">
       <label for="destination-input">Where</label>
@@ -39,8 +42,8 @@
       <button class="large-filter-search"><img src="../styles/icons/search_white.png" alt="">Search</button>
     </div>
       </div>
-  </form>
-        <!-- <div class="add-modal">
+  </form> -->
+  <!-- <div class="add-modal">
           <div>
             content of the popover
   <ul>input</ul>
@@ -50,38 +53,33 @@
         </div> -->
 </template>
 <script>
-import flatPickr from 'vue-flatpickr-component';
-import 'flatpickr/dist/flatpickr.css';
+import flatPickr from "vue-flatpickr-component";
+import "flatpickr/dist/flatpickr.css";
 
 export default {
-  props: {
-
-  },
+  props: {},
   components: {
-    flatPickr
-
+    flatPickr,
   },
   data() {
     return {
       filter: {
-        destination: '',
+        destination: "",
         numOfBeds: 0,
       },
-      date:{
+      date: {
         checkIn: null,
         checkOut: null,
       },
       checkinDisplayed: true,
-      checkOutDisplayed: true
+      checkOutDisplayed: true,
     };
   },
-  methods: {
-
-  },
+  methods: {},
   actions: {},
   computed: {},
-  created() { },
-  unmounted() { },
+  created() {},
+  unmounted() {},
 };
 </script>
 <style lang=""></style>

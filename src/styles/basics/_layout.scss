@@ -10,12 +10,6 @@
     grid-column: 1 / -1;
   }
 
-  > *:not(.full) {
-    display: grid;
-    grid-auto-flow: dense;
-    grid-template-columns: auto;
-  }
-
   @include for-narrow-layout {
     @include layoutGTC($break-narrow);
   }

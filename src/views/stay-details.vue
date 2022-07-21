@@ -1,7 +1,7 @@
 <template>
-  <section class="stay-details" v-if="stay">
+  <section class="stay-details main-layout" v-if="stay">
     <div class="stay-info">
-      <h2>{{ stay.name }}</h2>
+      <h2 class="stay-name">{{ stay.name }}</h2>
       <section class="short-info flex">
         <section class="flex">
           <h5 class="reviews-rating">★ 4.7</h5>
@@ -33,6 +33,7 @@
     </div>
     <section class="stay-display flex">
       <div class="stay-info">
+        <div class="stay-summary"></div>
         <h3>{{ stay.type }} Hosted by {{ stay.host.fullname }}</h3>
         <p class="host-details">{{ stay.numOfBeds }} bedroom</p>
         <p class="summary">{{ stay.summary }}</p>
@@ -86,12 +87,53 @@
       </div>
     </section>
     <div class="stay-reviews">
-      <h3>{{ stay.reviews.length }} Reviews</h3>
-      <ol>
-        <li v-for="(review, idx) in stay.reviews" :key="idx">
-          {{ review }}
-        </li>
-      </ol>
+      <h2>★ 4.7 · {{ stay.reviews.length }} Reviews</h2>
+      <div class="review-stats grid">
+        <div class="review-ctg flex space-between">
+          <label>Cleanliness</label>
+          <span class="score">4.7</span>
+        </div>
+        <div class="review-ctg flex space-between">
+          <label>Communication</label>
+          <span class="score">5.0</span>
+        </div>
+        <div class="review-ctg flex space-between">
+          <label>Check-in</label>
+          <span class="score">4.6</span>
+        </div>
+        <div class="review-ctg flex space-between">
+          <label>Accuracy</label>
+          <span class="score">4.3</span>
+        </div>
+        <div class="review-ctg flex space-between">
+          <label>Location</label>
+          <span class="score">4.9</span>
+        </div>
+        <div class="review-ctg flex space-between">
+          <label>Value</label>
+          <span class="score">5.0</span>
+        </div>
+      </div>
+      <div class="review-list">
+        <ul class="reviews-list-container clean-list">
+          <li
+            v-for="(review, idx) in stay.reviews"
+            :key="idx"
+            class="review-preview clean-list"
+          >
+            <section class="review-details">
+              <div class="review-details-header">
+                <img v-bind:src="`${review.by.imgUrl}`" class="review-img" />
+                <div class="review-preview-details">
+                  <h4 class="review-name">{{ review.by.fullname }}</h4>
+                  <h5 class="review-time">{{ review.at }}</h5>
+                </div>
+              </div>
+              <span class="review-txt">{{ review.txt }}</span>
+            </section>
+          </li>
+        </ul>
+      </div>
     </div>
     <router-link to="/">Back</router-link>
     <!-- <button @click="removeStay">Delete</button> -->
