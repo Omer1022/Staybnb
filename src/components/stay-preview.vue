@@ -1,5 +1,5 @@
 <template>
-  <section class="stay-previews" v-if="stay">
+  <section class="stay-previews " v-if="stay">
     <div class="stay-preview-card">
       <div class="card-img" 
       @mouseover="hover=true"  
@@ -17,7 +17,7 @@
             </p>
             <p class="stay-name">{{ stay.loc.city }}, {{ stay.loc.country }}</p>
           </div>
-          <p class="stay-price"><span>{{ stay.price }}$ </span>per Night</p>
+          <p class="stay-price"><span>${{ stay.price }} </span> Night</p>
           <p class="stay-type">{{ stay.type }}</p>
         </div>
       </div>

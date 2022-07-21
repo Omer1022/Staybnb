@@ -1,6 +1,6 @@
 <template>
   <section v-if="stays" class="stay-list">
-    <div class="stay-list-container" v-for="stay in stays" :key="stay._id">
+    <div class="cards-container" v-for="stay in stays" :key="stay._id">
       <stay-preview :stay="stay" />
     </div>
   </section>

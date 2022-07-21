@@ -3,12 +3,14 @@
   justify-content: center;
   flex-direction: column;
   align-content: center;
-  width: rem(300px);
+  width: rem(265px);
+  
 }
 
 .preview-img {
   border-radius: 20px;
-  height: 300px;
+  height: rem(265px);
+  width: rem(265px);
   aspect-ratio: 1/1;
   object-fit: cover
 }
@@ -25,11 +27,3 @@
   background: none;
   cursor: pointer;
 }
-
-// .card-img .liked{
-//   position: absolute;
-//   top: 5%;
-//   left: 170%;
-//   background: none;
-//   cursor: pointer;
-// }

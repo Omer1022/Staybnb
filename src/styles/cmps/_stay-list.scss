@@ -1,5 +1,13 @@
 .stay-list {
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(rem(300px), 1fr) );;
-  gap:5px
+  grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));
+  // grid-template-columns: repeat(auto-fill, (265px));
+
+  // grid-template-columns: repeat(auto-fill, 300px)
+  // grid-template-columns: repeat(auto-fit, 265px)
+
+
+}
+
+.card-container{
 }

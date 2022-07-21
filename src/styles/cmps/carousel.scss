@@ -58,7 +58,7 @@
 .slide-in-leave-active,
 .slide-out-enter-active,
 .slide-out-leave-active {
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .slide-in-enter-from {
   transform: translateX(-100%);
