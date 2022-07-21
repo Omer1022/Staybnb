@@ -1,6 +1,6 @@
 <template>
   <section class="stay-previews" v-if="stay">
-    <div class="stay-preview-card">
+    <div  @click="$router.push(`/${stay._id}`)" class="stay-preview-card">
       <div
         class="card-img"
         @mouseover="hover = true"
@@ -11,7 +11,7 @@
           <img src="../../public/footer-imgs/like.png" alt="" />
         </button>
       </div>
-      <div @click="$router.push(`/${stay._id}`)">
+      <div >
         <div class="card-details">
           <div class="stay-header">
             <span class="star-rate">★4.3</span>

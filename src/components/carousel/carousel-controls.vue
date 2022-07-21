@@ -1,7 +1,7 @@
 <template>
 <div>
-  <button class="carousel-control left" @click="$emit('prev')">&#60;</button>
-  <button class="carousel-control right" @click="$emit('next')">&#62;</button>
+  <button class="carousel-control left" @click.stop="$emit('prev')">&#60;</button>
+  <button class="carousel-control right" @click.stop="$emit('next')">&#62;</button>
 </div>
 </template>
 
