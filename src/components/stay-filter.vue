@@ -1,5 +1,5 @@
 <template>
-  <div class="header-search">
+  <!-- <div class="header-search">
     <button @click="openSearch">Anywhere</button>
     <span>|</span>
     <button @click="openSearch">Any week</button>
@@ -10,10 +10,54 @@
         <img src="../styles/icons/search_white.png" alt="" />
       </span>
     </button>
-  </div>
+  </div> -->
+
+  <form class="large-header-filter flex">
+    <div class="destination-input">
+      <label for="destination-input">Where</label>
+      <input name="destination-input" type="text" placeholder="Search detinations">
+    </div>
+    <span>|</span>
+    <div class="checkIn-input">
+      <label for="checkIn-input">Check in</label>
+      <button class="checkIn-input">Add Dates</button>
+    </div>
+    <span>|</span>
+    <div class="checkOut-input">
+      <label for="checkOut-input">Checck out</label>
+      <button class="checkOut-input">Add Dates</button>
+    </div>
+    <span>|</span>
+    <div class="gusets-input flex">
+      <div class="gusets-btn-warper">
+      <label for="gusets-input">Who</label>
+      <button class="gusets-input">Add gusets</button>
+      </div>
+        <button class="large-filter-search"><img src="../styles/icons/search_white.png" alt="">Search</button>
+    </div>
+
+
+
+
+  </form>
 </template>
 <script>
-export default {};
+export default {
+  props: {
+
+  },
+  components: {
+
+  },
+  data() {
+    return {};
+  },
+  methods: {},
+  actions: {},
+  computed: {},
+  created() { },
+  unmounted() { },
+};
 </script>
 <style lang=""></style>
 
