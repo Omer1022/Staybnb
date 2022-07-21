@@ -26,7 +26,8 @@
     <span>|</span>
     <div class="date-picker">
     <div class="block">
-      <p>Component value：{{ value }}</p>
+     <button>check in</button>
+     <button>check out</button>
       <el-date-picker
         v-model="value"
         type="daterange"
@@ -34,7 +35,6 @@
         end-placeholder="End date"
         :default-time="defaultTime"
       />
-
     </div>
     </div>
     <span>|</span>
@@ -90,6 +90,7 @@ export default {
       },
       checkinDisplayed: false,
       checkOutDisplayed: false,
+      value: []
     };
   },
   methods: {},
