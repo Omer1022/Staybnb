@@ -25,9 +25,17 @@
     </div>
     <span>|</span>
     <div class="date-picker">
-    
+    <div class="block">
+      <p>Component value：{{ value }}</p>
+      <el-date-picker
+        v-model="value"
+        type="daterange"
+        start-placeholder="Start date"
+        end-placeholder="End date"
+        :default-time="defaultTime"
+      />
 
-
+    </div>
     </div>
     <span>|</span>
     <div class="gusets-input flex">
