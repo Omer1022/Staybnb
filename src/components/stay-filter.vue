@@ -1,5 +1,5 @@
 <template>
-  <div class="header-search">
+  <!-- <div class="header-search">
     <button @click="openSearch">Anywhere</button>
     <span>|</span>
     <button @click="openSearch">Any week</button>
@@ -13,8 +13,8 @@
         <img src="../styles/icons/search_white.png" alt="" />
       </span>
     </button>
-  </div>
-  <!-- 
+  </div> -->
+  
   <form class="large-header-filter flex">
     <div class="destination-input">
       <label for="destination-input">Where</label>
@@ -36,7 +36,6 @@
         Dates </button>
       <flat-pickr v-else v-model="date.checkOut"></flat-pickr>
     </div>
-
     <span>|</span>
     <div class="gusets-input flex">
  <Popper>
@@ -48,18 +47,13 @@
       <div class="gusets-modal">
           <num-input></num-input>
           <ul>input</ul>
+     </div>
+          </template>
+          </Popper>
           <!-- <ul>input</ul> -->
-          <!-- <ul>input</ul> -->
-      </div>
-<<<<<<< HEAD
+          <!-- <ul>input</ul>
   </form> -->
   <!-- <div class="add-modal">
-=======
-    </template>
-  </Popper>
-          <!--
-     
->>>>>>> 0b48be71554aeb7b7d6730dc8446ce026196e618
           <div>
           <ul>input</ul>
           <ul>input</ul>
@@ -75,28 +69,19 @@
 
 </template>
 <script>
-<<<<<<< HEAD
 import flatPickr from "vue-flatpickr-component";
 import "flatpickr/dist/flatpickr.css";
-=======
-import flatPickr from 'vue-flatpickr-component';
-import 'flatpickr/dist/flatpickr.css';
-import { defineComponent } from "vue";
 import Popper from "vue3-popper";
 import numInput from "./num-input.vue"
 
->>>>>>> 0b48be71554aeb7b7d6730dc8446ce026196e618
 
 export default {
   props: {},
   components: {
     flatPickr,
-<<<<<<< HEAD
-=======
     Popper,
     numInput
 
->>>>>>> 0b48be71554aeb7b7d6730dc8446ce026196e618
   },
   data() {
     return {
@@ -110,10 +95,6 @@ export default {
       },
       checkinDisplayed: true,
       checkOutDisplayed: true,
-<<<<<<< HEAD
-=======
-      modalActive: true,
->>>>>>> 0b48be71554aeb7b7d6730dc8446ce026196e618
     };
   },
   methods: {},
