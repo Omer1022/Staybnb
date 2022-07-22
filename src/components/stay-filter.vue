@@ -17,38 +17,57 @@
 
   <form class="large-header-filter flex">
     <div class="destination-input">
-      <label>
-        <div> Where</div>
-        <input v-model="filter.destination" name="destination-input" type="text"
-          placeholder="Search detinations">
-      </label>
+      <button>
+        <label>
+          <div> Where</div>
+          <input v-model="filter.destination" name="destination-input" type="text" placeholder="Search detinations">
+        </label>
+      </button>
     </div>
     <span>|</span>
+
     <div class="date-picker">
-    <div class="block">
-     <button>check in</button>
-     <button>check out</button>
-      <el-date-picker
-        v-model="value"
-        type="daterange"
-        start-placeholder="Start date"
-        end-placeholder="End date"
-        :default-time="defaultTime"
-      />
-    </div>
+      <div class="block">
+        <Popper>
+            <div class="dates-btn-warper">
+              <button >
+                <div>check in</div>{{ checkInDate }}
+              </button>
+            </div>
+            <template #content>
+              <div class="calendar-modal">
+                <calender-spread></calender-spread>
+              </div>
+            </template>
+          </Popper>
+        <Popper>
+            <div class="dates-btn-warper">
+              <button >
+                <div>check out</div>{{ checkOutDate }}
+              </button>
+            </div>
+            <template #content>
+              <div class="calendar-modal">
+                <calender-spread></calender-spread>
+              </div>
+            </template>
+          </Popper>
+      
+      </div>
     </div>
     <span>|</span>
     <div class="gusets-input flex">
-      <Popper	>
+      <Popper>
         <div class="gusets-btn-warper">
-          <label for="gusets-input">Who</label>
-          <button class="gusets-input">Add gusets</button>
+          <button class="gusets-input"><label>
+              <div>Who</div>
+            </label>Add gusets</button>
         </div>
         <template #content>
           <div class="gusets-modal">
             <num-input></num-input>
             <num-input></num-input>
-          
+
           </div>
         </template>
       </Popper>
@@ -64,18 +83,18 @@
 
 </template>
 <script>
-import flatPickr from "vue-flatpickr-component";
-import "flatpickr/dist/flatpickr.css";
 import Popper from "vue3-popper";
 import numInput from "./num-input.vue"
-
+import calenderSpread from "./calender-spread.vue";
+import { DatePicker } from 'v-calendar'
+import 'v-calendar/dist/style.css'
 
 export default {
   props: {},
   components: {
-    flatPickr,
     Popper,
-    numInput
+    numInput,
+    calenderSpread
 
   },
   data() {
@@ -95,11 +114,22 @@ export default {
   },
   methods: {},
   actions: {},
-  computed: {},
+  computed: {
+    checkInDate() {
+      return  'Add dates'
+    },
+    checkOutDate() {
+      return  'Add dates'
+    }
+  },
   created() { },
   unmounted() { },
 };
 </script>
-<style lang=""></style>
+<style>
+.hidden {
+  visibility: hidden;
+}
+</style>
 
 
