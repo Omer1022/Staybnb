@@ -144,10 +144,7 @@
   }
 
 
-  .gusets-modal {
-    background-color:teal ;
-    z-index: 1;
-  }
+ 
 
   .gusets-modal{
     margin-top: 0.75rem;
@@ -157,3 +154,19 @@
     padding: 1rem 2rem;
     box-shadow:  0 0 0 1px rgba(0,0,0,0.04),0 8px 16px rgba(0,0,0,0.15);
   }
+
+
+  .calendar-modal{
+    margin-top: 0.75rem;
+    width: rem(850px);
+    
+    background-color: $clr3;
+    border-radius: 2rem;
+    padding: 3rem 3rem;
+    box-shadow:  0 0 0 1px rgba(0,0,0,0.04),0 8px 16px rgba(0,0,0,0.15);
+  }
+  .vc-container {
+    width: 100%;
+    border-color: transparent;
+    background-color: transparent;
+}

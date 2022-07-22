@@ -36,7 +36,7 @@
             </div>
             <template #content>
               <div class="calendar-modal">
-                <calender-spread></calender-spread>
+                <calender-spread is-expanded></calender-spread>
               </div>
             </template>
           </Popper>
@@ -48,7 +48,7 @@
             </div>
             <template #content>
               <div class="calendar-modal">
-                <calender-spread></calender-spread>
+                <calender-spread is-expanded></calender-spread>
               </div>
             </template>
           </Popper>
