@@ -44,6 +44,7 @@
         </h2>
         <!-- <img v-bind:src="`${stays.host.imgUrl}`" class="host-img" /> -->
         <p class="host-details">{{ stay.numOfBeds }} bedroom</p>
+        <h2 class="stay-summary">About this space</h2>
         <p class="summary">{{ stay.summary }}</p>
         <div class="stay-amenities">
           <h2 class="amenities-header">What this place offers</h2>
@@ -63,12 +64,15 @@
           <div class="order-modal flex">
             <div class="mini-modal-container">
               <div class="order-form-header flex">
-                <div><span class="bold">$500</span>Night</div>
+                <div>
+                  <span class="stay-details-price bold">${{ stay.price }}</span
+                  >night
+                </div>
                 <div class="reviews-preview flex">
                   <div class="star-preview">
                     <span class="star-icon">★</span>
                   </div>
-                  <span class="review-avg">4.7</span>
+                  <span class="review-avg">4.7</span> ·
                   <span class="total-reviews">3 Reviews</span>
                 </div>
               </div>
