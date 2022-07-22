@@ -3,14 +3,20 @@
   justify-content: center;
   flex-direction: column;
   align-content: center;
-  width: rem(300px);
+  width: rem(265px);
+  
+}
+
+.stay-name-preview {
+  margin: 0;
 }
 
 .preview-img {
   border-radius: 20px;
-  height: 300px;
+  height: rem(265px);
+  width: rem(265px);
   aspect-ratio: 1/1;
-  object-fit: cover
+  object-fit: cover;
 }
 
 .card-img {
@@ -25,6 +31,8 @@
   background: none;
   cursor: pointer;
 }
+<<<<<<< HEAD
+=======
 
 // .card-img .liked{
 //   position: absolute;
@@ -33,3 +41,4 @@
 //   background: none;
 //   cursor: pointer;
 // }
+>>>>>>> a1b1ef17a5d6824f8386fbe88c0279e0cbaf7371

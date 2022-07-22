@@ -47,7 +47,7 @@
           </div>
           <img class="host-img" v-bind:src="`${stay.host.imgUrl}`" />
         </section>
-        <h2 class="stay-summary">About this space</h2>
+        <h2 class="stay-summary">About this place</h2>
         <p class="summary">{{ stay.summary }}</p>
         <div class="stay-amenities">
           <h2 class="amenities-header">What this place offers</h2>
