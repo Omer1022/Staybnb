@@ -38,12 +38,15 @@
     </div>
     <section class="stay-display flex">
       <div class="stay-info">
-        <div class="stay-summary"></div>
-        <h2 class="host-name">
-          {{ stay.type }} Hosted by {{ stay.host.fullname }}
-        </h2>
-        <!-- <img v-bind:src="`${stays.host.imgUrl}`" class="host-img" /> -->
-        <p class="host-details">{{ stay.numOfBeds }} bedroom</p>
+        <section class="host-summary flex align-center space-between">
+          <div>
+            <h2 class="host-name">
+              {{ stay.type }} Hosted by {{ stay.host.fullname }}
+            </h2>
+            <p class="host-details">{{ stay.numOfBeds }} bedroom</p>
+          </div>
+          <img class="host-img" v-bind:src="`${stay.host.imgUrl}`" />
+        </section>
         <h2 class="stay-summary">About this space</h2>
         <p class="summary">{{ stay.summary }}</p>
         <div class="stay-amenities">
@@ -192,7 +195,7 @@
             class="review-preview clean-list"
           >
             <section class="review-details">
-              <div class="review-details-header">
+              <div class="review-details-header flex">
                 <img v-bind:src="`${review.by.imgUrl}`" class="review-img" />
                 <div class="review-preview-details">
                   <h4 class="review-name">{{ review.by.fullname }}</h4>

@@ -109,13 +109,29 @@ h5 {
   border-end-end-radius: 13px;
 }
 
+.host-summary {
+  padding: 48px 0 24px 0;
+  box-shadow: inset 0 -0.5px 0 0 #ddd;
+}
+
 .host-name {
-  margin-top: 3rem;
+  margin: 0;
+  margin-bottom: 8px;
 }
 
 .host-details {
-  padding: 5px 0 24px 0;
-  box-shadow: inset 0 -0.5px 0 0 #ddd;
+  font-size: 1rem;
+  font-weight: 400;
+  line-break: strict;
+  line-height: 1.25rem;
+  margin: 0;
+}
+
+.host-img {
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .stay-summary {
@@ -262,35 +278,6 @@ h5 {
   grid-gap: 40px 1px;
 }
 
-.review-preview {
-  margin-right: 100.25px;
-}
-
-.review-img {
-  height: 56px;
-  width: 56px;
-  border-radius: 50%;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-
-.review-name {
-  margin: 0;
-  padding: 0;
-}
-
-.review-time {
-  margin: 0;
-  font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 1.25rem;
-  color: #717171;
-}
-
-.review-txt {
-  font-size: 1rem;
-}
-
 .gray-scale {
   background-color: #a3a3a3;
   width: 135px;
@@ -321,4 +308,39 @@ h5 {
   vertical-align: middle;
   text-align: center;
   font-family: airbnb-medium;
+}
+
+.review-preview {
+  margin-right: 100.25px;
+}
+
+.review-name {
+  margin: 0;
+  padding: 0;
+}
+
+.review-time {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: #717171;
+}
+
+.review-txt {
+  font-size: 1rem;
+}
+
+.review-details-header {
+  align-items: center;
+  grid-gap: 20px;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+
+.review-img {
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  object-fit: cover;
 }
