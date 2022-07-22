@@ -113,6 +113,7 @@
 
       display: inline;
       width: rem(75px);
+      height: 100%;
 
     }
   }}
@@ -133,4 +134,25 @@
   .gusets-modal {
     background-color:teal ;
     z-index: 1;
+  }
+
+  .gusets-modal{
+    margin-top: 0.75rem;
+    width: 406px;
+    background-color: $clr3;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    box-shadow:  0 0 0 1px rgba(0,0,0,0.04),0 8px 16px rgba(0,0,0,0.15);
+  }
+  .el-picker-panel__body-wrapper{
+    width: 848px;
+    height: 558px;
+    border-radius: 2rem;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.15); 
+    background-color: $clr3;
+    padding: 16px 32px;
+
+  }   
+  .el-date-range-picker__content{
+    width: 50%
   }

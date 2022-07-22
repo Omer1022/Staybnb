@@ -4,8 +4,7 @@
       <h2 class="stay-name">{{ stay.name }}</h2>
       <section class="short-info flex">
         <section class="flex">
-          <h5 class="reviews-rating">★ 4.7</h5>
-          ·
+          <h5 class="reviews-rating">★ 4.7 ·</h5>
           <h5 class="reviews-number">{{ stay.reviews.length }} reviews</h5>
           ·
           <h5 class="location">
@@ -15,10 +14,16 @@
         </section>
         <section class="flex">
           <button class="info-btn">
-            <span>Share</span>
+            <img
+              class="share-icon"
+              src="../styles/icons/share-icon.svg"
+              alt=""
+            />
+            <h5 class="share-btn">Share</h5>
           </button>
           <button class="info-btn">
-            <span>Save</span>
+            <span class="save-icon">♡</span>
+            <h5 class="save-btn">Save</h5>
           </button>
         </section>
       </section>
@@ -33,14 +38,25 @@
     </div>
     <section class="stay-display flex">
       <div class="stay-info">
-        <div class="stay-summary"></div>
-        <h3>{{ stay.type }} Hosted by {{ stay.host.fullname }}</h3>
-        <p class="host-details">{{ stay.numOfBeds }} bedroom</p>
+        <section class="host-summary flex align-center space-between">
+          <div>
+            <h2 class="host-name">
+              {{ stay.type }} Hosted by {{ stay.host.fullname }}
+            </h2>
+            <p class="host-details">{{ stay.numOfBeds }} bedroom</p>
+          </div>
+          <img class="host-img" v-bind:src="`${stay.host.imgUrl}`" />
+        </section>
+        <h2 class="stay-summary">About this place</h2>
         <p class="summary">{{ stay.summary }}</p>
-        <h3>What this place offers</h3>
         <div class="stay-amenities">
-          <ul>
-            <li v-for="(amenities, idx) in stay.amenities" :key="idx">
+          <h2 class="amenities-header">What this place offers</h2>
+          <ul class="amenities-list flex">
+            <li
+              class="amenitie-container flex"
+              v-for="(amenities, idx) in stay.amenities"
+              :key="idx"
+            >
               {{ amenities }}
             </li>
           </ul>
@@ -51,12 +67,15 @@
           <div class="order-modal flex">
             <div class="mini-modal-container">
               <div class="order-form-header flex">
-                <div><span class="bold">$500</span>Night</div>
+                <div>
+                  <span class="stay-details-price bold">${{ stay.price }}</span
+                  >night
+                </div>
                 <div class="reviews-preview flex">
                   <div class="star-preview">
                     <span class="star-icon">★</span>
                   </div>
-                  <span class="review-avg">4.7</span>
+                  <span class="review-avg">4.7</span> ·
                   <span class="total-reviews">3 Reviews</span>
                 </div>
               </div>
@@ -91,27 +110,81 @@
       <div class="review-stats grid">
         <div class="review-ctg flex space-between">
           <label>Cleanliness</label>
-          <span class="score">4.7</span>
+          <div class="flex">
+            <div class="gray-scale flex">
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale"></div>
+            </div>
+            <span class="score">4.7</span>
+          </div>
         </div>
         <div class="review-ctg flex space-between">
           <label>Communication</label>
-          <span class="score">5.0</span>
+          <div class="flex">
+            <div class="gray-scale flex">
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale"></div>
+            </div>
+            <span class="score">4.4</span>
+          </div>
         </div>
         <div class="review-ctg flex space-between">
           <label>Check-in</label>
-          <span class="score">4.6</span>
+          <div class="flex">
+            <div class="gray-scale flex">
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale"></div>
+            </div>
+            <span class="score">4.5</span>
+          </div>
         </div>
         <div class="review-ctg flex space-between">
           <label>Accuracy</label>
-          <span class="score">4.3</span>
+          <div class="flex">
+            <div class="gray-scale flex">
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale"></div>
+              <div class="scale"></div>
+            </div>
+            <span class="score">4.2</span>
+          </div>
         </div>
         <div class="review-ctg flex space-between">
           <label>Location</label>
-          <span class="score">4.9</span>
+          <div class="flex">
+            <div class="gray-scale flex">
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+            </div>
+            <span class="score">5.0</span>
+          </div>
         </div>
         <div class="review-ctg flex space-between">
           <label>Value</label>
-          <span class="score">5.0</span>
+          <div class="flex">
+            <div class="gray-scale flex">
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale black"></div>
+              <div class="scale"></div>
+            </div>
+            <span class="score">4.8</span>
+          </div>
         </div>
       </div>
       <div class="review-list">
@@ -122,7 +195,7 @@
             class="review-preview clean-list"
           >
             <section class="review-details">
-              <div class="review-details-header">
+              <div class="review-details-header flex">
                 <img v-bind:src="`${review.by.imgUrl}`" class="review-img" />
                 <div class="review-preview-details">
                   <h4 class="review-name">{{ review.by.fullname }}</h4>
@@ -135,7 +208,7 @@
         </ul>
       </div>
     </div>
-    <router-link to="/">Back</router-link>
+    <!-- <router-link to="/">Back</router-link> -->
     <!-- <button @click="removeStay">Delete</button> -->
   </section>
 </template>

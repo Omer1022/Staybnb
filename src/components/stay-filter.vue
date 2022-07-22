@@ -14,49 +14,51 @@
       </span>
     </button>
   </div> -->
-  
+
   <form class="large-header-filter flex">
     <div class="destination-input">
-      <label for="destination-input">Where</label>
-      <input v-model="filter.destination" name="destination-input" type="text" placeholder="Search detinations">
+      <label>
+        <div> Where</div>
+        <input v-model="filter.destination" name="destination-input" type="text"
+          placeholder="Search detinations">
+      </label>
     </div>
     <span>|</span>
-    <div class="checkIn-input">
-      <label for="checkIn-input">Check in</label>
-      <button v-if="checkinDisplayed" :class="{ active: checkinDisplayed }"
-        @click="checkinDisplayed = !checkinDisplayed">Add
-        Dates </button>
-      <flat-pickr class="checkIn-input-picker" v-else v-model="date.checkIn"></flat-pickr>
+    <div class="date-picker">
+    <div class="block">
+     <button>check in</button>
+     <button>check out</button>
+      <el-date-picker
+        v-model="value"
+        type="daterange"
+        start-placeholder="Start date"
+        end-placeholder="End date"
+        :default-time="defaultTime"
+      />
     </div>
-    <span>|</span>
-    <div class="checkOut-input">
-      <label for="checkOut-input">Check out</label>
-      <button v-if="checkOutDisplayed" :class="{ active: checkOutDisplayed }"
-        @click="checkOutDisplayed = !checkOutDisplayed">Add
-        Dates </button>
-      <flat-pickr v-else v-model="date.checkOut"></flat-pickr>
     </div>
     <span>|</span>
     <div class="gusets-input flex">
- <Popper>
-   <div class="gusets-btn-warper">
+      <Popper	>
+        <div class="gusets-btn-warper">
           <label for="gusets-input">Who</label>
           <button class="gusets-input">Add gusets</button>
         </div>
-    <template #content>
-      <div class="gusets-modal">
-          <num-input></num-input>
-          <ul>input</ul>
-     </div>
-          </template>
-          </Popper>
-   
+        <template #content>
+          <div class="gusets-modal">
+            <num-input></num-input>
+            <num-input></num-input>
+          
+          </div>
+        </template>
+      </Popper>
+
     </div>
 
-      
 
-      <button class="large-filter-search"><img src="../styles/icons/search_white.png" alt="">Search</button>
-   
+
+    <button class="large-filter-search"><img src="../styles/icons/search_white.png" alt="">Search</button>
+
   </form>
 
 
@@ -86,15 +88,16 @@ export default {
         checkIn: null,
         checkOut: null,
       },
-      checkinDisplayed: true,
-      checkOutDisplayed: true,
+      checkinDisplayed: false,
+      checkOutDisplayed: false,
+      value: []
     };
   },
   methods: {},
   actions: {},
   computed: {},
-  created() {},
-  unmounted() {},
+  created() { },
+  unmounted() { },
 };
 </script>
 <style lang=""></style>
