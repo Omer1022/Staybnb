@@ -51,7 +51,7 @@
         <p class="summary">{{ stay.summary }}</p>
         <div class="stay-amenities">
           <h2 class="amenities-header">What this place offers</h2>
-          <ul class="amenities-list">
+          <ul class="amenities-list flex">
             <li
               class="amenitie-container flex"
               v-for="(amenities, idx) in stay.amenities"

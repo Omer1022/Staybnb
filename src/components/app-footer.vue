@@ -1,7 +1,7 @@
 <template>
   <section class="footer">
     <div class="footer-action flex space-around">
-      <a>&copy; 2022 Staybnb, inc.</a> · <a herf="#">Privacy</a> ·
+      <a>&copy; 2022 Staybnb</a> · <a herf="#">Privacy</a> ·
       <a herf="#">Conditions</a> ·
       <a herf="#">Site map</a>
       <button class="btn flex align-items">
