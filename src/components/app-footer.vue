@@ -1,5 +1,5 @@
 <template>
-  <section class="footer">
+  <section class="footer main ">
     <div class="footer-action flex space-around">
       <a>&copy; 2022 Staybnb</a> · <a herf="#">Privacy</a> ·
       <a herf="#">Conditions</a> ·
