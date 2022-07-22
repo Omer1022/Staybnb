@@ -15,12 +15,14 @@
         <div class="card-details">
           <div class="stay-header">
             <span class="star-rate">★4.3</span>
-            <p class="stay-name">{{ stay.loc.city }}, {{ stay.loc.country }}</p>
+            <p class="stay-name-preview bold">
+              {{ stay.loc.city }}, {{ stay.loc.country }}
+            </p>
           </div>
-          <p class="stay-price">
-            <span>${{ stay.price }} night</span>
+          <p class="stay-type-preview">{{ stay.type }}</p>
+          <p class="stay-price-preview">
+            <span class="bold">${{ stay.price }} </span> night
           </p>
-          <p class="stay-type">{{ stay.type }}</p>
         </div>
       </div>
       <!-- <div class="actions">

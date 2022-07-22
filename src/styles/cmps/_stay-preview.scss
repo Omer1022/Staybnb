@@ -6,11 +6,15 @@
   width: rem(300px);
 }
 
+.stay-name-preview {
+  margin: 0;
+}
+
 .preview-img {
   border-radius: 20px;
   height: 300px;
   aspect-ratio: 1/1;
-  object-fit: cover
+  object-fit: cover;
 }
 
 .card-img {
