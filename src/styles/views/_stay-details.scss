@@ -25,10 +25,6 @@ h5 {
   text-decoration: underline;
 }
 
-.info-btn :hover {
-  background-color: gray;
-}
-
 .save-icon {
   font-size: 1.5rem;
   text-decoration: none;
@@ -67,9 +63,13 @@ h5 {
   align-items: center;
   display: flex;
   border: none;
-  font-size: 1rem;
+  font-size: 1.5rem;
   background-color: transparent;
   cursor: pointer;
+}
+
+.info-btn :hover {
+  background-color: lightgray;
 }
 
 .details-gallery {
