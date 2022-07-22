@@ -1,8 +1,8 @@
 <template>
   <section class="stay-previews" v-if="stay">
     <div @click="$router.push(`/${stay._id}`)" class="stay-preview-card">
-      <div
-        class="card-img"
+      <div class="card-img">
+        <carouse-app class="preview-img" :slides="stay.imgUrls"
         @mouseover="hover = true"
         @mouseleave="hover = false"
         />

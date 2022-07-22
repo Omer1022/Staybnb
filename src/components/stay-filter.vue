@@ -16,52 +16,52 @@
   </div> -->
 
   <form class="large-header-filter flex">
-    <div class="destination-input">
+    <div class="destination-input btn-container">
       <button>
         <label>
-          <div> Where</div>
+          <div class="button-title"> Where</div>
           <input v-model="filter.destination" name="destination-input" type="text" placeholder="Search detinations">
         </label>
       </button>
     </div>
     <span>|</span>
 
-    <div class="date-picker">
-      <div class="block">
-        <Popper>
-            <div class="dates-btn-warper">
-              <button >
-                <div>check in</div>{{ checkInDate }}
-              </button>
-            </div>
-            <template #content>
-              <div class="calendar-modal">
-                <calender-spread is-expanded></calender-spread>
-              </div>
-            </template>
-          </Popper>
-        <Popper>
-            <div class="dates-btn-warper">
-              <button >
-                <div>check out</div>{{ checkOutDate }}
-              </button>
-            </div>
-            <template #content>
-              <div class="calendar-modal">
-                <calender-spread is-expanded></calender-spread>
-              </div>
-            </template>
-          </Popper>
-      
-      </div>
-    </div>
+    <Popper class="popper-btn btn-container">
+      <button>
+        <div class="button-title">check in</div>{{ checkInDate }}
+      </button>
+
+      <template #content>
+        <div class="calendar-modal">
+          <calender-spread is-expanded></calender-spread>
+        </div>
+      </template>
+    </Popper>
     <span>|</span>
-    <div class="gusets-input flex">
-      <Popper>
-        <div class="gusets-btn-warper">
+    <Popper>
+
+      <button>
+        <div class="button-title">check out</div>{{ checkOutDate }}
+      </button>
+
+      <template #content>
+        <div class="calendar-modal">
+          <calender-spread is-expanded></calender-spread>
+        </div>
+      </template>
+    </Popper>
+
+
+    <span>|</span>
+    <div class="gusets-input flex btn-container">
+      <Popper btn-container>
+        <div class="gusets-btn-warper btn-container">
           <button class="gusets-input"><label>
-              <div>Who</div>
-            </label>Add gusets</button>
+              <div class="button-title">Who</div>
+            </label>Add gusets
+             <button @click.stop="runSerach" class="large-filter-search btn-container"><img src="../styles/icons/search_white.png" alt="">Search</button>
+             </button>
+
         </div>
         <template #content>
           <div class="gusets-modal">
@@ -73,10 +73,6 @@
       </Popper>
 
     </div>
-
-
-
-    <button class="large-filter-search"><img src="../styles/icons/search_white.png" alt="">Search</button>
 
   </form>
 
@@ -112,14 +108,18 @@ export default {
       value: []
     };
   },
-  methods: {},
+  methods: {
+    runSerach(){
+      console.log("searching")
+    }
+  },
   actions: {},
   computed: {
     checkInDate() {
-      return  'Add dates'
+      return 'Add dates'
     },
     checkOutDate() {
-      return  'Add dates'
+      return 'Add dates'
     }
   },
   created() { },
