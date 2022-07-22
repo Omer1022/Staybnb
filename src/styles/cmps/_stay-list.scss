@@ -1,6 +1,7 @@
 .stay-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));
+  gap: rem(25px);
   // grid-template-columns: repeat(auto-fill, (265px));
 
   // grid-template-columns: repeat(auto-fill, 300px)
@@ -9,5 +10,3 @@
 
 }
 
-.card-container{
-}

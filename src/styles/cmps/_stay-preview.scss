@@ -3,7 +3,7 @@
   justify-content: center;
   flex-direction: column;
   align-content: center;
-  width: rem(265px);
+  // width: rem(265px);
   
 }
 
@@ -13,15 +13,15 @@
 
 .preview-img {
   border-radius: 20px;
-  height: rem(265px);
-  width: rem(265px);
+  // height: rem(265px);
+  // width: rem(265px);
   aspect-ratio: 1/1;
   object-fit: cover;
 }
 
 .card-img {
   position: relative;
-  width: 50%;
+  // width: 50%;
 }
 
 .card-img .like-btn {

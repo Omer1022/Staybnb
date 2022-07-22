@@ -14,8 +14,6 @@
         :current-slide="currentSlide"
         :index="index"
         :direction="direction"
-        @mouseenter="stopSlideTimer"
-        @mouseout="startSlideTimer"
       ></carousel-item>
       <carousel-controls 
         v-if="controls"

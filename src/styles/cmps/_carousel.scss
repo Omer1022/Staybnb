@@ -9,6 +9,8 @@
 
 .carousel-control {
   background-color: #f3f3f3;
+  height: 25px;
+  width: 25px;
   border: none;
   border-radius: 50%;
   display: inline-block;
@@ -18,24 +20,24 @@
   cursor: pointer;
 }
 .left {
-  left: 0;
+  left: 10px;
 }
 .right {
-  right: 0px;
+  right: 10px;
 }
 
 .carousel-indicators {
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
-  bottom: 1.5em;
+  bottom: 0.5em;
   z-index: 2;
 }
 
 
 .carousel-indicator-item {
-  width: 10px;
-  height: 10px;
+  width: 5px;
+  height: 5px;
   border: none;
   background: #fff;
   opacity: 0.5;
@@ -49,7 +51,7 @@
 
 .carousel-item {
   border-radius: 20px;
-  height: 300px;
+  // height: 300px;
   aspect-ratio: 1/1;
 
 }

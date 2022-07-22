@@ -2,8 +2,8 @@
     <app-header />
   <div id="app" class="main-layout">
     <router-view />
-    <app-footer />
   </div>
+    <app-footer />
 </template>
 
 <script>
