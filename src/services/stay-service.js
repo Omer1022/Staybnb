@@ -140,7 +140,7 @@ function _createStays() {
         },
         reviews: [
           {
-            at: "2013-05-27T04:00:00.000Z",
+            at: "2013-05-27",
             txt: "Shaila's place is amazing! It's new, it's clean and it's big! And Shaila is very accommodating, we found everything we needed (cooking, coffee) and more. Given that we were the first guests she hosted through airbnb I can say that she did an amazing job! \r\n",
             rate: 3.7,
             by: {
@@ -151,7 +151,7 @@ function _createStays() {
             },
           },
           {
-            at: "2013-06-04T04:00:00.000Z",
+            at: "2013-06-04",
             by: {
               _id: "622f3403e36c59e6164fb048",
               fullname: "Jeff",
@@ -161,7 +161,7 @@ function _createStays() {
             txt: "Great, quiet place to stay. It is great having Shaila just upstairs to answer any questions, and especially to give great tips on places to go. ",
           },
           {
-            at: "2013-06-13T04:00:00.000Z",
+            at: "2013-06-13",
             by: {
               _id: "622f3406e36c59e6164fba55",
               fullname: "Carla",
@@ -215,7 +215,7 @@ function _createStays() {
         },
         reviews: [
           {
-            at: "2016-07-07T04:00:00.000Z",
+            at: "2016-07-07",
             rate: 4.6,
             by: {
               _id: "622f3407e36c59e6164fc058",
@@ -226,7 +226,7 @@ function _createStays() {
             txt: "The place was great, as was the host! I would recommend staying here.",
           },
           {
-            at: "2016-07-08T04:00:00.000Z",
+            at: "2016-07-08",
             by: {
               _id: "622f3403e36c59e6164fb274",
               fullname: "Adriana",
@@ -236,7 +236,7 @@ function _createStays() {
             txt: "J'ai adoré rester là. Très acceuillant.",
           },
           {
-            at: "2016-07-12T04:00:00.000Z",
+            at: "2016-07-12",
             by: {
               _id: "622f3405e36c59e6164fb87c",
               fullname: "Emma",
@@ -246,7 +246,7 @@ function _createStays() {
             txt: "Angel est un hôte très sympa et arrangeant ! L'appartement est agréable à vivre et propre. Proche du métro et du centre ville. Nous avons passé un très bon séjour !",
           },
           {
-            at: "2016-08-02T04:00:00.000Z",
+            at: "2016-08-02",
             by: {
               _id: "622f3408e36c59e6164fc082",
               fullname: "Jeffery",
@@ -295,7 +295,7 @@ function _createStays() {
         },
         reviews: [
           {
-            at: "2014-04-06T04:00:00.000Z",
+            at: "2014-04-06",
             rate: 3.9,
             by: {
               _id: "622f3406e36c59e6164fbcc7",
@@ -306,7 +306,7 @@ function _createStays() {
             txt: "I greatly appreciated both the location of the place (very central) and the appartment per se (clean and comfortable, with a very cosy room and with Wi-Fi). \r\n\r\nNihat was perfect host, quite welcoming and helpful about places to go (or avoid) and things to do in town. \r\n\r\nHosça kal!\r\n\r\n\r\n",
           },
           {
-            at: "2015-04-02T04:00:00.000Z",
+            at: "2015-04-02",
             by: {
               _id: "622f3405e36c59e6164fb7f6",
               fullname: "Steve",
@@ -316,7 +316,7 @@ function _createStays() {
             txt: "Nice room in a flat well located. Nihat is very nce and helpful. Good experience.",
           },
           {
-            at: "2015-05-19T04:00:00.000Z",
+            at: "2015-05-19",
             by: {
               _id: "622f3404e36c59e6164fb624",
               fullname: "Jess",
@@ -420,7 +420,7 @@ function _createStays() {
         },
         reviews: [
           {
-            at: "2013-05-27T04:00:00.000Z",
+            at: "2013-05-27",
             by: {
               _id: "622f3407e36c59e6164fbfd2",
               fullname: "Nicolas",
@@ -430,7 +430,7 @@ function _createStays() {
             txt: "Shaila's place is amazing! It's new, it's clean and it's big! And Shaila is very accommodating, we found everything we needed (cooking, coffee) and more. Given that we were the first guests she hosted through airbnb I can say that she did an amazing job! \r\n",
           },
           {
-            at: "2013-06-04T04:00:00.000Z",
+            at: "2013-06-04",
             by: {
               _id: "622f3403e36c59e6164fb048",
               fullname: "Jeff",
@@ -440,7 +440,7 @@ function _createStays() {
             txt: "Great, quiet place to stay. It is great having Shaila just upstairs to answer any questions, and especially to give great tips on places to go. ",
           },
           {
-            at: "2013-06-13T04:00:00.000Z",
+            at: "2013-06-13",
             by: {
               _id: "622f3406e36c59e6164fba55",
               fullname: "Carla",
@@ -494,7 +494,7 @@ function _createStays() {
         },
         reviews: [
           {
-            at: "2016-07-07T04:00:00.000Z",
+            at: "2016-07-07",
             by: {
               _id: "622f3407e36c59e6164fc058",
               fullname: "Rowan",
@@ -504,7 +504,7 @@ function _createStays() {
             txt: "The place was great, as was the host! I would recommend staying here.",
           },
           {
-            at: "2016-07-08T04:00:00.000Z",
+            at: "2016-07-08",
             by: {
               _id: "622f3403e36c59e6164fb274",
               fullname: "Adriana",
@@ -514,7 +514,7 @@ function _createStays() {
             txt: "J'ai adoré rester là. Très acceuillant.",
           },
           {
-            at: "2016-07-12T04:00:00.000Z",
+            at: "2016-07-12",
             by: {
               _id: "622f3405e36c59e6164fb87c",
               fullname: "Emma",
@@ -524,7 +524,7 @@ function _createStays() {
             txt: "Angel est un hôte très sympa et arrangeant ! L'appartement est agréable à vivre et propre. Proche du métro et du centre ville. Nous avons passé un très bon séjour !",
           },
           {
-            at: "2016-08-02T04:00:00.000Z",
+            at: "2016-08-02",
             by: {
               _id: "622f3408e36c59e6164fc082",
               fullname: "Jeffery",
@@ -573,7 +573,7 @@ function _createStays() {
         },
         reviews: [
           {
-            at: "2014-04-06T04:00:00.000Z",
+            at: "2014-04-06",
             by: {
               _id: "622f3406e36c59e6164fbcc7",
               fullname: "Quentin",
@@ -583,7 +583,7 @@ function _createStays() {
             txt: "I greatly appreciated both the location of the place (very central) and the appartment per se (clean and comfortable, with a very cosy room and with Wi-Fi). \r\n\r\nNihat was perfect host, quite welcoming and helpful about places to go (or avoid) and things to do in town. \r\n\r\nHosça kal!\r\n\r\n\r\n",
           },
           {
-            at: "2015-04-02T04:00:00.000Z",
+            at: "2015-04-02",
             by: {
               _id: "622f3405e36c59e6164fb7f6",
               fullname: "Steve",
@@ -593,7 +593,7 @@ function _createStays() {
             txt: "Nice room in a flat well located. Nihat is very nce and helpful. Good experience.",
           },
           {
-            at: "2015-05-19T04:00:00.000Z",
+            at: "2015-05-19",
             by: {
               _id: "622f3404e36c59e6164fb624",
               fullname: "Jess",

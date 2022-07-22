@@ -1,19 +1,21 @@
 <template>
   <section class="stay-previews " v-if="stay">
     <div class="stay-preview-card">
-      <div class="card-img" 
-      @mouseover="hover=true"  
-      @mouseleave="hover=false">
+      <div
+        class="card-img"
+        @mouseover="hover = true"
+        @mouseleave="hover = false"
+      >
         <carouse-app class="preview-img" :slides="stay.imgUrls" />
         <button class="btn like-btn" @click.stop="LikeStay()">
           <img src="../../public/footer-imgs/like.png" alt="" />
         </button>
       </div>
       <div @click="$router.push(`/${stay._id}`)">
-        <div class="card-details ">
+        <div class="card-details">
           <div class="stay-header">
             <p class="stay-rate">
-              <img src="../../public/footer-imgs/star.png"/> 4.3
+              <img src="../../public/footer-imgs/star.png" /> 4.3
             </p>
             <p class="stay-name">{{ stay.loc.city }}, {{ stay.loc.country }}</p>
           </div>
@@ -40,13 +42,11 @@ export default {
     CarouseApp,
   },
   data() {
-    return {
-    };
+    return {};
   },
   methods: {
     LikeStay() {
       console.log("likedddd");
-      
     },
   },
   computed: {},

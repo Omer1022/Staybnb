@@ -1,0 +1,27 @@
+.num-input-cmp{
+    background-color: white;
+    width: rem(104px);
+    button{
+        display: flex;
+        flex-direction: row;
+        
+        padding: 0;
+        width: 2rem;
+        height: 2rem;
+        text-align: center;
+        border: 1px solid $clr5;
+        color: $clr5;
+        border-radius: 50%; 
+        justify-content: center;
+        align-items: center;
+    }
+    input{
+        width: 2rem;
+        height: 2rem;
+        border: hidden;
+        -webkit-appearance: none;
+    
+        &:focus{outline:none;}
+
+    }
+}
