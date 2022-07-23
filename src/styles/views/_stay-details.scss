@@ -360,7 +360,9 @@ h5 {
   border-bottom-color: hsla(0, 0%, 100%, 0);
   border-right-color: hsla(0, 0%, 100%, 0);
   border-top-left-radius: 13px;
-  padding: 10px 12px;
+  padding: 10px;
+  text-align: left;
+  width: 156px;
 }
 
 .check-out {
@@ -368,7 +370,9 @@ h5 {
   border: 1px solid #b0b0b0;
   border-bottom-color: hsla(0, 0%, 100%, 0);
   border-top-right-radius: 13px;
-  padding: 10px 12px;
+  padding: 10px;
+  text-align: left;
+  width: 156px;
 }
 
 .guests {
@@ -382,7 +386,7 @@ h5 {
 }
 
 .dates-pick {
-  width: 100%;
+  display: flex;
 }
 
 .guest-input {

@@ -85,7 +85,7 @@
               </div>
             </div>
             <form class="order-form">
-              <section class="dates-pick flex">
+              <div class="dates-pick">
                 <Popper class="btn-container">
                   <button class="check-in">
                     <div class="order-button">CHECK-IN</div>
@@ -117,12 +117,12 @@
                     </template>
                   </Popper>
                 </div>
-              </section>
+              </div>
               <div class="guest-input">
                 <Popper>
                   <button class="guests">
                     <div class="order-button">GUESTS</div>
-                    <span class="guests-sum">{{ totalGuests }}</span>
+                    <span class="guest-num">{{ totalGuests }}</span>
                   </button>
 
                   <template #content>
