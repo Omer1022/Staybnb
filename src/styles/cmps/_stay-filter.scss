@@ -59,7 +59,7 @@
   padding-inline-start: 0;
   max-width: rem(850px); 
   display: flex;
-  flex: 1 1 0%;
+  // flex: 1 1 0%;
   border-radius: 3.2rem;
   overflow: hidden;
   align-items: center;
@@ -67,11 +67,7 @@
   color: var(clr1);
   height: rem(70px);
   transition: box-shadow 2s;
-  box-shadow: 1px 1px 6px -1px #000000;
 
-  &:hover {
-    box-shadow: 1px 1px 10px 1px #000000;
-  }
 
   button {
     height: 100%;
@@ -186,4 +182,12 @@
 }
 // .Popper{
 //   height: 100%;
+// }
+
+
+// .popper-check-out{
+//   height: 100%;
+//   justify-content: center;
+//   align-items: center;
+//   background-color: red;
 // }
