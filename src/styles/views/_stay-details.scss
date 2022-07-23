@@ -352,3 +352,12 @@ h5 {
   border-radius: 50%;
   object-fit: cover;
 }
+
+.detials-gusets-modal{
+ 
+  // width: 406px;
+  background-color: $clr3;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  box-shadow:  0 0 0 1px rgba(0,0,0,0.04),0 8px 16px rgba(0,0,0,0.15);  
+}
