@@ -67,6 +67,16 @@ h5 {
   margin-right: 4px;
 }
 
+.save-container :hover {
+  background-color: rgb(233, 233, 233);
+  border-radius: 10px;
+}
+
+.share-container :hover {
+  background-color: rgb(233, 233, 233);
+  border-radius: 10px;
+}
+
 .info-btn {
   align-items: center;
   display: flex;
@@ -74,10 +84,6 @@ h5 {
   font-size: 1.5rem;
   background-color: transparent;
   cursor: pointer;
-}
-
-.info-btn :hover {
-  background-color: lightgray;
 }
 
 .details-gallery {
@@ -212,7 +218,7 @@ h5 {
   box-shadow: none !important;
   font-family: inherit;
   background-color: transparent;
-  width: 100%;
+  // width: 100%;
 }
 
 .order-modal .reserve-btn {
@@ -345,4 +351,13 @@ h5 {
   width: 56px;
   border-radius: 50%;
   object-fit: cover;
+}
+
+.details-guests-modal{
+ 
+  // width: 406px;
+  background-color: $clr3;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  box-shadow:  0 0 0 1px rgba(0,0,0,0.04),0 8px 16px rgba(0,0,0,0.15);  
 }

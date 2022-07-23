@@ -1,5 +1,5 @@
 <template>
-  <section class="stay-details main-layout" v-if="stay">
+  <section class="stay-details" v-if="stay">
     <div class="stay-info">
       <h2 class="stay-name">{{ stay.name }}</h2>
       <section class="short-info flex">
@@ -13,27 +13,22 @@
           </h5>
         </section>
         <section class="flex">
-          <button class="info-btn">
-            <img
-              class="share-icon"
-              src="../styles/icons/share-icon.svg"
-              alt=""
-            />
-            <h5 class="share-btn">Share</h5>
-          </button>
-          <button class="info-btn">
-            <span class="save-icon">♡</span>
-            <h5 class="save-btn">Save</h5>
-          </button>
+          <div class="share-container">
+            <button class="info-btn">
+              <img class="share-icon" src="../styles/icons/share-icon.svg" alt="" />
+              <h5 class="share-btn">Share</h5>
+            </button>
+          </div>
+          <div class="save-container">
+            <button class="info-btn">
+              <span class="save-icon">♡</span>
+              <h5 class="save-btn">Save</h5>
+            </button>
+          </div>
         </section>
       </section>
       <section class="details-gallery grid">
-        <img
-          v-bind:src="`../../img/${imgUrl}`"
-          v-for="(imgUrl, idx) in stay.imgUrls"
-          :key="idx"
-          class="img-gallery"
-        />
+        <img v-bind:src="`../../img/${imgUrl}`" v-for="(imgUrl, idx) in stay.imgUrls" :key="idx" class="img-gallery" />
       </section>
     </div>
     <section class="stay-display flex">
@@ -52,11 +47,7 @@
         <div class="stay-amenities">
           <h2 class="amenities-header">What this place offers</h2>
           <ul class="amenities-list flex">
-            <li
-              class="amenitie-container flex"
-              v-for="(amenities, idx) in stay.amenities"
-              :key="idx"
-            >
+            <li class="amenitie-container flex" v-for="(amenities, idx) in stay.amenities" :key="idx">
               {{ amenities }}
             </li>
           </ul>
@@ -68,8 +59,7 @@
             <div class="mini-modal-container">
               <div class="order-form-header flex">
                 <div>
-                  <span class="stay-details-price bold">${{ stay.price }}</span
-                  >night
+                  <span class="stay-details-price bold">${{ stay.price }}</span>night
                 </div>
                 <div class="reviews-preview flex">
                   <div class="star-preview">
@@ -81,11 +71,49 @@
               </div>
             </div>
             <form class="order-form">
-              <section class="dates-pick"></section>
-              <label class="check-in">CHECK-IN|</label>
-              <label class="check-out">CHECK-OUT</label>
+              <section class="dates-pick">
+                <Popper class="btn-container">
+                  <button>
+                    <div class="button-title">check in</div>{{ checkInDate }}
+                  </button>
+                  <template #content>
+                    <div class="calendar-modal">
+                      <calender-spread @dateChange="dateUpdate" is-expanded></calender-spread>
+                    </div>
+                  </template>
+                </Popper>
+                <div class="popper-check-out">
+                  <Popper class="btn-container">
+                    <button>
+                      <div class="button-title">check out</div>{{ checkOutDate }}
+                    </button>
+
+                    <template #content>
+                      <div class="calendar-modal">
+                        <calender-spread @dateChange="dateUpdate" is-expanded></calender-spread>
+                      </div>
+                    </template>
+                  </Popper>
+                </div>
+              </section>
+              <!-- <label class="check-in">CHECK-IN|</label>
+              <label class="check-out">CHECK-OUT</label> -->
               <div class="guest-input">
-                <label
+                <Popper>
+
+                  <button class="btn-container">
+                    <div class="button-title">Guests</div><span class="guests-sum">{{ totalGuests }}</span>
+                  </button>
+
+                  <template #content>
+                    <div class="details-guests-modal">
+                      <num-input @updateItemsNum="updateAdults" title="Adults" subtitle="Ages 13 or over" />
+                      <num-input @updateItemsNum="updateKids" title="Children" subtitle="Ages 2-12" />
+                      <num-input @updateItemsNum="updateInfants" title="Infants" subtitle="under 2" />
+                    </div>
+                  </template>
+                </Popper>
+                <!-- <label
                   >Guests
                   <div class="guest-btn">
                     <span class="expand-more"></span>
@@ -94,8 +122,8 @@
                     placeholder="1 Guest"
                     disabled="disabled"
                     class="input-guest"
-                  />
-                </label>
+                  /> -->
+                <!-- </label> -->
               </div>
               <button class="reserve-btn">
                 <span>Reserve</span>
@@ -189,11 +217,7 @@
       </div>
       <div class="review-list">
         <ul class="reviews-list-container clean-list">
-          <li
-            v-for="(review, idx) in stay.reviews"
-            :key="idx"
-            class="review-preview clean-list"
-          >
+          <li v-for="(review, idx) in stay.reviews" :key="idx" class="review-preview clean-list">
             <section class="review-details">
               <div class="review-details-header flex">
                 <img v-bind:src="`${review.by.imgUrl}`" class="review-img" />
@@ -214,14 +238,33 @@
 </template>
 <script>
 import { stayService } from "../services/stay-service";
+import Popper from "vue3-popper";
+import numInput from "../components/num-input.vue"
+import calenderSpread from "../components/calender-spread.vue";
+import 'v-calendar/dist/style.css'
 
 export default {
   props: [],
   template: ``,
-  components: {},
+  components: {
+    Popper,
+    numInput,
+    calenderSpread
+  },
   data() {
     return {
       stay: null,
+      date: {
+        start: null,
+        end: null,
+      },
+
+      guests: {
+        adults: 0,
+        kids: 0,
+        infants: 0,
+        total: 0,
+      }
     };
   },
   methods: {
@@ -232,14 +275,63 @@ export default {
           this.$router.push("/stay");
         });
     },
+    sumGuests() {
+      this.guests.total =
+        this.guests.adults + this.guests.kids + this.guests.infants;
+    },
+    updateAdults(num) {
+      console.log(num);
+      this.guests.adults = num;
+      this.sumGuests();
+    },
+    updateKids(num) {
+      this.guests.kids = num;
+      this.sumGuests();
+    },
+    updateInfants(num) {
+      this.guests.infants = num;
+      this.sumGuests();
+    },
+    dateUpdate(date) {
+      this.date = date;
+      console.log("yes!");
+      console.log("yes", this.date);
+      console.log("start", this.date.start);
+      console.log("end", this.date.end);
+    },
   },
-  computed: {},
+  computed: {
+    checkInDate() {
+      return this.date.start ? this.date.start.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+       
+      }) : "Add dates"
+    },
+
+    checkOutDate() {
+      return this.date.end ? this.date.end.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+      
+      }) : "Add dates"
+    },
+    totalGuests() {
+      return this.guests.total > 0 ? this.guests.total : "Add guests";
+    },
+    totalGuests() {
+      return this.guests.total > 0 ? this.guests.total : "Add guests";
+    },
+  }
+  ,
   created() {
     const { stayId } = this.$route.params;
     stayService.getById(stayId).then((currStay) => {
       this.stay = currStay;
     });
   },
-  unmounted() {},
+  unmounted() { },
 };
 </script>
