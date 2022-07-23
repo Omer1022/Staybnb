@@ -1,5 +1,5 @@
 <template>
-  <section class="stay-details main-layout" v-if="stay">
+  <section class="stay-details" v-if="stay">
     <div class="stay-info">
       <h2 class="stay-name">{{ stay.name }}</h2>
       <section class="short-info flex">
@@ -13,18 +13,22 @@
           </h5>
         </section>
         <section class="flex">
-          <button class="info-btn">
-            <img
-              class="share-icon"
-              src="../styles/icons/share-icon.svg"
-              alt=""
-            />
-            <h5 class="share-btn">Share</h5>
-          </button>
-          <button class="info-btn">
-            <span class="save-icon">♡</span>
-            <h5 class="save-btn">Save</h5>
-          </button>
+          <div class="share-container">
+            <button class="info-btn">
+              <img
+                class="share-icon"
+                src="../styles/icons/share-icon.svg"
+                alt=""
+              />
+              <h5 class="share-btn">Share</h5>
+            </button>
+          </div>
+          <div class="save-container">
+            <button class="info-btn">
+              <span class="save-icon">♡</span>
+              <h5 class="save-btn">Save</h5>
+            </button>
+          </div>
         </section>
       </section>
       <section class="details-gallery grid">

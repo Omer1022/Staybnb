@@ -67,6 +67,16 @@ h5 {
   margin-right: 4px;
 }
 
+.save-container :hover {
+  background-color: rgb(233, 233, 233);
+  border-radius: 10px;
+}
+
+.share-container :hover {
+  background-color: rgb(233, 233, 233);
+  border-radius: 10px;
+}
+
 .info-btn {
   align-items: center;
   display: flex;
@@ -74,10 +84,6 @@ h5 {
   font-size: 1.5rem;
   background-color: transparent;
   cursor: pointer;
-}
-
-.info-btn :hover {
-  background-color: lightgray;
 }
 
 .details-gallery {
