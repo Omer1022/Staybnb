@@ -1,17 +1,20 @@
 .num-input-cmp{
-
-    display: flex; 
+    text-align: start;
+    display: flex ; 
     justify-content: space-between;
     width: 100%;
     padding: 1rem; 
-
+    
     .item-label{
+        padding-inline-end: 4rem;
         .title{
+           
             color: $clr8;
             font-size:rem(14px);
             line-height: 1.43;
         }
         .sub-title{
+           
             color: $clr5;
             font-weight: 400;
             font-size:rem(14px);
@@ -52,4 +55,6 @@
         &:focus{outline:none;}
     }
 }
+
+
 

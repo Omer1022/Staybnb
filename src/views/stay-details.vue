@@ -72,42 +72,41 @@
             </div>
             <form class="order-form">
               <section class="dates-pick">
-                
-    <Popper class="btn-container">
-      <button>
-        <div class="button-title">check in</div>{{ checkInDate }}
-      </button>
-      <template #content>
-        <div class="calendar-modal">
-          <calender-spread @dateChange="dateUpdate" is-expanded></calender-spread>
-        </div>
-      </template>
-    </Popper>
-   <div class="popper-check-out">
-    <Popper class="btn-container">
-      <button>
-        <div class="button-title">check out</div>{{ checkOutDate }}
-      </button>
+                <Popper class="btn-container">
+                  <button>
+                    <div class="button-title">check in</div>{{ checkInDate }}
+                  </button>
+                  <template #content>
+                    <div class="calendar-modal">
+                      <calender-spread @dateChange="dateUpdate" is-expanded></calender-spread>
+                    </div>
+                  </template>
+                </Popper>
+                <div class="popper-check-out">
+                  <Popper class="btn-container">
+                    <button>
+                      <div class="button-title">check out</div>{{ checkOutDate }}
+                    </button>
 
-      <template #content>
-        <div class="calendar-modal">
-          <calender-spread @dateChange="dateUpdate" is-expanded></calender-spread>
-        </div>
-      </template>
-    </Popper>
-</div> 
+                    <template #content>
+                      <div class="calendar-modal">
+                        <calender-spread @dateChange="dateUpdate" is-expanded></calender-spread>
+                      </div>
+                    </template>
+                  </Popper>
+                </div>
               </section>
               <!-- <label class="check-in">CHECK-IN|</label>
               <label class="check-out">CHECK-OUT</label> -->
               <div class="guest-input">
                 <Popper>
-               
+
                   <button class="btn-container">
-                    <div class="button-title">Guests</div><span class="guests-sum">{{ sumGusets }}</span>
+                    <div class="button-title">Guests</div><span class="guests-sum">{{ totalGuests }}</span>
                   </button>
 
                   <template #content>
-                    <div class="detials-gusets-modal">
+                    <div class="details-guests-modal">
                       <num-input @updateItemsNum="updateAdults" title="Adults" subtitle="Ages 13 or over" />
                       <num-input @updateItemsNum="updateKids" title="Children" subtitle="Ages 2-12" />
                       <num-input @updateItemsNum="updateInfants" title="Infants" subtitle="under 2" />
@@ -255,6 +254,17 @@ export default {
   data() {
     return {
       stay: null,
+      date: {
+        start: null,
+        end: null,
+      },
+
+      guests: {
+        adults: 0,
+        kids: 0,
+        infants: 0,
+        total: 0,
+      }
     };
   },
   methods: {
@@ -265,8 +275,57 @@ export default {
           this.$router.push("/stay");
         });
     },
+    sumGuests() {
+      this.guests.total =
+        this.guests.adults + this.guests.kids + this.guests.infants;
+    },
+    updateAdults(num) {
+      console.log(num);
+      this.guests.adults = num;
+      this.sumGuests();
+    },
+    updateKids(num) {
+      this.guests.kids = num;
+      this.sumGuests();
+    },
+    updateInfants(num) {
+      this.guests.infants = num;
+      this.sumGuests();
+    },
+    dateUpdate(date) {
+      this.date = date;
+      console.log("yes!");
+      console.log("yes", this.date);
+      console.log("start", this.date.start);
+      console.log("end", this.date.end);
+    },
   },
-  computed: {},
+  computed: {
+    checkInDate() {
+      return this.date.start ? this.date.start.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+       
+      }) : "Add dates"
+    },
+
+    checkOutDate() {
+      return this.date.end ? this.date.end.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+      
+      }) : "Add dates"
+    },
+    totalGuests() {
+      return this.guests.total > 0 ? this.guests.total : "Add guests";
+    },
+    totalGuests() {
+      return this.guests.total > 0 ? this.guests.total : "Add guests";
+    },
+  }
+  ,
   created() {
     const { stayId } = this.$route.params;
     stayService.getById(stayId).then((currStay) => {

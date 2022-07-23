@@ -24,7 +24,7 @@
             v-model="filter.destination"
             name="destination-input"
             type="text"
-            placeholder="Search detinations"
+            placeholder="Search detonations"
           />
         </label>
       </button>
@@ -53,10 +53,12 @@
 
     <div class="check-out-container flex">
       <Popper class="btn-container">
+     
         <button>
           <div class="button-title">Check out</div>
           {{ checkOutDate }}
         </button>
+     
         <template #content>
           <div class="calendar-modal">
             <calender-spread
@@ -74,13 +76,13 @@
       <Popper class="btn-container">
         <button class="btn-container">
           <div class="button-title">Who</div>
-          <span class="guests-sum">{{ sumGusets }}</span>
-          <button @click.stop="runSerach" class="filter-search btn-container">
+          <span class="guests-sum">{{ totalGuests }}</span>
+          <button @click.stop="runSearch" class="filter-search btn-container">
             <img src="../styles/icons/search_white.png" alt="" />
           </button>
         </button>
         <template #content>
-          <div class="gusets-modal">
+          <div class="guests-modal">
             <num-input
               @updateItemsNum="updateAdults"
               title="Adults"
@@ -126,9 +128,8 @@ export default {
         start: null,
         end: null,
       },
-      checkinDisplayed: false,
-      checkOutDisplayed: false,
-      gustes: {
+
+      guests: {
         adults: 0,
         kids: 0,
         infants: 0,
@@ -137,25 +138,25 @@ export default {
     };
   },
   methods: {
-    runSerach() {
+    runSearch() {
       console.log("searching");
     },
-    sumGustes() {
-      this.gustes.total =
-        this.gustes.adults + this.gustes.kids + this.gustes.infants;
+    sumGuests() {
+      this.guests.total =
+        this.guests.adults + this.guests.kids + this.guests.infants;
     },
     updateAdults(num) {
       console.log(num);
-      this.gustes.adults = num;
-      this.sumGustes();
+      this.guests.adults = num;
+      this.sumGuests();
     },
     updateKids(num) {
-      this.gustes.kids = num;
-      this.sumGustes();
+      this.guests.kids = num;
+      this.sumGuests();
     },
     updateInfants(num) {
-      this.gustes.infants = num;
-      this.sumGustes();
+      this.guests.infants = num;
+      this.sumGuests();
     },
     dateUpdate(date) {
       this.date = date;
@@ -168,15 +169,22 @@ export default {
   actions: {},
   computed: {
     checkInDate() {
-      return this.date.start || "Add dates";
-    },
+    return this.date.start? this.date.start.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    }) : "Add dates"},
+  
     checkOutDate() {
-      return this.date.end || "Add dates";
-    },
-    sumGusets() {
-      return this.gustes.total > 0 ? this.gustes.total : "Add guests";
-    },
-  },
+      return this.date.end? this.date.end.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    }) : "Add dates"},
+    totalGuests() {
+      return this.guests.total > 0 ? this.guests.total : "Add guests";
+    }, },
+  
   created() {},
   unmounted() {},
 };
