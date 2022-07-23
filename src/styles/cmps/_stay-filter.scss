@@ -1,6 +1,8 @@
+//small-filter
 .header-search {
   display: inline-flex;
   border-radius: 3.2rem;
+  margin-bottom: 0.75rem;
   overflow: hidden;
   align-items: center;
   border: 1px solid lightgray;
@@ -20,7 +22,17 @@
     align-items: center;
     color: $clr1;
     border: none;
-
+    
+    button:nth-of-type(3) {
+      width: 11rem;
+      justify-content: space-between;
+      color: lightgray;
+  
+      img {
+        color: white;
+      }
+    }
+  }
     .filter-search-icon {
       justify-content: center;
       align-items: center;
@@ -31,16 +43,6 @@
     }
   }
 
-  button:nth-of-type(3) {
-    width: 11rem;
-    justify-content: space-between;
-    color: lightgray;
-
-    img {
-      color: white;
-    }
-  }
-}
 
 .filter-search-icon img {
   margin-inline-end: 0;
@@ -50,12 +52,17 @@
   border: 1px solid lightgray;
 }
 
+
+//large filter
+
 .header-filter {
+  margin-bottom: 0.75rem;
+  margin-top: rem(80px);
   border: 1px solid lightgray;
   border-radius: 50px;
   text-align: start;
   padding-inline-start: 0;
-  max-width: rem(850px);
+  // max-width: rem(850px);
   display: flex;
   border-radius: 3.2rem black;
   overflow: hidden;
@@ -110,7 +117,7 @@
       height: 1.3rem;
     }
 
-    .gusets-btn-warper {
+    .guests-btn-warper {
       align-items: center;
       justify-content: center;
     }
@@ -139,7 +146,9 @@
 }
 
 .guests-modal {
-  // margin-top: 26rem;
+  margin-top: 4.75rem;
+  opacity: 0%;
+  transition: opacity 1s;
   position: fixed;
   z-index: 1;
   // vertical-align: middle;/
@@ -151,13 +160,16 @@
 }
 
 .calendar-modal {
+  opacity: 0%;
+  transition: opacity 1s;
+  margin-top: 25.75rem;
   position: fixed;
   z-index: 1;
   vertical-align: middle;
   // position: fixed;
   // z-index: 1;
-  margin-top: 0.75rem;
-  width: rem(850px);
+  // margin-top: 0.75rem;
+  width: inherit;
 
   background-color: $clr3;
   border-radius: 2rem;
@@ -179,4 +191,18 @@
 }
 .guests-sum {
   width: 5rem;
+}
+
+.active{
+  opacity: 100%;
+}
+
+.x-btn{
+  justify-self: end;
+  background-color: transparent;
+  border: 0.2rem solid transparent;
+  color:$clr5;
+  &:hover{
+    color: $clr2;
+  }
 }

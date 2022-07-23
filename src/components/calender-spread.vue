@@ -1,6 +1,6 @@
 
 <template>
-
+  <button class="x-btn" @click="emit('close')">x</button>
   <DatePicker :columns="2" v-model="date" is-range update-on-input/>
   <!-- <div>{{date}}</div> -->
 
