@@ -88,7 +88,7 @@
               <section class="dates-pick flex">
                 <Popper class="btn-container">
                   <button class="check-in">
-                    <div class="button-title">CHECK-IN</div>
+                    <div class="order-button">CHECK-IN</div>
                     {{ checkInDate }}
                   </button>
                   <template #content>
@@ -103,7 +103,7 @@
                 <div class="popper-check-out">
                   <Popper class="btn-container">
                     <button class="check-out">
-                      <div class="button-title">CHECKOUT</div>
+                      <div class="order-button">CHECKOUT</div>
                       {{ checkOutDate }}
                     </button>
 
@@ -121,7 +121,7 @@
               <div class="guest-input">
                 <Popper>
                   <button class="guests">
-                    <div class="button-title">GUESTS</div>
+                    <div class="order-button">GUESTS</div>
                     <span class="guests-sum">{{ totalGuests }}</span>
                   </button>
 
