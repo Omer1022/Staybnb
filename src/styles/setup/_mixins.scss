@@ -1,13 +1,13 @@
 /* Media queries Breakpoint mixins */
 
-@mixin for-mobile-layout {
-  @media (max-width: $break-narrow) {
+@mixin for-phone-layout {
+  @media (max-width: $break-phone) {
     @content;
   }
 }
 
-@mixin for-narrow-layout {
-  @media (min-width: $break-narrow) {
+@mixin for-tablet-layout {
+  @media (min-width: $break-tablet) {
     @content;
   }
 }
@@ -18,13 +18,28 @@
   }
 }
 
-@mixin for-wide-layout {
+@mixin for-larg-layout {
+  @media (min-width: $break-larg) {
+    @content;
+  }
+
+}@mixin for-wide-layout {
   @media (min-width: $break-wide) {
     @content;
   }
 }
 
-@mixin layoutGTC($max) {
+
+
+
+
+// $break-wide:1440px;
+// $break-larg:1120px;
+// $break-normal:950px;
+// $break-tablet:745px;
+// $break-phone:375px;
+
+@mixin layoutGTC($max,$layoutPadding) {
   grid-template-columns:
     minmax($layoutPadding, 1fr)
     minmax(auto, $max)

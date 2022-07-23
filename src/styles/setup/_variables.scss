@@ -13,13 +13,25 @@ $clr8:#484848 ;
 // $clr8: rgb(113, 113, 113);
 
 // LAYOUT
-$layoutPadding: 75px;
+$layoutWidePadding: 80px;
+$layoutNormalPadding: 40px;
+$layoutSmallPadding: 24px;
+
 
 // LAYOUT BREAKPOINTS
-$break-narrow: 1200px;
-$break-normal: 1360px;
-$break-wide: 1920px;
+// $break-narrow: 1200px;
+// $break-normal: 1360px;
+// $break-wide: 1920px;
 
-$padded-break-narrow: $break-narrow + $layoutPadding * 2;
-$padded-break-normal: $break-normal + $layoutPadding * 2;
-$padded-break-wide: $break-wide + $layoutPadding * 2;
+// $padded-break-narrow: $break-narrow + $layoutPadding * 2;
+// $padded-break-normal: $break-normal + $layoutPadding * 2;
+// $padded-break-wide: $break-wide + $layoutPadding * 2;
+
+
+
+
+$break-wide:1440px;
+$break-larg:1120px;
+$break-normal:950px;
+$break-tablet:745px;
+$break-phone:375px;
