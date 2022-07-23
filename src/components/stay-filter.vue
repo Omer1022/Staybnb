@@ -32,12 +32,13 @@
       </button>
       <template #content>
         <div class="calendar-modal">
-          <calender-spread is-expanded></calender-spread>
+          <calender-spread @dateChange="dateUpdate" is-expanded></calender-spread>
         </div>
       </template>
     </Popper>
 
     <span>|</span>
+   <div class="popper-check-out">
     <Popper class="btn-container">
       <button>
         <div class="button-title">check out</div>{{ checkOutDate }}
@@ -49,7 +50,7 @@
         </div>
       </template>
     </Popper>
-
+</div> 
 
     <span>|</span>
     <div class="flex btn-container">
