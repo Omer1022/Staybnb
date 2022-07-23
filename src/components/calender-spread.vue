@@ -1,7 +1,8 @@
 
 <template>
 
-  <DatePicker :columns="2" v-model="date" is-range />
+  <DatePicker :columns="2" v-model="date" is-range update-on-input/>
+  <!-- <div>{{date}}</div> -->
 
 </template>
     <script>
@@ -13,7 +14,7 @@
         DatePicker,
       },
       props: {
-        startDate: Object
+        // startDate: Object
       },
       data() {
         return {
@@ -21,7 +22,15 @@
         }
       },
       created() {
-        this.date = this.startDate || new Date()
-      }
+        // this.date = this.startDate || new Date()
+      },
+      watch: { 
+        date(){
+          console.log('new date', this.date)
+          this.$emit('dateChange',this.date)
+        }
+      },
+      methods: {
+      },
     }
     </script>

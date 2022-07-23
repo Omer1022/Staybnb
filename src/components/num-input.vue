@@ -1,9 +1,9 @@
 <template>
 <section class="num-input-cmp">
    <div class="item-label">
-       <span class="title">test-title</span>
+       <span class="title">{{title}}</span>
        <br>
-    <span class="sub-title">test-subtitle</span>
+    <span class="sub-title">{{subtitle}}</span>
    </div>
     <div class="plus-minus-btn">
         <button @click="updateNumOfitems(-1)" :disabled="numOfItems === 0">-</button>
@@ -18,17 +18,28 @@
 export default {
     name: 'plusMinusInput',
     props:{
-        subject: Object
+      title:String,
+      subtitle: String
     },
     data(){
         return {
             numOfItems: 0,
+            title: "",
+            subtitle: ""
         }
     },
     methods: {
         updateNumOfitems(dir) {
             this.numOfItems += dir
+            this.$emit('updateItemsNum', this.numOfItems)
         }
     },
+    created(){
+        // console.log('title',title)
+        console.log( this.$props.title)
+        this.title = this.$props.title
+         console.log( this.$props.subtitle)
+        this.subtitle = this.$props.subtitle
+    }
 }
 </script>

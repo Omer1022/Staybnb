@@ -5,11 +5,9 @@
   align-items: center;
   border: 1px solid lightgray;
   color: var(clr1);
-  // width: rem(400px);
   height: rem(48px);
   transition: box-shadow 2s;
   box-shadow: 1px 1px 6px -1px #000000;
-
   &:hover {
     box-shadow: 1px 1px 8px 1px #000000;
   }
@@ -25,7 +23,6 @@
 
 
     .filter-search-icon {
-      //   color: white;
       justify-content: center;
       align-items: center;
       width: 2rem;
@@ -44,9 +41,6 @@
     img {
       color: white;
     }
-
-
-
   }
 }
 
@@ -71,25 +65,18 @@
   align-items: center;
   border: 1px solid lightgray;
   color: var(clr1);
-  // width: rem(850px);
   height: rem(70px);
   transition: box-shadow 2s;
   box-shadow: 1px 1px 6px -1px #000000;
-  // div{
-  //   height: 100%;
-  // }
+
   &:hover {
     box-shadow: 1px 1px 10px 1px #000000;
   }
-  // div label { 
-  //   font-size: rem(12px);
-  // }
+
   button {
     height: 100%;
     display: inline;
     background: transparent;
-    // height: 3rem;
-    // width: rem(75px);
     padding: 0 1rem;
     text-align: start;
     align-items: center;
@@ -134,10 +121,7 @@
     }
 
     .gusets-btn-warper {
-
-      // display: inline;
-      // width: rem(75px);
-      // height: 100%;  
+ 
       align-items: center;
       justify-content: center;
 
@@ -160,15 +144,8 @@
 }
 
 
-  .flatpickr-input{
-    border: hidden;
-    width: rem(125px);
-    &:focus{outline:none;}
-  }
-
 .gusets-input{
   align-items: center;
-  flex-grow: 1;
 }
  
 
@@ -204,3 +181,9 @@
 .btn-container{
   height:100%;
 }
+.guests-sum{
+  width: 5rem;
+}
+// .Popper{
+//   height: 100%;
+// }
