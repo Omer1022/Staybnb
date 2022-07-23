@@ -354,25 +354,37 @@ h5 {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-.check-in {
-  background-color: #fff;
+.dates-pick {
+  display: flex;
+}
+
+.date-picker-container-left {
+  width: 50%;
   border: 1px solid #b0b0b0;
   border-bottom-color: hsla(0, 0%, 100%, 0);
   border-right-color: hsla(0, 0%, 100%, 0);
   border-top-left-radius: 13px;
-  padding: 10px;
-  text-align: left;
-  width: 156px;
 }
 
-.check-out {
-  background-color: #fff;
+.date-picker-container-right {
+  width: 50%;
   border: 1px solid #b0b0b0;
   border-bottom-color: hsla(0, 0%, 100%, 0);
   border-top-right-radius: 13px;
+}
+
+.check-in {
+  border: none;
+  background-color: #fff;
   padding: 10px;
   text-align: left;
-  width: 156px;
+}
+
+.check-out {
+  border: none;
+  background-color: #fff;
+  padding: 10px;
+  text-align: left;
 }
 
 .guests {
@@ -383,10 +395,6 @@ h5 {
   padding: 10px 12px;
   border-radius: 0 0 13px 13px;
   width: 100%;
-}
-
-.dates-pick {
-  display: flex;
 }
 
 .guest-input {
@@ -402,4 +410,8 @@ h5 {
   font-size: 10px;
   font-weight: 800;
   text-transform: uppercase;
+}
+
+.order-form {
+  display: block;
 }
