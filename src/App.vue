@@ -1,9 +1,9 @@
 <template>
-    <app-header />
-  <div id="app" class="main-layout">
-    <router-view />
+  <div id="app" class="layout">
+    <app-header class="header-layout "/>
+    <router-view class="body-layout main-layout"/>
+    <app-footer class="footer-layout"/>
   </div>
-    <app-footer />
 </template>
 
 <script>

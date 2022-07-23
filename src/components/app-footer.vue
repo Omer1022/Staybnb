@@ -1,4 +1,48 @@
 <template>
+  <section class="footer flex space-between">
+    <!-- <div class="padding">left</div> -->
+    <div class="footer-action flex">
+      <a>&copy; 2022 Staybnb</a>
+      <pre> · </pre>
+      <a herf="#">Privacy</a>
+      <pre> · </pre>
+      <a herf="#">Conditions</a>
+      <pre> · </pre>
+      <a herf="#">Site map</a>
+    </div>
+    <div class="footer-details flex">
+      <button class="btn flex align-items">
+        <img src="/footer-imgs/lan.png" alt="" />
+        Language
+      </button>
+      <pre></pre>
+      <button class="btn flex align-items">
+        <img src="/footer-imgs/dollar.png" alt="" />
+        Currency
+      </button>
+      <pre></pre>
+      <a herf="#">Support</a>
+    </div>
+    <!-- <div class="padding">right</div> -->
+  </section>
+</template>
+
+<script>
+export default {
+  props: [],
+  template: ``,
+  components: {},
+  data() {
+    return {}
+  },
+  methods: {},
+  computed: {},
+  created() {},
+  unmounted() {},
+}
+</script>
+
+<!-- <template>
   <section class="footer main ">
     <div class="footer-action flex space-around">
       <a>&copy; 2022 Staybnb</a> · <a herf="#">Privacy</a> ·
@@ -30,4 +74,4 @@ export default {
   created() {},
   unmounted() {},
 };
-</script>
+</script> -->
