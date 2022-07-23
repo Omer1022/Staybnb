@@ -1,5 +1,5 @@
 <template>
-  <section class="footer flex space-between">
+  <section class="footer ">
     <!-- <div class="padding">left</div> -->
     <div class="footer-action flex">
       <a>&copy; 2022 Staybnb</a>
@@ -10,7 +10,7 @@
       <pre> · </pre>
       <a herf="#">Site map</a>
     </div>
-    <div class="footer-details flex">
+    <div class="footer-details flex space-between">
       <button class="btn flex align-items">
         <img src="/footer-imgs/lan.png" alt="" />
         Language

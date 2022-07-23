@@ -1,5 +1,6 @@
 <template>
   <section class="stay-details" v-if="stay">
+    <app-header class="header-layout main-layout"/>
     <div class="stay-info">
       <h2 class="stay-name">{{ stay.name }}</h2>
       <section class="short-info flex">
@@ -234,6 +235,7 @@
     </div>
     <!-- <router-link to="/">Back</router-link> -->
     <!-- <button @click="removeStay">Delete</button> -->
+    <app-footer class="footer-layout footer-padding-layout footer"/>
   </section>
 </template>
 <script>
@@ -242,6 +244,8 @@ import Popper from "vue3-popper";
 import numInput from "../components/num-input.vue"
 import calenderSpread from "../components/calender-spread.vue";
 import 'v-calendar/dist/style.css'
+import appHeader from "../components/app-header.vue";
+import appFooter from "../components/app-footer.vue";
 
 export default {
   props: [],
@@ -249,8 +253,10 @@ export default {
   components: {
     Popper,
     numInput,
-    calenderSpread
-  },
+    calenderSpread,
+    appHeader,
+    appFooter
+},
   data() {
     return {
       stay: null,

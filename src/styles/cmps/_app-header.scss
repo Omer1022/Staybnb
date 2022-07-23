@@ -1,5 +1,9 @@
 .header {
+  position: sticky;
+  top:0 ;
+  z-index: 1;
   width: 100%;
+  background-color:$clr3;
   height: rem(80px);
   display: flex;
   flex-direction: row;
@@ -20,4 +24,18 @@
 .link {
   color: black;
   text-decoration: none;
+}
+
+.user-info{
+  border: 1px solid lightgray;
+    border-radius: 50px;
+    align-items: center;
+    height: rem(35px);
+    width: rem(70px);
+    transition: box-shadow 2s;
+    justify-content: space-evenly;
+}
+
+.user-actions{
+width: rem(240px);
 }

@@ -3,9 +3,9 @@
     <div @click="$router.push(`/${stay._id}`)" class="stay-preview-card">
       <div class="card-img">
         <carouse-app class="preview-img" :slides="stay.imgUrls"
-        @mouseover="hover = true"
-        @mouseleave="hover = false"
         />
+        <!-- @mouseover="hover = true"
+        @mouseleave="hover = false" -->
         <!-- v-if="hover" :class="{'carousel-hover': hover}" -->
         <!-- {{hover not work}} -->
         <button class="btn like-btn" @click.stop="LikeStay()">
@@ -45,7 +45,7 @@ export default {
   },
   data() {
     return {
-      hover: false,
+      // hover: false,
     };
   },
   methods: {

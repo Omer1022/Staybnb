@@ -5,7 +5,6 @@
     @content;
   }
 }
-
 @mixin for-tablet-layout {
   @media (min-width: $break-tablet) {
     @content;
@@ -22,17 +21,12 @@
   @media (min-width: $break-larg) {
     @content;
   }
-
-}@mixin for-wide-layout {
+}
+@mixin for-wide-layout {
   @media (min-width: $break-wide) {
     @content;
   }
 }
-
-
-
-
-
 
 // $break-wide:1440px;
 // $break-larg:1120px;
@@ -46,14 +40,26 @@
 //    padding-left: $layoutPadding;
 // }
 
-@mixin layoutGTC($max,$layoutPadding) {
+@mixin layoutGTC($max, $layoutPadding) {
   grid-template-columns:
-    minmax($layoutPadding, 1fr)
+    $layoutPadding
+    minmax($max+$layoutPadding*2-10px,1fr)
+    $layoutPadding
+}
+
+@mixin footer-padding($max, $layoutPadding) {
+  grid-template-columns:
+    $layoutPadding
+    auto
     minmax(auto, $max)
-    minmax($layoutPadding, 1fr);
+    auto
+    $layoutPadding
 }
 
 
+@mixin padding ($layoutPadding){
+padding:0 $layoutPadding;
+}
 
 /* Media  Mixins */
 
