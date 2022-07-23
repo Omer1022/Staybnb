@@ -33,11 +33,18 @@
 
 
 
+
 // $break-wide:1440px;
 // $break-larg:1120px;
 // $break-normal:950px;
 // $break-tablet:745px;
 // $break-phone:375px;
+
+// @mixin layoutGTC($max,$layoutPadding) {
+//    width: min($max,1fr);
+//    padding-right:  min($layoutPadding, 100%);
+//    padding-left: $layoutPadding;
+// }
 
 @mixin layoutGTC($max,$layoutPadding) {
   grid-template-columns:
@@ -45,6 +52,8 @@
     minmax(auto, $max)
     minmax($layoutPadding, 1fr);
 }
+
+
 
 /* Media  Mixins */
 
