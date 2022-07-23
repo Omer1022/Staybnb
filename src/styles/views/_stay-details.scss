@@ -172,7 +172,6 @@ h5 {
   border: 1px solid #ddd;
   box-shadow: 0 6px 16px rgb(0 0 0 / 12%);
   justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 
@@ -218,7 +217,6 @@ h5 {
   box-shadow: none !important;
   font-family: inherit;
   background-color: transparent;
-  // width: 100%;
 }
 
 .order-modal .reserve-btn {
@@ -353,11 +351,50 @@ h5 {
   object-fit: cover;
 }
 
-.details-guests-modal{
- 
-  // width: 406px;
+.details-guests-modal {
   background-color: $clr3;
   border-radius: 2rem;
   padding: 1rem 2rem;
-  box-shadow:  0 0 0 1px rgba(0,0,0,0.04),0 8px 16px rgba(0,0,0,0.15);  
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.check-in {
+  background-color: #fff;
+  border: 1px solid #b0b0b0;
+  border-bottom-color: hsla(0, 0%, 100%, 0);
+  border-right-color: hsla(0, 0%, 100%, 0);
+  border-top-left-radius: 13px;
+  padding: 10px 12px;
+}
+
+.check-out {
+  background-color: #fff;
+  border: 1px solid #b0b0b0;
+  border-bottom-color: hsla(0, 0%, 100%, 0);
+  border-top-right-radius: 13px;
+  padding: 10px 12px;
+}
+
+.guests {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #b0b0b0;
+  padding: 10px 12px;
+  border-radius: 0 0 13px 13px;
+  width: 100%;
+}
+
+.dates-pick {
+  width: 100%;
+}
+
+.guest-input {
+  width: 100%;
+}
+
+.button-title {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
 }
