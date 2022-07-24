@@ -31,7 +31,7 @@ export default {
             this.$emit('guestsUpdate', this.guests)
         },
         updateAdults(num) {
-            console.log(num);
+           
             this.guests.adults = num;
             this.sumGuests();
         },

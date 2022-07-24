@@ -24,7 +24,7 @@
             </button>
         </div>
         <span>|</span>
-        <div  class="calendar-modal" :class ="{active: isCalendarShown}">
+        <div  class="calendar-modal" :class ="{'active-calendar': isCalendarShown}">
             <calender-spread @closeCalendar = "isCalendarShown=false"  @dateChange="dateUpdate" @click.stop is-expanded></calender-spread>
         </div>
 
@@ -36,7 +36,7 @@
                     <img src="../styles/icons/search_white.png" alt="" />Search
                 </div>
             </button>
-            <div  class="guests-modal" :class="{active:isGuestModalShown}">
+            <div  class="guests-modal" :class="{'active-guest':isGuestModalShown}">
                 <guests-picker @guestsUpdate="updateGuests" @closeGuestsModal="isGuestModalShown = false" />
             </div>
         </div>
@@ -78,14 +78,12 @@ export default {
     },
     methods: {
         clickedButton() {
-            console.log('trilili')
+            console.log('clicked')
         },
         runSearch() {
             console.log("searching");
         },
-        closeGuestModal(){
-         console.log("closing modal")   
-        },
+
         dateUpdate(newDate){
             this.date = newDate
         },

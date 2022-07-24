@@ -1,6 +1,6 @@
 <template>
-<!-- <main-filter-small></main-filter-small> -->
-<main-filter-large></main-filter-large>
+<main-filter-small v-if="defaultDisplay"></main-filter-small>
+<main-filter-large v-else></main-filter-large>
 
 </template>
 <script>
@@ -15,7 +15,9 @@ export default {
 
 props: [],
 data() {
-return {};
+return {
+  defaultDisplay:false
+};
 },
 created() {},
 methods: {},

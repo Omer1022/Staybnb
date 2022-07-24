@@ -1,17 +1,20 @@
 <template>
       <div class="header-search">
-    <button @click="openSearch">Anywhere</button>
+    <button value="destination" @click="openSearch('destination')">Anywhere</button>
     <span>|</span>
-    <button @click="openSearch">Any week</button>
+    <button  @click="openSearch('date')">Any week</button>
     <span>|</span>
     <button
+      value="guests"
       class="search-header flex space-between add-btn"
-      @click="openSearch"
+      @click="openSearch('guests')"
     >
       add guests
+      <button>
       <span class="filter-search-icon">
         <img src="../styles/icons/search_white.png" alt="" />
       </span>
+      </button>
     </button>
   </div>
 </template>
@@ -24,8 +27,8 @@ export default {
     },
     created() {},
     methods: {
-        openSearch(){
-            console.log('opening large search')
+        openSearch(mode){
+            this.$emit('openLarge', mode)
         }
     },
     computed: {},

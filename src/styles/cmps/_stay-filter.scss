@@ -146,7 +146,8 @@
 }
 
 .guests-modal {
-  margin-top: 4.75rem;
+  
+  margin-top: -37.25rem;
   opacity: 0%;
   transition: opacity 1s;
   position: fixed;
@@ -162,7 +163,8 @@
 .calendar-modal {
   opacity: 0%;
   transition: opacity 1s;
-  margin-top: 25.75rem;
+  margin-top: -37.25rem;
+ 
   position: fixed;
   z-index: 1;
   vertical-align: middle;
@@ -193,8 +195,13 @@
   width: 5rem;
 }
 
-.active{
+.active-calendar{
   opacity: 100%;
+  margin-top: 25.75rem;
+}
+.active-guest{
+  opacity: 100%;
+  margin-top: 4.75rem;
 }
 
 .x-btn{
