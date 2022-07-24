@@ -152,6 +152,11 @@
       align-items: center;
       justify-content: center;
     }
+    &:hover {
+      // background-color: $clr7;
+      cursor: pointer;
+  
+    }
   }
 
 
@@ -168,12 +173,15 @@
     &:focus {
       outline: none;
     }
-
+    &:hover{
+      cursor: pointer;
+    }
     padding-bottom: 2px;
     background-clip: padding-box;
     border: 1px solid transparent;
     border-radius: 32px;
     background-color: inherit;
+
   }
 }
 
@@ -221,9 +229,6 @@
   background-color: transparent;
 }
 
-.vc-header {
-  display: none;
-}
 
 .btn-container {
   height: inherit;
@@ -263,6 +268,8 @@
   border-radius: 2rem;
   &:hover {
     background-color: $clr7;
+    cursor: pointer;
+
   }
 }
 
@@ -271,6 +278,7 @@
   &:hover{
     &:hover {
       background-color: $clr7;
+      cursor: pointer;
     }
   }
   border-radius: 2rem;
