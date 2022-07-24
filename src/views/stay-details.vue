@@ -208,9 +208,10 @@
                   <span class="guest-num">{{ totalGuests }}</span>
                 </button>
               </div>
-              <button class="reserve-btn">
+              <fancy-btn>Reserve</fancy-btn>
+              <!-- <button class="reserve-btn">
                 <span>Reserve</span>
-              </button>
+              </button> -->
             </form>
           </div>
         </div>
@@ -330,6 +331,7 @@ import calenderSpread from "../components/calender-spread.vue";
 import guestsPicker from "../components/guests-picker.cmp.vue";
 import appHeader from "../components/app-header.vue";
 import appFooter from "../components/app-footer.vue";
+import fancyBtn from "../components/fancy-btn.cmp.vue";
 
 export default {
   props: [],
@@ -338,6 +340,7 @@ export default {
     calenderSpread,
     appHeader,
     appFooter,
+    fancyBtn
   },
   data() {
     return {

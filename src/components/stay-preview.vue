@@ -2,8 +2,13 @@
   <section class="stay-previews" v-if="stay">
     <div @click="$router.push(`/${stay._id}`)" class="stay-preview-card">
       <div class="card-img">
-        <carouse-app class="preview-img" :slides="stay.imgUrls"
-        />
+        <!-- <el-carousel arrow="hover" trigger="click">
+          <el-carousel-item v-for="item in 4" >
+            <h3 text="2xl" justify="center">{{ item }}</h3>
+          </el-carousel-item>
+        </el-carousel> -->
+        <!-- <carouse-app class="preview-img" :slides="stay.imgUrls"
+        /> -->
         <!-- <carousel-cmp class="preview-img" :slides="stay.imgUrls"
         /> -->
         <button class="btn like-btn" @click.stop="LikeStay()">
@@ -39,7 +44,7 @@ export default {
   components: {
     carouseApp,
     CarouselCmp
-},
+  },
   data() {
     return {
     };
@@ -50,7 +55,7 @@ export default {
     },
   },
   computed: {},
-  created() {},
-  unmounted() {},
+  created() { },
+  unmounted() { },
 };
 </script>
