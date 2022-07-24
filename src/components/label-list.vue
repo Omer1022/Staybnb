@@ -3,13 +3,11 @@
     <button class="labels-control prev" @click.stop="$emit('prev')">
       &#60;
     </button>
-    <section v-if="labels" class="label-list">
-      <lu class="labels-card" v-for="label in labels">
-        <li>
-        <h1>labelS</h1>
-        </li>
-      </lu>
-    </section>
+    <section v-if="labels" class="labels-list">
+    <div class="cards-container" v-for="(label,idx) in labels" :key="idx">
+      {{label.name}}
+    </div>
+  </section>
     <!-- <div class="lable-container">here comes lables</div> -->
 
     <button class="labels-control next" @click.stop="$emit('next')">
@@ -26,20 +24,21 @@
 </template>
 
 <script>
+import { labelService } from '../services/label-service.js'
 export default {
-  name: "lable-filter",
+  name: "label-filter",
   props: {
     labels: Array,
   },
-  components: {},
+  components: {
+  },
   data() {
-    return {
-        labels:null,
-    }
+    return {}
   },
   methods: {},
 
   created() {
+    labelService.query()
   },
   unmounted() {},
 }

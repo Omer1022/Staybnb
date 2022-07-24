@@ -7,15 +7,13 @@ export default {
     labels:null,
   },
   getters: {
-    lableToDisplay({labels}) {
-        console.log("from label mudel",labels)
-        // if (!labels) return;
-
-        // return labels;
-    }
+    // labelToDisplay(){
+    //   console.log("from getters",labels)
+    //   // return ;
+    // }
 },
 actions: {
-  loadLables({ commit }) {
+    loadLabels({ commit }) {
     labelService
       .query()
       .then((labels) => {
@@ -30,6 +28,7 @@ actions: {
 },
 mutations: {
   setLabels(state, {labels}){
+      state.labels = labels;
     console.log("from label stor",labels)
   }
 },

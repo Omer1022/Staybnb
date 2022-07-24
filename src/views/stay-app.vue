@@ -2,7 +2,7 @@
   <div class="stay-app">
     <app-header class="header-layout"/>
 
-    <lable-filter :labels="labels"/>
+    <label-list :labels="labels"/>
 
     <stay-list @removeStay="removeStay" :stays="stays" />
 
@@ -17,7 +17,7 @@ import stayList from "../components/stay-list.vue";
 import carouseApp from "../components/carousel/carouse-app.vue";
 import appHeader from "../components/app-header.vue";
 import appFooter from "../components/app-footer.vue";
-import lableFilter from "../components/lable-filter.vue";
+import labelList from "../components/label-list.vue";
 
 export default {
   template: ``,
@@ -26,7 +26,7 @@ export default {
     carouseApp,
     appHeader,
     appFooter,
-    lableFilter
+    labelList,
 },
   data() {
     return {};
@@ -44,13 +44,13 @@ export default {
     stays() {
       return this.$store.getters.staysToDisplay;
     },
-    lables(){
-      return this.$store.getters.lableToDisplay;
+    labels(){
+      return this.$store.getters.labelToDisplay;
     }
   },
   created() {
     this.$store.dispatch({ type: "loadStays" }).then(() => {});
-    this.$store.dispatch({type: "loadLables"}).then(()=>{});
+    this.$store.dispatch({type: "loadLabels"}).then(()=>{});
   },
   unmounted() {},
 };
