@@ -10,7 +10,7 @@
       <pre> · </pre>
       <a herf="#">Site map</a>
     </div>
-    <div class="footer-details flex space-between">
+    <div class="footer-details flex">
       <button class="btn flex align-items">
         <img src="/footer-imgs/lan.png" alt="" />
         Language
