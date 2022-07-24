@@ -1,4 +1,11 @@
 <template>
+  <div :class="{ active: isCalendarShown }" class="calendar-modal" >
+    <calender-spread @dateChange="dateUpdate" @click.stop is-expanded></calender-spread>
+  </div>
+  <div class="guests-modal" :class="{ active: isGuestModalShown }">
+    <guests-picker />
+  </div>
+
   <section class="stay-details" v-if="stay">
     <div class="stay-info">
       <h2 class="stay-name">{{ stay.name }}</h2>
@@ -15,11 +22,7 @@
         <section class="flex">
           <div class="share-container">
             <button class="info-btn">
-              <img
-                class="share-icon"
-                src="../styles/icons/share-icon.svg"
-                alt=""
-              />
+              <img class="share-icon" src="../styles/icons/share-icon.svg" alt="" />
               <h5 class="share-btn">Share</h5>
             </button>
           </div>
@@ -32,12 +35,7 @@
         </section>
       </section>
       <section class="details-gallery grid">
-        <img
-          v-bind:src="`../../img/${imgUrl}`"
-          v-for="(imgUrl, idx) in stay.imgUrls"
-          :key="idx"
-          class="img-gallery"
-        />
+        <img v-bind:src="`../../img/${imgUrl}`" v-for="(imgUrl, idx) in stay.imgUrls" :key="idx" class="img-gallery" />
       </section>
     </div>
     <section class="stay-display flex">
@@ -56,11 +54,7 @@
         <div class="stay-amenities">
           <h2 class="amenities-header">What this place offers</h2>
           <ul class="amenities-list flex">
-            <li
-              class="amenitie-container flex"
-              v-for="(amenities, idx) in stay.amenities"
-              :key="idx"
-            >
+            <li class="amenitie-container flex" v-for="(amenities, idx) in stay.amenities" :key="idx">
               {{ amenities }}
             </li>
           </ul>
@@ -72,8 +66,7 @@
             <div class="mini-modal-container">
               <div class="order-form-header flex">
                 <div>
-                  <span class="stay-details-price bold">${{ stay.price }}</span
-                  >night
+                  <span class="stay-details-price bold">${{ stay.price }}</span>night
                 </div>
                 <div class="reviews-preview flex">
                   <div class="star-preview">
@@ -87,66 +80,28 @@
             <form class="order-form">
               <div class="dates-pick flex">
                 <div class="date-picker-container-left">
-                  <Popper class="btn-container">
-                    <button class="check-in">
-                      <div class="order-button">CHECK-IN</div>
-                      {{ checkInDate }}
-                    </button>
-                    <template #content>
-                      <div class="calendar-modal">
-                        <calender-spread
-                          @dateChange="dateUpdate"
-                          is-expanded
-                        ></calender-spread>
-                      </div>
-                    </template>
-                  </Popper>
-                </div>
-                <div class="date-picker-container-right">
-                  <Popper class="btn-container">
-                    <button class="check-out">
+                  <button @click.stop="isCalendarShown = !isCalendarShown" class="check-in">
+                    <div class="order-button">CHECK-IN</div>
+                    {{ checkInDate }}
+                  </button>
+                  <div class="date-picker-container-right">
+                    <button @click.stop="isCalendarShown = !isCalendarShown" class="check-out">
                       <div class="order-button">CHECKOUT</div>
                       {{ checkOutDate }}
                     </button>
-
-                    <template #content>
-                      <div class="calendar-modal">
-                        <calender-spread
-                          @dateChange="dateUpdate"
-                          is-expanded
-                        ></calender-spread>
-                      </div>
-                    </template>
-                  </Popper>
+                  </div>
                 </div>
               </div>
-              <div class="guest-input">
-                <Popper>
-                  <button class="guests">
-                    <div class="order-button">GUESTS</div>
-                    <span class="guest-num">{{ totalGuests }}</span>
-                  </button>
 
-                  <template #content>
-                    <div class="details-guests-modal">
-                      <num-input
-                        @updateItemsNum="updateAdults"
-                        title="Adults"
-                        subtitle="Ages 13 or over"
-                      />
-                      <num-input
-                        @updateItemsNum="updateKids"
-                        title="Children"
-                        subtitle="Ages 2-12"
-                      />
-                      <num-input
-                        @updateItemsNum="updateInfants"
-                        title="Infants"
-                        subtitle="under 2"
-                      />
-                    </div>
-                  </template>
-                </Popper>
+
+              <div class="guest-input">
+
+                <button  @click.stop="isGuestModalShown = !isGuestModalShown" class="guests">
+                  <div class="order-button">GUESTS</div>
+                  <span class="guest-num">{{ totalGuests }}</span>
+                </button>
+
+
               </div>
               <button class="reserve-btn">
                 <span>Reserve</span>
@@ -240,11 +195,7 @@
       </div>
       <div class="review-list">
         <ul class="reviews-list-container clean-list">
-          <li
-            v-for="(review, idx) in stay.reviews"
-            :key="idx"
-            class="review-preview clean-list"
-          >
+          <li v-for="(review, idx) in stay.reviews" :key="idx" class="review-preview clean-list">
             <section class="review-details">
               <div class="review-details-header flex">
                 <img v-bind:src="`${review.by.imgUrl}`" class="review-img" />
@@ -265,17 +216,15 @@
 </template>
 <script>
 import { stayService } from "../services/stay-service";
-import Popper from "vue3-popper";
-import numInput from "../components/num-input.vue";
 import calenderSpread from "../components/calender-spread.vue";
 import "v-calendar/dist/style.css";
+import guestsPicker from "../components/guests-picker.cmp.vue"
 
 export default {
   props: [],
   template: ``,
   components: {
-    Popper,
-    numInput,
+    guestsPicker,
     calenderSpread,
   },
   data() {
@@ -292,6 +241,8 @@ export default {
         infants: 0,
         total: 0,
       },
+      isCalendarShown: false
+
     };
   },
   methods: {
@@ -331,20 +282,20 @@ export default {
     checkInDate() {
       return this.date.start
         ? this.date.start.toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "2-digit",
-            day: "2-digit",
-          })
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+        })
         : "Add dates";
     },
 
     checkOutDate() {
       return this.date.end
         ? this.date.end.toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "2-digit",
-            day: "2-digit",
-          })
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+        })
         : "Add dates";
     },
     totalGuests() {
@@ -360,6 +311,6 @@ export default {
       this.stay = currStay;
     });
   },
-  unmounted() {},
+  unmounted() { },
 };
 </script>
