@@ -1,6 +1,10 @@
 <template>
-<main-filter-small v-if="defaultDisplay"></main-filter-small>
-<main-filter-large v-else></main-filter-large>
+<transition>
+  <main-filter-small @openLarge="openLargeFilter" v-show="defaultDisplay"></main-filter-small>
+</transition>
+<!-- <transition>
+  <main-filter-large v-show="!defaultDisplay" ></main-filter-large>
+</transition> -->
 
 </template>
 <script>
@@ -16,11 +20,15 @@ export default {
 props: [],
 data() {
 return {
-  defaultDisplay:false
+  defaultDisplay:true
 };
 },
 created() {},
-methods: {},
+methods: {
+  openLargeFilter(){
+    // this.defaultDisplay = false
+  }
+},
 computed: {},
 unmounted() {},
 };

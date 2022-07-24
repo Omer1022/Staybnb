@@ -1,7 +1,7 @@
 <template>
     <form class="header-filter flex">
         <div class="destination-input btn-container">
-            <button @click.stop="clickedButton">
+            <button  @click.stop="clickedButton">
                 <label>
                     <div class="button-title">Where</div>
                     <input v-model="filter.destination" name="destination-input" type="text"
@@ -10,19 +10,21 @@
             </button>
         </div>
         <span>|</span>
-        <div class="check-in-container  btn-container flex">
+       <div class="date-container">
+           <div   class="btn-container flex">
             <button @click.stop="isCalendarShown = !isCalendarShown">
                 <div class="button-title">Check in</div>
                 {{ checkInDate }}
             </button>
         </div>
         <span>|</span>
-        <div class="check-out-container  btn-container flex">
+        <div class= "btn-container flex">
             <button @click.stop="isCalendarShown = !isCalendarShown">
                 <div class="button-title">Check out</div>
                 {{ checkOutDate }}
             </button>
         </div>
+       </div>
         <span>|</span>
         <div  class="calendar-modal" :class ="{'active-calendar': isCalendarShown}">
             <calender-spread @closeCalendar = "isCalendarShown=false"  @dateChange="dateUpdate" @click.stop is-expanded></calender-spread>

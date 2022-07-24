@@ -1,5 +1,7 @@
 //small-filter
 .header-search {
+  margin: 1.5rem auto;
+  font-weight: 600;
   display: inline-flex;
   border-radius: 3.2rem;
   margin-bottom: 0.75rem;
@@ -10,52 +12,75 @@
   height: rem(48px);
   transition: box-shadow 2s;
   box-shadow: 1px 1px 6px -1px #000000;
+
   &:hover {
     box-shadow: 1px 1px 8px 1px #000000;
   }
 
+  .header-separator {
+    color: $clr5;
+    font-weight: 100;
+  }
+
   button {
+    text-align: start;
+    font-family: Circular;
+    ;
+    font-weight: 600;
+    font-size: rem(14px);
+    padding-left: 8px;
     background: transparent;
     height: 3rem;
     width: 10rem;
     padding: 0 1rem;
     align-items: center;
-    color: $clr1;
+    color: $clr2;
     border: none;
+  }
+
+  .add-btn {
+    color: $clr5;
+    display: flex;
+    flex-grow: 2;
+    font-weight: 400;
+  }
+
+  button:nth-of-type(4) {
+    flex-grow: 1;
+  }
+
+  .filter-search-icon {
+    border: none;
+    justify-content: center;
+    align-items: center;
+    margin: 7px 7px 7px 0;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: $clr1;
+    display: flex;
     
-    button:nth-of-type(3) {
-      width: 11rem;
-      justify-content: space-between;
-      color: lightgray;
-  
-      img {
-        color: white;
-      }
-    }
   }
-    .filter-search-icon {
-      justify-content: center;
-      align-items: center;
-      width: 2rem;
-      border-radius: 50%;
-      background-color: $clr1;
-      display: flex;
-    }
-  }
+}
+
+
+
+
+
 
 
 .filter-search-icon img {
-  margin-inline-end: 0;
+  
   color: white;
   width: 1rem;
   height: 1rem;
-  border: 1px solid lightgray;
+
 }
 
 
 //large filter
 
 .header-filter {
+  flex: 1 1 0%;
   margin-bottom: 0.75rem;
   margin-top: rem(80px);
   border: 1px solid lightgray;
@@ -86,10 +111,12 @@
     font-weight: 400;
     line-height: 18px;
     border-radius: 2rem;
+
     &:hover {
       background-color: $clr7;
     }
   }
+
   .button-title {
     color: $clr2;
     font-size: 0.75rem;
@@ -99,6 +126,7 @@
   }
 
   .filter-search {
+
     padding: 0;
     margin-inline-end: 0;
     justify-self: end;
@@ -125,14 +153,18 @@
 }
 
 .destination-input {
+  flex-grow: 1;
   padding-inline-start: 0;
   text-align: start;
+
   input {
     border: hidden;
-    width: rem(260px);
+
+    // width: rem(260px);
     &:focus {
       outline: none;
     }
+
     padding-bottom: 2px;
     background-clip: padding-box;
     border: 1px solid transparent;
@@ -146,7 +178,7 @@
 }
 
 .guests-modal {
-  
+
   margin-top: -37.25rem;
   opacity: 0%;
   transition: opacity 1s;
@@ -164,7 +196,7 @@
   opacity: 0%;
   transition: opacity 1s;
   margin-top: -37.25rem;
- 
+
   position: fixed;
   z-index: 1;
   vertical-align: middle;
@@ -178,6 +210,7 @@
   padding: 3rem 3rem;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.15);
 }
+
 .vc-container {
   width: 100%;
   border-color: transparent;
@@ -191,25 +224,37 @@
 .btn-container {
   height: inherit;
 }
+
 .guests-sum {
-  width: 5rem;
+  // width: 5rem;
 }
 
-.active-calendar{
+.active-calendar {
   opacity: 100%;
   margin-top: 25.75rem;
 }
-.active-guest{
+
+.active-guest {
   opacity: 100%;
   margin-top: 4.75rem;
 }
 
-.x-btn{
+.x-btn {
   justify-self: end;
   background-color: transparent;
   border: 0.2rem solid transparent;
-  color:$clr5;
-  &:hover{
+  color: $clr5;
+
+  &:hover {
     color: $clr2;
   }
+}
+
+
+.date-container {
+  flex-grow: 1;
+}
+
+.guest-container {
+  flex-grow: 1;
 }
