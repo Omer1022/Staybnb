@@ -1,7 +1,7 @@
 <template>
     <div>
         <div>
-        <button class="x-btn" @click="$emit('close-guests-picker')">x</button>
+        <button class="x-btn"  @click="$emit('closeGuestsModal')">x</button>
         </div>
         <num-input @updateItemsNum="updateAdults" title="Adults" subtitle="Ages 13 or over" />
         <num-input @updateItemsNum="updateKids" title="Children" subtitle="Ages 2-12" />
@@ -28,6 +28,7 @@ export default {
         sumGuests() {
             this.guests.total =
                 this.guests.adults + this.guests.kids + this.guests.infants;
+            this.$emit('guestsUpdate', this.guests)
         },
         updateAdults(num) {
             console.log(num);
@@ -41,7 +42,7 @@ export default {
         updateInfants(num) {
             this.guests.infants = num;
             this.sumGuests();
-        }
+        },
     },
 }
 </script>

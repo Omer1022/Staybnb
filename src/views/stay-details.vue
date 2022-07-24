@@ -1,13 +1,17 @@
 <template>
-  <!-- <div :class="{ active: isCalendarShown }" class="calendar-modal" >
-    <calender-spread @dateChange="dateUpdate" @click.stop is-expanded></calender-spread>
+  <!-- <div :class="{ active: isCalendarShown }" class="calendar-modal">
+    <calender-spread
+      @dateChange="dateUpdate"
+      @click.stop
+      is-expanded
+    ></calender-spread>
   </div>
   <div class="guests-modal" :class="{ active: isGuestModalShown }">
     <guests-picker />
   </div> -->
 
   <section class="stay-details" v-if="stay">
-    <app-header class="header-layout main-layout"/>
+    <app-header class="header-layout main-layout" />
     <div class="stay-info">
       <h2 class="stay-name">{{ stay.name }}</h2>
       <section class="short-info flex">
@@ -23,7 +27,11 @@
         <section class="flex">
           <div class="share-container">
             <button class="info-btn">
-              <img class="share-icon" src="../styles/icons/share-icon.svg" alt="" />
+              <img
+                class="share-icon"
+                src="../styles/icons/share-icon.svg"
+                alt=""
+              />
               <h5 class="share-btn">Share</h5>
             </button>
           </div>
@@ -36,7 +44,12 @@
         </section>
       </section>
       <section class="details-gallery grid">
-        <img v-bind:src="`../../img/${imgUrl}`" v-for="(imgUrl, idx) in stay.imgUrls" :key="idx" class="img-gallery" />
+        <img
+          v-bind:src="`../../img/${imgUrl}`"
+          v-for="(imgUrl, idx) in stay.imgUrls"
+          :key="idx"
+          class="img-gallery"
+        />
       </section>
     </div>
     <section class="stay-display flex">
@@ -55,7 +68,11 @@
         <div class="stay-amenities">
           <h2 class="amenities-header">What this place offers</h2>
           <ul class="amenities-list flex">
-            <li class="amenitie-container flex" v-for="(amenities, idx) in stay.amenities" :key="idx">
+            <li
+              class="amenitie-container flex"
+              v-for="(amenities, idx) in stay.amenities"
+              :key="idx"
+            >
               {{ amenities }}
             </li>
           </ul>
@@ -67,7 +84,8 @@
             <div class="mini-modal-container">
               <div class="order-form-header flex">
                 <div>
-                  <span class="stay-details-price bold">${{ stay.price }}</span>night
+                  <span class="stay-details-price bold">${{ stay.price }}</span
+                  >night
                 </div>
                 <div class="reviews-preview flex">
                   <div class="star-preview">
@@ -81,28 +99,32 @@
             <form class="order-form">
               <div class="dates-pick flex">
                 <div class="date-picker-container-left">
-                  <button @click.stop="isCalendarShown = !isCalendarShown" class="check-in">
+                  <button
+                    @click.stop="isCalendarShown = !isCalendarShown"
+                    class="check-in"
+                  >
                     <div class="order-button">CHECK-IN</div>
                     {{ checkInDate }}
                   </button>
-                  <div class="date-picker-container-right">
-                    <button @click.stop="isCalendarShown = !isCalendarShown" class="check-out">
-                      <div class="order-button">CHECKOUT</div>
-                      {{ checkOutDate }}
-                    </button>
-                  </div>
+                </div>
+                <div class="date-picker-container-right">
+                  <button
+                    @click.stop="isCalendarShown = !isCalendarShown"
+                    class="check-out"
+                  >
+                    <div class="order-button">CHECKOUT</div>
+                    {{ checkOutDate }}
+                  </button>
                 </div>
               </div>
-
-
               <div class="guest-input">
-
-                <button  @click.stop="isGuestModalShown = !isGuestModalShown" class="guests">
+                <button
+                  @click.stop="isGuestModalShown = !isGuestModalShown"
+                  class="guests"
+                >
                   <div class="order-button">GUESTS</div>
                   <span class="guest-num">{{ totalGuests }}</span>
                 </button>
-
-
               </div>
               <button class="reserve-btn">
                 <span>Reserve</span>
@@ -196,7 +218,11 @@
       </div>
       <div class="review-list">
         <ul class="reviews-list-container clean-list">
-          <li v-for="(review, idx) in stay.reviews" :key="idx" class="review-preview clean-list">
+          <li
+            v-for="(review, idx) in stay.reviews"
+            :key="idx"
+            class="review-preview clean-list"
+          >
             <section class="review-details">
               <div class="review-details-header flex">
                 <img v-bind:src="`${review.by.imgUrl}`" class="review-img" />
@@ -213,13 +239,13 @@
     </div>
     <!-- <router-link to="/">Back</router-link> -->
     <!-- <button @click="removeStay">Delete</button> -->
-    <app-footer class="footer-layout footer-padding-layout footer"/>
+    <app-footer class="footer-layout footer"/>
   </section>
 </template>
 <script>
 import { stayService } from "../services/stay-service";
 import calenderSpread from "../components/calender-spread.vue";
-import guestsPicker from "../components/guests-picker.cmp.vue"
+import guestsPicker from "../components/guests-picker.cmp.vue";
 import appHeader from "../components/app-header.vue";
 import appFooter from "../components/app-footer.vue";
 
@@ -229,8 +255,8 @@ export default {
     guestsPicker,
     calenderSpread,
     appHeader,
-    appFooter
-},
+    appFooter,
+  },
   data() {
     return {
       stay: null,
@@ -245,8 +271,7 @@ export default {
         infants: 0,
         total: 0,
       },
-      isCalendarShown: false
-
+      isCalendarShown: false,
     };
   },
   methods: {
@@ -286,20 +311,20 @@ export default {
     checkInDate() {
       return this.date.start
         ? this.date.start.toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "2-digit",
-          day: "2-digit",
-        })
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit",
+          })
         : "Add dates";
     },
 
     checkOutDate() {
       return this.date.end
         ? this.date.end.toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "2-digit",
-          day: "2-digit",
-        })
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit",
+          })
         : "Add dates";
     },
     totalGuests() {
@@ -315,6 +340,6 @@ export default {
       this.stay = currStay;
     });
   },
-  unmounted() { },
+  unmounted() {},
 };
 </script>
