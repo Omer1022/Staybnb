@@ -45,7 +45,7 @@
       </section>
       <section class="details-gallery grid">
         <img
-          v-bind:src="`../../img/${imgUrl}`"
+          :src="`../../img/${imgUrl}`"
           v-for="(imgUrl, idx) in stay.imgUrls"
           :key="idx"
           class="img-gallery"
@@ -73,8 +73,11 @@
               v-for="(amenities, idx) in stay.amenities"
               :key="idx"
             >
-              <!-- <img v-bind:src="`../styles/icons${amenities.imgUrl}`" /> -->
-              <!-- <img v-bind:src="`${amenities.imgUrl}`" class="amenitie-img" /> -->
+              <!-- <img
+                :src="`../styles/icons/${amenities.imgUrl}`"
+                class="amenitie-img"
+              /> -->
+              <img src="../styles/icons/wifi-icon.png" class="amenitie-img" />
               {{ amenities.name }}
             </li>
           </ul>
