@@ -17,7 +17,7 @@
 
   <form class="header-filter flex">
     <div class="destination-input btn-container">
-      <button>
+      <button  @click.stop="clickedButton">
         <label>
           <div class="button-title">Where</div>
           <input
@@ -29,60 +29,33 @@
         </label>
       </button>
     </div>
-
     <span>|</span>
-
-    <div class="check-in-container flex">
-      <Popper class="btn-container">
-        <button>
+    <div class="check-in-container  btn-container flex">
+        <button  @click.stop="clickedButton">
           <div class="button-title">Check in</div>
           {{ checkInDate }}
         </button>
-        <template #content>
-          <div class="calendar-modal">
-            <calender-spread
-              @dateChange="dateUpdate"
-              is-expanded
-            ></calender-spread>
-          </div>
-        </template>
-      </Popper>
     </div>
-
     <span>|</span>
-
-    <div class="check-out-container flex">
-      <Popper class="btn-container">
-     
-        <button>
-          <div class="button-title">Check out</div>
+    <div class="check-out-container  btn-container flex">
+      <button @click.stop="clickedButton">
+        <div class="button-title">Check out</div>
           {{ checkOutDate }}
         </button>
-     
-        <template #content>
-          <div class="calendar-modal">
-            <calender-spread
-              @dateChange="dateUpdate"
-              is-expanded
-            ></calender-spread>
-          </div>
-        </template>
-      </Popper>
     </div>
 
     <span>|</span>
 
-    <div class="guest-container flex">
-      <Popper class="btn-container">
-        <button class="btn-container">
-          <div class="button-title">Who</div>
+    <div class="guest-container  btn-container flex">
+      <button  @click.stop="clickedButton">
+        <div class="button-title">Who</div>
           <span class="guests-sum">{{ totalGuests }}</span>
-          <button @click.stop="runSearch" class="filter-search btn-container">
-            <img src="../styles/icons/search_white.png" alt="" />
-          </button>
+          <div @click.stop="runSearch" class="filter-search">
+            <img src="../styles/icons/search_white.png" alt="" />Search
+          </div>
         </button>
-        <template #content>
-          <div class="guests-modal">
+       
+          <div v-if="isGuestModalShown" class="guests-modal">
             <num-input
               @updateItemsNum="updateAdults"
               title="Adults"
@@ -99,22 +72,26 @@
               subtitle="under 2"
             />
           </div>
-        </template>
-      </Popper>
+  
     </div>
   </form>
+            <div v-if="isCalendarShown" class="calendar-modal">
+              <calender-spread
+                @dateChange="dateUpdate"
+                is-expanded
+              ></calender-spread>
+            </div>
 </template>
 <script>
-import Popper from "vue3-popper";
+// import Popper from "vue3-popper";
 import numInput from "./num-input.vue";
 import calenderSpread from "./calender-spread.vue";
-import { DatePicker } from "v-calendar";
+// import { DatePicker } from "v-calendar";
 import "v-calendar/dist/style.css";
 
 export default {
   props: {},
   components: {
-    Popper,
     numInput,
     calenderSpread,
   },
@@ -135,9 +112,15 @@ export default {
         infants: 0,
         total: 0,
       },
+      isCalendarShown: false
+      ,
+      isGuestModalShown: false
     };
   },
   methods: {
+    clickedButton(){
+      console.log('trilili')
+    },
     runSearch() {
       console.log("searching");
     },
@@ -182,7 +165,16 @@ export default {
     day: '2-digit',
     }) : "Add dates"},
     totalGuests() {
-      return this.guests.total > 0 ? this.guests.total : "Add guests";
+      switch(this.guests.total){
+        case 0: 
+          return 'Add guests'
+          break
+        case 1:
+          return '1 guest'
+          break
+        default: 
+          return `${this.guests.total} guests`
+      } 
     }, },
   
   created() {},

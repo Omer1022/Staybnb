@@ -9,18 +9,10 @@
   width: 100%;
   line-height: 1.25rem;
   padding-block: 15px;
-  display: grid;
-  grid-template-areas: ". action . details .";
-}
 
-.footer-action{
-  grid-area: action;
-}
-.footer-details{
-  grid-area: details;
-  width: 250px;
-}
 
+
+}
 
 .btn {
   background-color: transparent;
@@ -35,6 +27,3 @@
   height: 20px;
 }
 
-// .footer-action {
-//   width: 100%;
-// }
