@@ -8,7 +8,7 @@
   bottom: 0;
   width: 100%;
   line-height: 1.25rem;
-  padding-block: 15px;
+  // padding-block: 15px;
 
 
 
@@ -27,3 +27,13 @@
   height: 20px;
 }
 
+.footer-details{
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  grid-area: details;
+}
+
+// .footer-action{
+// grid-area: actions;
+// }

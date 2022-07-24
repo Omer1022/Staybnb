@@ -1,6 +1,5 @@
 <template>
-  <section class="footer ">
-    <!-- <div class="padding">left</div> -->
+  <section class="footer">
     <div class="footer-action flex">
       <a>&copy; 2022 Staybnb</a>
       <pre> · </pre>
@@ -23,7 +22,6 @@
       <pre></pre>
       <a herf="#">Support</a>
     </div>
-    <!-- <div class="padding">right</div> -->
   </section>
 </template>
 

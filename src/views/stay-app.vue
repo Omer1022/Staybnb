@@ -1,10 +1,10 @@
 <template>
   <div class="stay-app">
-    <app-header class="header-layout main-layout"/>
+    <app-header class="header-layout "/>
 
     <stay-list @removeStay="removeStay" :stays="stays" />
 
-    <app-footer class="footer-layout footer-padding-layout"/>
+    <app-footer class="footer-layout "/>
   </div>
 
 

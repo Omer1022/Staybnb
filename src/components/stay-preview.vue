@@ -4,10 +4,6 @@
       <div class="card-img">
         <carouse-app class="preview-img" :slides="stay.imgUrls"
         />
-        <!-- @mouseover="hover = true"
-        @mouseleave="hover = false" -->
-        <!-- v-if="hover" :class="{'carousel-hover': hover}" -->
-        <!-- {{hover not work}} -->
         <button class="btn like-btn" @click.stop="LikeStay()">
           <img src="../styles/icons/save-icon.svg" alt="" />
         </button>
@@ -26,9 +22,6 @@
           </p>
         </div>
       </div>
-      <!-- <div class="actions">
-        <router-link :to="'/edit/' + stay._id" class="link">Edit</router-link>
-      </div> -->
     </div>
   </section>
 </template>
@@ -45,7 +38,6 @@ export default {
   },
   data() {
     return {
-      // hover: false,
     };
   },
   methods: {
