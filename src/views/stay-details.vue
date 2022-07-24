@@ -11,7 +11,7 @@
   </div> -->
 
   <section class="stay-details" v-if="stay">
-    <app-header class="header-layout main-layout" />
+    <app-header class="header-layout" />
     <div class="stay-info">
       <h2 class="stay-name">{{ stay.name }}</h2>
       <section class="short-info flex">
@@ -45,7 +45,7 @@
       </section>
       <section class="details-gallery grid">
         <img
-          v-bind:src="`../../img/${imgUrl}`"
+          :src="`../../img/${imgUrl}`"
           v-for="(imgUrl, idx) in stay.imgUrls"
           :key="idx"
           class="img-gallery"
@@ -73,7 +73,12 @@
               v-for="(amenities, idx) in stay.amenities"
               :key="idx"
             >
-              {{ amenities }}
+              <!-- <img
+                :src="`../styles/icons/${amenities.imgUrl}`"
+                class="amenitie-img"
+              /> -->
+              <img src="../styles/icons/wifi-icon.png" class="amenitie-img" />
+              {{ amenities.name }}
             </li>
           </ul>
         </div>
@@ -243,11 +248,11 @@
   </section>
 </template>
 <script>
-import { stayService } from "../services/stay-service"
-import calenderSpread from "../components/calender-spread.vue"
-import guestsPicker from "../components/guests-picker.cmp.vue"
-import appHeader from "../components/app-header.vue"
-import appFooter from "../components/app-footer.vue"
+import { stayService } from "../services/stay-service";
+import calenderSpread from "../components/calender-spread.vue";
+import guestsPicker from "../components/guests-picker.cmp.vue";
+import appHeader from "../components/app-header.vue";
+import appFooter from "../components/app-footer.vue";
 
 export default {
   props: [],
@@ -272,39 +277,39 @@ export default {
         total: 0,
       },
       isCalendarShown: false,
-    }
+    };
   },
   methods: {
     removeStay() {
       this.$store
         .dispatch({ type: "removeStay", stayId: this.stay._id })
         .then(() => {
-          this.$router.push("/stay")
-        })
+          this.$router.push("/stay");
+        });
     },
     sumGuests() {
       this.guests.total =
-        this.guests.adults + this.guests.kids + this.guests.infants
+        this.guests.adults + this.guests.kids + this.guests.infants;
     },
     updateAdults(num) {
-      console.log(num)
-      this.guests.adults = num
-      this.sumGuests()
+      console.log(num);
+      this.guests.adults = num;
+      this.sumGuests();
     },
     updateKids(num) {
-      this.guests.kids = num
-      this.sumGuests()
+      this.guests.kids = num;
+      this.sumGuests();
     },
     updateInfants(num) {
-      this.guests.infants = num
-      this.sumGuests()
+      this.guests.infants = num;
+      this.sumGuests();
     },
     dateUpdate(date) {
-      this.date = date
-      console.log("yes!")
-      console.log("yes", this.date)
-      console.log("start", this.date.start)
-      console.log("end", this.date.end)
+      this.date = date;
+      console.log("yes!");
+      console.log("yes", this.date);
+      console.log("start", this.date.start);
+      console.log("end", this.date.end);
     },
   },
   computed: {
@@ -315,7 +320,7 @@ export default {
             month: "2-digit",
             day: "2-digit",
           })
-        : "Add dates"
+        : "Add dates";
     },
 
     checkOutDate() {
@@ -325,21 +330,21 @@ export default {
             month: "2-digit",
             day: "2-digit",
           })
-        : "Add dates"
+        : "Add dates";
     },
     totalGuests() {
-      return this.guests.total > 0 ? this.guests.total : "Add guests"
+      return this.guests.total > 0 ? this.guests.total : "Add guests";
     },
     totalGuests() {
-      return this.guests.total > 0 ? this.guests.total : "Add guests"
+      return this.guests.total > 0 ? this.guests.total : "Add guests";
     },
   },
   created() {
-    const { stayId } = this.$route.params
+    const { stayId } = this.$route.params;
     stayService.getById(stayId).then((currStay) => {
-      this.stay = currStay
-    })
+      this.stay = currStay;
+    });
   },
   unmounted() {},
-}
+};
 </script>

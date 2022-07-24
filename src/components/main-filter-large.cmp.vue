@@ -1,5 +1,6 @@
 <template>
-    <form class="header-filter flex">
+    <form class="header-filter">
+
         <div class="destination-input btn-container">
             <button @click.stop="clickedButton">
                 <label>
@@ -9,34 +10,43 @@
                 </label>
             </button>
         </div>
+
         <span>|</span>
-        <div class="check-in-container  btn-container flex">
-            <button @click.stop="isCalendarShown = !isCalendarShown">
-                <div class="button-title">Check in</div>
-                {{ checkInDate }}
-            </button>
+
+        <div class="date-container">
+            <div class="btn-container flex">
+                <button @click.stop="isCalendarShown = !isCalendarShown">
+                    <div class="button-title">Check in</div>
+                    {{ checkInDate }}
+                </button>
+            </div>
+
+            <!-- <span>|</span> -->
+
+            <div class="btn-container flex">
+                <button @click.stop="isCalendarShown = !isCalendarShown">
+                    <div class="button-title">Check out</div>
+                    {{ checkOutDate }}
+                </button>
+            </div>
         </div>
+        
         <span>|</span>
-        <div class="check-out-container  btn-container flex">
-            <button @click.stop="isCalendarShown = !isCalendarShown">
-                <div class="button-title">Check out</div>
-                {{ checkOutDate }}
-            </button>
-        </div>
-        <span>|</span>
-        <div  class="calendar-modal" :class ="{'active-calendar': isCalendarShown}">
-            <calender-spread @closeCalendar = "isCalendarShown=false"  @dateChange="dateUpdate" @click.stop is-expanded></calender-spread>
+        
+        <div class="calendar-modal" :class="{ 'active-calendar': isCalendarShown }">
+            <calender-spread @closeCalendar="isCalendarShown = false" @dateChange="dateUpdate" @click.stop is-expanded>
+            </calender-spread>
         </div>
 
         <div class="guest-container  btn-container flex">
             <button @click.stop="isGuestModalShown = !isGuestModalShown">
                 <div class="button-title">Who</div>
                 <span class="guests-sum">{{ totalGuests }}</span>
+            </button>
                 <div @click.stop="runSearch" class="filter-search">
                     <img src="../styles/icons/search_white.png" alt="" />Search
                 </div>
-            </button>
-            <div  class="guests-modal" :class="{'active-guest':isGuestModalShown}">
+            <div class="guests-modal" :class="{ 'active-guest': isGuestModalShown }">
                 <guests-picker @guestsUpdate="updateGuests" @closeGuestsModal="isGuestModalShown = false" />
             </div>
         </div>
@@ -84,12 +94,12 @@ export default {
             console.log("searching");
         },
 
-        dateUpdate(newDate){
+        dateUpdate(newDate) {
             this.date = newDate
         },
-        updateGuests(NewGuests){
-               this.guests = NewGuests     
-               }
+        updateGuests(NewGuests) {
+            this.guests = NewGuests
+        }
     },
     actions: {},
     computed: {
