@@ -239,7 +239,7 @@
     </div>
     <!-- <router-link to="/">Back</router-link> -->
     <!-- <button @click="removeStay">Delete</button> -->
-    <app-footer class="footer-layout footer-padding-layout footer" />
+    <app-footer class="footer-layout footer"/>
   </section>
 </template>
 <script>

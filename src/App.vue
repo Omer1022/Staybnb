@@ -1,7 +1,6 @@
 <template>
   <div id="app" class="layout">
     <router-view class="body-layout main-layout"/>
-    <app-footer class="footer-layout footer-padding-layout"/>
   </div>
 </template>
 
