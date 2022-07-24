@@ -1,6 +1,10 @@
 <template>
   <div class="stay-app">
+    <app-header class="header-layout main-layout"/>
+
     <stay-list @removeStay="removeStay" :stays="stays" />
+
+    <app-footer class="footer-layout footer-padding-layout"/>
   </div>
 
 
@@ -9,12 +13,17 @@
 <script>
 import stayList from "../components/stay-list.vue";
 import carouseApp from "../components/carousel/carouse-app.vue";
+import appHeader from "../components/app-header.vue";
+import appFooter from "../components/app-footer.vue";
+
 export default {
   template: ``,
   components: {
     stayList,
     carouseApp,
-  },
+    appHeader,
+    appFooter
+},
   data() {
     return {};
   },

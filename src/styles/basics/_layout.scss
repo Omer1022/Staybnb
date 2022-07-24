@@ -12,7 +12,7 @@
 }
 .body-layout {
   grid-area: main;
-  overflow-y:auto;
+  // overflow-y:auto;
 }
 .footer-layout {
   grid-area: footer;
@@ -21,112 +21,57 @@
 
 
 .main-layout {
-  display: grid;
-  >*  {
-    grid-column: 2;
-  }
+  // display: grid;
+  // >*  {
+  //   grid-column: 2;
+  // }
 
-  > *.full {
-    grid-column: 1 / -1;
-  }
-  @include for-phone-layout {
-    @include layoutGTC($break-phone, $layoutSmallPadding);
-  }
+  // > *.full {
+  //   grid-column: 1 / -1;
+  // }
+  
+    @include padding ($layoutSmallPadding);
+  
   @include for-tablet-layout {
-    @include layoutGTC($break-tablet, $layoutNormalPadding);
+    // @include layoutGTC($break-tablet, $layoutNormalPadding);
+    @include padding ($layoutNormalPadding);
+
   }
   @include for-normal-layout {
-    @include layoutGTC($break-normal, $layoutNormalPadding);
+    // @include layoutGTC($break-normal, $layoutNormalPadding);
+    @include padding ($layoutNormalPadding);
   }
   @include for-larg-layout {
-    @include layoutGTC($break-larg, $layoutWidePadding);
+    // @include layoutGTC($break-larg, $layoutWidePadding);
+    @include padding ($layoutWidePadding);
   }
   @include for-wide-layout {
-    @include layoutGTC($break-wide, $layoutWidePadding);
+    // @include layoutGTC($break-wide, $layoutWidePadding);
+    @include padding ($layoutWidePadding);
+
   }
 }
 
+.footer-padding-layout{
 
+  @include for-phone-layout {
+    @include footer-padding($break-phone, $layoutSmallPadding)
+  }
+  @include for-tablet-layout {
+    @include footer-padding($break-tablet, $layoutNormalPadding)
 
-// .main-layout {
-//   display: grid;
-//   // grid-template-columns: 80px 1fr 80px;
-//   // grid-template-columns:  1fr ;
+  }
+  @include for-normal-layout {
+    @include footer-padding($break-normal, $layoutNormalPadding)
 
-//   >*  {
-//     grid-column: 2;
-//   }
+  }
+  @include for-larg-layout {
+    @include footer-padding($break-larg, $layoutWidePadding)
 
-//   > *.full {
-//     grid-column: 1 / -1;
-//   }
+  }
+  @include for-wide-layout {
+    @include footer-padding($break-wide, $layoutWidePadding)
 
-//   @include for-phone-layout {
-//     @include layoutGTC($break-phone, $layoutSmallPadding);
-//   }
-//   @include for-tablet-layout {
-//     @include layoutGTC($break-tablet, $layoutNormalPadding);
-//   }
-//   @include for-normal-layout {
-//     @include layoutGTC($break-normal, $layoutNormalPadding);
-//   }
-//   @include for-larg-layout {
-//     @include layoutGTC($break-larg, $layoutWidePadding);
-//   }
-//   @include for-wide-layout {
-//     @include layoutGTC($break-wide, $layoutWidePadding);
-//   }
-// }
+  }
 
-// #app{
-//   height: 100vh;
-// }
-
-
-
-
-
-// .foot-layout {
-//   display: grid;
-//   grid-template-columns:auto 1fr auto;
-//   grid-template-rows: 1fr;
-//   grid-template-areas: 
-//   ". footer .";
-
-
-//   @include for-phone-layout {
-//     @include layoutGTC($break-phone, $layoutSmallPadding);
-//   }
-//   @include for-tablet-layout {
-//     @include layoutGTC($break-tablet, $layoutNormalPadding);
-//   }
-//   @include for-normal-layout {
-//     @include layoutGTC($break-normal, $layoutNormalPadding);
-//   }
-//   @include for-larg-layout {
-//     @include layoutGTC($break-larg, $layoutWidePadding);
-//   }
-//   @include for-wide-layout {
-//     @include layoutGTC($break-wide, $layoutWidePadding);
-//   }
-// }
-
-
-// .padding-layout{
-//   grid-template-areas: " . . .";
-//   @include for-phone-layout {
-//     @include layoutGTC($break-phone, $layoutSmallPadding);
-//   }
-//   @include for-tablet-layout {
-//     @include layoutGTC($break-tablet, $layoutNormalPadding);
-//   }
-//   @include for-normal-layout {
-//     @include layoutGTC($break-normal, $layoutNormalPadding);
-//   }
-//   @include for-larg-layout {
-//     @include layoutGTC($break-larg, $layoutWidePadding);
-//   }
-//   @include for-wide-layout {
-//     @include layoutGTC($break-wide, $layoutWidePadding);
-//   }
-// }
+}

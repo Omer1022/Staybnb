@@ -6,6 +6,8 @@
         :total="slides.length"
         :current-index="currentSlide"
         @switch="switchSlide($event)"
+        @mouseover="hover = true"
+        @mouseleave="hover = false"
       ></carousel-indicators>
       <carousel-item
         v-for="(slide, index) in slides"
@@ -15,19 +17,21 @@
         :index="index"
         :direction="direction"
       ></carousel-item>
-      <carousel-controls 
+      <carousel-controls
         v-if="controls"
         @prev="prev"
         @next="next"
+        @mouseover="hover = true"
+        @mouseleave="hover = false"
       ></carousel-controls>
     </div>
   </div>
 </template>
 
 <script>
-import CarouselItem from "./carousel-item.vue";
-import CarouselControls from "./carousel-controls.vue";
-import CarouselIndicators from "./carousel-indicator.vue";
+import CarouselItem from "./carousel-item.vue"
+import CarouselControls from "./carousel-controls.vue"
+import CarouselIndicators from "./carousel-indicator.vue"
 export default {
   props: {
     slides: {
@@ -52,43 +56,42 @@ export default {
     currentSlide: 0,
     slideInterval: null,
     direction: "right",
+    hover: false,
   }),
   methods: {
     setCurrentSlide(index) {
-      this.currentSlide = index;
+      this.currentSlide = index
     },
     prev(step = -1) {
       const index =
         this.currentSlide > 0
           ? this.currentSlide + step
-          : this.slides.length - 1;
-      this.setCurrentSlide(index);
-      this.direction = "left";
+          : this.slides.length - 1
+      this.setCurrentSlide(index)
+      this.direction = "left"
     },
     _next(step = 1) {
       const index =
         this.currentSlide < this.slides.length - 1
           ? this.currentSlide + step
-          : 0;
-      this.setCurrentSlide(index);
-      this.direction = "right";
+          : 0
+      this.setCurrentSlide(index)
+      this.direction = "right"
     },
     next(step = 1) {
-      this._next(step);
+      this._next(step)
     },
-    
+
     switchSlide(index) {
-      const step = index - this.currentSlide;
+      const step = index - this.currentSlide
       if (step > 0) {
-        this.next(step);
+        this.next(step)
       } else {
-        this.prev(step);
+        this.prev(step)
       }
     },
   },
-  mounted() {
-  },
-  beforeUnmount() {
-  },
-};
+  mounted() {},
+  beforeUnmount() {},
+}
 </script>
