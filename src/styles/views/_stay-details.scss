@@ -437,4 +437,66 @@
   .order-form {
     display: block;
   }
+
+  .dates-pick {
+    display: flex;
+  }
+
+  .date-picker-container-left {
+    width: 50%;
+    border: 1px solid #b0b0b0;
+    border-bottom-color: hsla(0, 0%, 100%, 0);
+    border-right-color: hsla(0, 0%, 100%, 0);
+    border-top-left-radius: 13px;
+  }
+
+  .date-picker-container-right {
+    width: 50%;
+    border: 1px solid #b0b0b0;
+    border-bottom-color: hsla(0, 0%, 100%, 0);
+    border-top-right-radius: 13px;
+  }
+
+  .check-in {
+    border: none;
+    background-color: #fff;
+    padding: 10px;
+    text-align: left;
+  }
+
+  .check-out {
+    border: none;
+    background-color: #fff;
+    padding: 10px;
+    text-align: left;
+  }
+
+  .guests {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #b0b0b0;
+    padding: 10px 12px;
+    border-radius: 0 0 13px 13px;
+    width: 100%;
+  }
+
+  .guest-input {
+    text-align: center;
+    position: relative;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .order-button {
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .order-form {
+    display: block;
+  }
 }

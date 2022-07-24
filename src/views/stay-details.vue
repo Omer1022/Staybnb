@@ -246,17 +246,18 @@
 <script>
 import { stayService } from "../services/stay-service";
 import calenderSpread from "../components/calender-spread.vue";
-import "v-calendar/dist/style.css";
+import guestsPicker from "../components/guests-picker.cmp.vue";
 import appHeader from "../components/app-header.vue";
 import appFooter from "../components/app-footer.vue";
+
 export default {
   props: [],
-  template: ``,
+  componentes: {
     guestsPicker,
     calenderSpread,
     appHeader,
-    appFooter
-},
+    appFooter,
+  },
   data() {
     return {
       stay: null,
@@ -271,8 +272,7 @@ export default {
         infants: 0,
         total: 0,
       },
-      isCalendarShown: false
-
+      isCalendarShown: false,
     };
   },
   methods: {
@@ -312,20 +312,20 @@ export default {
     checkInDate() {
       return this.date.start
         ? this.date.start.toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "2-digit",
-          day: "2-digit",
-        })
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit",
+          })
         : "Add dates";
     },
 
     checkOutDate() {
       return this.date.end
         ? this.date.end.toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "2-digit",
-          day: "2-digit",
-        })
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit",
+          })
         : "Add dates";
     },
     totalGuests() {
@@ -341,6 +341,6 @@ export default {
       this.stay = currStay;
     });
   },
-  unmounted() { },
+  unmounted() {},
 };
 </script>
