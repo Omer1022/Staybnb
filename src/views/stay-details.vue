@@ -63,6 +63,84 @@
           </div>
           <img class="host-img" v-bind:src="`${stay.host.imgUrl}`" />
         </section>
+        <section class="stay-feature-container">
+          <div class="feature-block flex">
+            <div class="feature-logo">
+              <img
+                class="material-icons"
+                src="../styles/icons/park-icon.svg"
+                alt=""
+              />
+            </div>
+            <section class="feature-text-area">
+              <div class="feature-header">
+                <h4 class="feature-header-text">Park for free</h4>
+              </div>
+              <div>
+                <h5 class="feature-text">
+                  This is one of the few places in the area with free parking.
+                </h5>
+              </div>
+            </section>
+          </div>
+          <div class="feature-block flex">
+            <div class="feature-logo">
+              <img
+                class="material-icons"
+                src="../styles/icons/check-in-icon.svg"
+                alt=""
+              />
+            </div>
+            <section class="feature-text-area">
+              <div class="feature-header">
+                <h4 class="feature-header-text">Self check-in</h4>
+              </div>
+              <div>
+                <h5 class="feature-text">
+                  Check yourself in with the smartlock.
+                </h5>
+              </div>
+            </section>
+          </div>
+          <div class="feature-block flex">
+            <div class="feature-logo">
+              <img
+                class="material-icons"
+                src="../styles/icons/location-icon.svg"
+                alt=""
+              />
+            </div>
+            <section class="feature-text-area">
+              <div class="feature-header">
+                <h4 class="feature-header-text">Great location</h4>
+              </div>
+              <div>
+                <h5 class="feature-text">
+                  100% of recent guests gave the location a 5-star rating.
+                </h5>
+              </div>
+            </section>
+          </div>
+          <div class="feature-block flex">
+            <div class="feature-logo">
+              <img
+                class="material-icons"
+                src="../styles/icons/cancel-icon.svg"
+                alt=""
+              />
+            </div>
+            <section class="feature-text-area">
+              <div class="feature-header">
+                <h4 class="feature-header-text">
+                  Free cancellation for 48 hours.
+                </h4>
+              </div>
+              <div>
+                <h5 class="feature-text">feel free to be flexible</h5>
+              </div>
+            </section>
+          </div>
+        </section>
         <h2 class="stay-summary">About this place</h2>
         <p class="summary">{{ stay.summary }}</p>
         <div class="stay-amenities">
@@ -88,8 +166,8 @@
             <div class="mini-modal-container">
               <div class="order-form-header flex">
                 <div>
-                  <span class="stay-details-price bold">${{ stay.price }}</span
-                  >night
+                  <span class="stay-details-price bold">${{ stay.price }}</span>
+                  night
                 </div>
                 <div class="reviews-preview flex">
                   <div class="star-preview">
@@ -108,7 +186,7 @@
                     @click.stop="isCalendarShown = !isCalendarShown"
                   >
                     <div class="order-button">CHECK-IN</div>
-                    {{ checkInDate }}
+                    <span class="calender-pick">{{ checkInDate }}</span>
                   </button>
                 </div>
                 <div class="date-picker-container-right">
@@ -117,7 +195,7 @@
                     @click.stop="isCalendarShown = !isCalendarShown"
                   >
                     <div class="order-button">CHECKOUT</div>
-                    {{ checkOutDate }}
+                    <span class="calender-pick">{{ checkOutDate }}</span>
                   </button>
                 </div>
               </div>

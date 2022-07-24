@@ -1,5 +1,6 @@
 import { createStore } from 'vuex'
 import stayStore from './modules/stay-moduel'
+import labelStore from './modules/labels-moduel'
 
 const store = createStore({
   strict: true,
@@ -9,6 +10,7 @@ const store = createStore({
   actions: {},
   modules: {
     stayStore,
+    labelStore
   },
 })
 

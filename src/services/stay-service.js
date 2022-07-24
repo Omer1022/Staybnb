@@ -1,5 +1,5 @@
-import { storageService } from "./storage-service.js";
-import { utilService } from "./util-service.js";
+import { storageService } from "./storage-service.js"
+import { utilService } from "./util-service.js"
 
 export const stayService = {
   query,
@@ -7,24 +7,23 @@ export const stayService = {
   getEmptyStay,
   saveStay,
   removeStay,
-};
+  // getLabel,
+}
 
-const gLables =[
-  {
-    title:name,
-    
-  }
-]
-const STAY_KEY = "keyDB";
 
-_createStays();
+
+const STAY_KEY = "keyDB"
+// const Label_key = "labelDB"
+
+_createStays()
+// getLabel()
 
 function query() {
-  return storageService.query(STAY_KEY);
+  return storageService.query(STAY_KEY)
 }
 
 function getById(stayId) {
-  return storageService.get(STAY_KEY, stayId);
+  return storageService.get(STAY_KEY, stayId)
 }
 
 function getEmptyStay() {
@@ -35,22 +34,22 @@ function getEmptyStay() {
     imgUrls,
     price: utilService.getRandomIntInclusive(0, 300),
     amenities: ["TV", "Wifi", "Kitchen"],
-  };
+  }
 }
 
 function saveStay(stay) {
   const savedStay = stay._id
     ? storageService.put(STAY_KEY, stay)
-    : storageService.post(STAY_KEY, stay);
-  return savedStay;
+    : storageService.post(STAY_KEY, stay)
+  return savedStay
 }
 
 function removeStay(stay) {
-  return storageService.remove(STAY_KEY, stay);
+  return storageService.remove(STAY_KEY, stay)
 }
 
 function _createStays() {
-  let stays = JSON.parse(localStorage.getItem(STAY_KEY));
+  let stays = JSON.parse(localStorage.getItem(STAY_KEY))
   if (!stays || !stays.length) {
     stays = [
       {
@@ -694,8 +693,38 @@ function _createStays() {
           },
         ],
       },
-    ];
-    localStorage.setItem(STAY_KEY, JSON.stringify(stays));
+    ]
+    localStorage.setItem(STAY_KEY, JSON.stringify(stays))
   }
-  return stays;
+  return stays
 }
+
+// function getLabel() {
+//   let labels = JSON.parse(localStorage.getItem(Label_key))
+//   if (!labels || !labels.length) {
+//     labels = [
+//       {
+//         name: "beach",
+//         imgUrl: "beach.jpg",
+//       },
+//       {
+//         name: "castles",
+//         imgUrl: "castles.jpg",
+//       },
+//       {
+//         name: "caves",
+//         imgUrl: "caves.jpg",
+//       },
+//       {
+//         name: "containers",
+//         imgUrl: "containers.jpg",
+//       },
+//       {
+//         name: "creativ-spaces",
+//         imgUrl: "creativ-spaces.jpg",
+//       },
+//     ]
+//     localStorage.setItem(Label_key, JSON.stringify(labels))
+//   }
+//   return labels
+// }

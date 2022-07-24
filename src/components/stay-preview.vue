@@ -4,6 +4,8 @@
       <div class="card-img">
         <carouse-app class="preview-img" :slides="stay.imgUrls"
         />
+        <!-- <carousel-cmp class="preview-img" :slides="stay.imgUrls"
+        /> -->
         <button class="btn like-btn" @click.stop="LikeStay()">
           <img src="../styles/icons/save-icon.svg" alt="" />
         </button>
@@ -28,6 +30,7 @@
 <script>
 import carouseApp from "./carousel/carouse-app.vue";
 import CarouseApp from "./carousel/carouse-app.vue";
+import CarouselCmp from "./carousel.cmp.vue";
 
 export default {
   props: {
@@ -35,7 +38,8 @@ export default {
   },
   components: {
     carouseApp,
-  },
+    CarouselCmp
+},
   data() {
     return {
     };
