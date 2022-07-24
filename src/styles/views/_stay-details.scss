@@ -441,15 +441,8 @@
     text-transform: uppercase;
   }
 
-  .order-form {
-    display: block;
-  }
-
-  .dates-pick {
-    display: flex;
-  }
-
   .date-picker-container-left {
+    text-align: left;
     width: 50%;
     border: 1px solid #b0b0b0;
     border-bottom-color: hsla(0, 0%, 100%, 0);
@@ -458,24 +451,11 @@
   }
 
   .date-picker-container-right {
+    text-align: left;
     width: 50%;
     border: 1px solid #b0b0b0;
     border-bottom-color: hsla(0, 0%, 100%, 0);
     border-top-right-radius: 13px;
-  }
-
-  .check-in {
-    border: none;
-    background-color: #fff;
-    padding: 10px;
-    text-align: left;
-  }
-
-  .check-out {
-    border: none;
-    background-color: #fff;
-    padding: 10px;
-    text-align: left;
   }
 
   .guests {
@@ -504,6 +484,12 @@
   }
 
   .order-form {
+    width: 100%;
     display: block;
+  }
+
+  .order-modal-container {
+    position: sticky;
+    top: 20px;
   }
 }

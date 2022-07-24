@@ -100,8 +100,8 @@
               <div class="dates-pick flex">
                 <div class="date-picker-container-left">
                   <button
-                    @click.stop="isCalendarShown = !isCalendarShown"
                     class="check-in"
+                    @click.stop="isCalendarShown = !isCalendarShown"
                   >
                     <div class="order-button">CHECK-IN</div>
                     {{ checkInDate }}
@@ -109,8 +109,8 @@
                 </div>
                 <div class="date-picker-container-right">
                   <button
-                    @click.stop="isCalendarShown = !isCalendarShown"
                     class="check-out"
+                    @click.stop="isCalendarShown = !isCalendarShown"
                   >
                     <div class="order-button">CHECKOUT</div>
                     {{ checkOutDate }}
@@ -122,7 +122,7 @@
                   @click.stop="isGuestModalShown = !isGuestModalShown"
                   class="guests"
                 >
-                  <div class="order-button">GUESTS</div>
+                  <label class="order-button">GUESTS</label>
                   <span class="guest-num">{{ totalGuests }}</span>
                 </button>
               </div>
@@ -239,15 +239,15 @@
     </div>
     <!-- <router-link to="/">Back</router-link> -->
     <!-- <button @click="removeStay">Delete</button> -->
-    <app-footer class="footer-layout footer"/>
+    <app-footer class="footer-layout footer" />
   </section>
 </template>
 <script>
-import { stayService } from "../services/stay-service";
-import calenderSpread from "../components/calender-spread.vue";
-import guestsPicker from "../components/guests-picker.cmp.vue";
-import appHeader from "../components/app-header.vue";
-import appFooter from "../components/app-footer.vue";
+import { stayService } from "../services/stay-service"
+import calenderSpread from "../components/calender-spread.vue"
+import guestsPicker from "../components/guests-picker.cmp.vue"
+import appHeader from "../components/app-header.vue"
+import appFooter from "../components/app-footer.vue"
 
 export default {
   props: [],
@@ -272,39 +272,39 @@ export default {
         total: 0,
       },
       isCalendarShown: false,
-    };
+    }
   },
   methods: {
     removeStay() {
       this.$store
         .dispatch({ type: "removeStay", stayId: this.stay._id })
         .then(() => {
-          this.$router.push("/stay");
-        });
+          this.$router.push("/stay")
+        })
     },
     sumGuests() {
       this.guests.total =
-        this.guests.adults + this.guests.kids + this.guests.infants;
+        this.guests.adults + this.guests.kids + this.guests.infants
     },
     updateAdults(num) {
-      console.log(num);
-      this.guests.adults = num;
-      this.sumGuests();
+      console.log(num)
+      this.guests.adults = num
+      this.sumGuests()
     },
     updateKids(num) {
-      this.guests.kids = num;
-      this.sumGuests();
+      this.guests.kids = num
+      this.sumGuests()
     },
     updateInfants(num) {
-      this.guests.infants = num;
-      this.sumGuests();
+      this.guests.infants = num
+      this.sumGuests()
     },
     dateUpdate(date) {
-      this.date = date;
-      console.log("yes!");
-      console.log("yes", this.date);
-      console.log("start", this.date.start);
-      console.log("end", this.date.end);
+      this.date = date
+      console.log("yes!")
+      console.log("yes", this.date)
+      console.log("start", this.date.start)
+      console.log("end", this.date.end)
     },
   },
   computed: {
@@ -315,7 +315,7 @@ export default {
             month: "2-digit",
             day: "2-digit",
           })
-        : "Add dates";
+        : "Add dates"
     },
 
     checkOutDate() {
@@ -325,21 +325,21 @@ export default {
             month: "2-digit",
             day: "2-digit",
           })
-        : "Add dates";
+        : "Add dates"
     },
     totalGuests() {
-      return this.guests.total > 0 ? this.guests.total : "Add guests";
+      return this.guests.total > 0 ? this.guests.total : "Add guests"
     },
     totalGuests() {
-      return this.guests.total > 0 ? this.guests.total : "Add guests";
+      return this.guests.total > 0 ? this.guests.total : "Add guests"
     },
   },
   created() {
-    const { stayId } = this.$route.params;
+    const { stayId } = this.$route.params
     stayService.getById(stayId).then((currStay) => {
-      this.stay = currStay;
-    });
+      this.stay = currStay
+    })
   },
   unmounted() {},
-};
+}
 </script>

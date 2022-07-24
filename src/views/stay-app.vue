@@ -4,7 +4,7 @@
 
     <stay-list @removeStay="removeStay" :stays="stays" />
 
-    <app-footer class="footer-layout footer-padding-layout"/>
+    <app-footer class="footer-layout "/>
   </div>
 
 
