@@ -44,7 +44,7 @@
                 <span class="guests-sum">{{ totalGuests }}</span>
             </button>
                 <div @click.stop="runSearch" class="filter-search">
-                    <img src="../styles/icons/search_white.png" alt="" />Search
+                    <img src="../styles/icons/search_white.png" alt="" /> <span>Search</span>
                 </div>
             <div class="guests-modal" :class="{ 'active-guest': isGuestModalShown }">
                 <guests-picker @guestsUpdate="updateGuests" @closeGuestsModal="isGuestModalShown = false" />

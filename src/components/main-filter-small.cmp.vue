@@ -7,7 +7,7 @@
 
     <div class="add-container flex">
       <button value="guests" class="search-header flex add-btn" @click="openSearch('guests')">
-        add guests
+        Add guests
       </button>
      
         <span class="filter-search-icon">

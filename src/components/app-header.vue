@@ -9,26 +9,17 @@
     <stay-filter class="filter-header" @setFilter="setFilter" />
     <section class="user-actions flex align-items space-between">
       <div class="host">
-        <router-link :to="'/'" class="host-header link"
-          >Become a Host</router-link>
+        <router-link :to="'/'" class="host-header link">Become a Host</router-link>
       </div>
       <button class="btn ">
         <img src="/footer-imgs/lan.png" alt="" />
       </button>
       <section class="user-info flex">
         <button class="menu-btn btn">
-          <img
-            class="menu-img"
-            src="../../public/footer-imgs/menu.png"
-            alt=""
-          />
-          </button>
-          <button class="user-btn btn">
-          <img
-            class="user-img"
-            src="../../public/footer-imgs/user.png"
-            alt=""
-          />
+          <img class="menu-img" src="../../public/footer-imgs/menu.png" alt="" />
+        </button>
+        <button class="user-btn btn">
+          <img class="user-img" src="../../public/footer-imgs/user.png" alt="" />
         </button>
       </section>
     </section>
@@ -47,7 +38,7 @@ export default {
   },
   methods: {},
   computed: {},
-  created() {},
-  unmounted() {},
+  created() { },
+  unmounted() { },
 }
 </script>

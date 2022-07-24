@@ -54,6 +54,7 @@
     align-items: center;
     margin: 7px 7px 7px 0;
     width: 2rem;
+    height: 2rem;
     border-radius: 50%;
     background-color: $clr1;
     display: flex;
@@ -70,8 +71,8 @@
 .filter-search-icon img {
   
   color: white;
-  width: 1rem;
-  height: 1rem;
+  width: 0.85rem;
+  height: 0.85rem;
 
 }
 
@@ -126,12 +127,10 @@
   }
 
   }
-
   .filter-search {
     margin: 7px 7px 7px 0;
     height: 80%;
-    padding: 0;
-  
+    padding: 1.3rem;
     justify-self: end;
     align-items: center;
     font-weight: 500;
@@ -141,11 +140,13 @@
     display: inline-flex;
     color: white;
     background-color: $clr1;
-
+    span{
+      padding-inline-start: 0.5rem;
+    }
     img {
       margin-inline-end: 0;
-      width: 1.3rem;
-      height: 1.3rem;
+      width: 1.1rem;
+      height: 1.1rem;
     }
 
     .guests-btn-warper {
@@ -196,8 +197,7 @@
   transition: opacity 1s;
   position: fixed;
   z-index: 1;
-  // vertical-align: middle;/
-  // width: 406px;
+
   background-color: $clr3;
   border-radius: 2rem;
   padding: 1rem 2rem;
@@ -212,11 +212,7 @@
   position: fixed;
   z-index: 1;
   vertical-align: middle;
-  // position: fixed;
-  // z-index: 1;
-  // margin-top: 0.75rem;
   width: inherit;
-
   background-color: $clr3;
   border-radius: 2rem;
   padding: 3rem 3rem;
@@ -234,13 +230,9 @@
   height: inherit;
 }
 
-.guests-sum {
-  // width: 5rem;
-}
-
 .active-calendar {
   opacity: 100%;
-  margin-top: 25.75rem;
+  margin-top: 29.5rem;
 }
 
 .active-guest {
@@ -269,7 +261,6 @@
   &:hover {
     background-color: $clr7;
     cursor: pointer;
-
   }
 }
 
