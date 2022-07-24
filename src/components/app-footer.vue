@@ -1,5 +1,5 @@
 <template>
-  <section class="footer">
+  <footer class="footer">
     <div class="footer-action flex">
       <a>&copy; 2022 Staybnb</a>
       <pre> · </pre>
@@ -22,7 +22,7 @@
       <pre></pre>
       <a herf="#">Support</a>
     </div>
-  </section>
+  </footer>
 </template>
 
 <script>
@@ -31,13 +31,13 @@ export default {
   template: ``,
   components: {},
   data() {
-    return {}
+    return {};
   },
   methods: {},
   computed: {},
   created() {},
   unmounted() {},
-}
+};
 </script>
 
 <!-- <template>
