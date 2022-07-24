@@ -86,22 +86,24 @@
               </div>
             </div>
             <form class="order-form">
-              <div class="dates-pick">
-                <Popper class="btn-container">
-                  <button class="check-in">
-                    <div class="order-button">CHECK-IN</div>
-                    {{ checkInDate }}
-                  </button>
-                  <template #content>
-                    <div class="calendar-modal">
-                      <calender-spread
-                        @dateChange="dateUpdate"
-                        is-expanded
-                      ></calender-spread>
-                    </div>
-                  </template>
-                </Popper>
-                <div class="popper-check-out">
+              <div class="dates-pick flex">
+                <div class="date-picker-container-left">
+                  <Popper class="btn-container">
+                    <button class="check-in">
+                      <div class="order-button">CHECK-IN</div>
+                      {{ checkInDate }}
+                    </button>
+                    <template #content>
+                      <div class="calendar-modal">
+                        <calender-spread
+                          @dateChange="dateUpdate"
+                          is-expanded
+                        ></calender-spread>
+                      </div>
+                    </template>
+                  </Popper>
+                </div>
+                <div class="date-picker-container-right">
                   <Popper class="btn-container">
                     <button class="check-out">
                       <div class="order-button">CHECKOUT</div>
