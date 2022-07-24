@@ -79,15 +79,15 @@
 //large filter
 
 .header-filter {
-  flex: 1 1 0%;
+  display: flex;
+  // flex: 1 1 0%;
   margin-bottom: 0.75rem;
-  margin-top: rem(80px);
-  border: 1px solid lightgray;
+  margin-top: 5rem;
+  border: 0.5px solid  $clr9;
   border-radius: 50px;
   text-align: start;
   padding-inline-start: 0;
-  // max-width: rem(850px);
-  display: flex;
+  max-width: rem(850px);
   border-radius: 3.2rem black;
   overflow: hidden;
   align-items: center;
@@ -96,12 +96,14 @@
   transition: box-shadow 2s;
 
   button {
+    display: block;
+ 
     height: 100%;
     // display: inline;
     background: transparent;
     padding: 0 1rem;
     text-align: start;
-    align-items: center;
+    // align-items: center;
     border: none;
     font-size: rem(14px);
     color: $clr5;
@@ -115,7 +117,6 @@
       background-color: $clr7;
     }
   }
-
   .button-title {
     color: $clr2;
     font-size: 0.75rem;
@@ -124,15 +125,18 @@
     line-height: 1rem;
   }
 
-  .filter-search {
+  }
 
+  .filter-search {
+    margin: 7px 7px 7px 0;
+    height: 80%;
     padding: 0;
-    margin-inline-end: 0;
+  
     justify-self: end;
     align-items: center;
     font-weight: 500;
     font-size: 1.2rem;
-    justify-content: space-between;
+    // justify-content: space-between;
     border-radius: 3.2rem;
     display: inline-flex;
     color: white;
@@ -149,10 +153,11 @@
       justify-content: center;
     }
   }
-}
+
 
 .destination-input {
-  flex-grow: 1;
+  
+  // flex-grow: 1;
   padding-inline-start: 0;
   text-align: start;
 
@@ -251,9 +256,22 @@
 
 
 .date-container {
-  flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
+  // flex-grow: 1;
+  height: 100%;
+  border-radius: 2rem;
+  &:hover {
+    background-color: $clr7;
+  }
 }
 
 .guest-container {
-  flex-grow: 1;
+  flex-direction: row;
+  &:hover{
+    &:hover {
+      background-color: $clr7;
+    }
+  }
+  border-radius: 2rem;
 }
