@@ -2,7 +2,7 @@
   <div class="stay-app">
     <app-header class="header-layout"/>
 
-    <lable-filter/>
+    <lable-filter :labels="labels"/>
 
     <stay-list @removeStay="removeStay" :stays="stays" />
 
@@ -45,12 +45,12 @@ export default {
       return this.$store.getters.staysToDisplay;
     },
     lables(){
-      // return this.$store.getters.lableFilter
+      return this.$store.getters.lableToDisplay;
     }
   },
   created() {
     this.$store.dispatch({ type: "loadStays" }).then(() => {});
-    // this.$store.dispatch({type: "loadLables"}).then(()=>{});
+    this.$store.dispatch({type: "loadLables"}).then(()=>{});
   },
   unmounted() {},
 };

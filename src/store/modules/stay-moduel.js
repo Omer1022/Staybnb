@@ -1,4 +1,5 @@
 import { stayService } from "../../services/stay-service.js";
+// import { labelService } from "../../services/label-service.js";
 
 export default {
   state: {
@@ -94,6 +95,8 @@ actions: {
       commit({ type: "setStays", stays });
     });
   },
+  
+
 },
 mutations: {
   setStays(state, { stays }) {
