@@ -25,7 +25,7 @@
         </div>
         <span>|</span>
         <div  class="calendar-modal" :class ="{active: isCalendarShown}">
-            <calender-spread @dateChange="dateUpdate" @click.stop is-expanded></calender-spread>
+            <calender-spread @closeCalendar = "isCalendarShown=false"  @dateChange="dateUpdate" @click.stop is-expanded></calender-spread>
         </div>
 
         <div class="guest-container  btn-container flex">
@@ -37,7 +37,7 @@
                 </div>
             </button>
             <div  class="guests-modal" :class="{active:isGuestModalShown}">
-                <guests-picker />
+                <guests-picker @guestsUpdate="updateGuests" @closeGuestsModal="isGuestModalShown = false" />
             </div>
         </div>
     </form>
@@ -83,6 +83,15 @@ export default {
         runSearch() {
             console.log("searching");
         },
+        closeGuestModal(){
+         console.log("closing modal")   
+        },
+        dateUpdate(newDate){
+            this.date = newDate
+        },
+        updateGuests(NewGuests){
+               this.guests = NewGuests     
+               }
     },
     actions: {},
     computed: {

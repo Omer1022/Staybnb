@@ -251,7 +251,7 @@ import appFooter from "../components/app-footer.vue";
 
 export default {
   props: [],
-  componentes: {
+  components: {
     guestsPicker,
     calenderSpread,
     appHeader,
