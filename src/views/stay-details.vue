@@ -1,6 +1,17 @@
 <template>
+  <div :class="{ active: isCalendarShown }" class="calendar-modal">
+    <calender-spread
+      @dateChange="dateUpdate"
+      @click.stop
+      is-expanded
+    ></calender-spread>
+  </div>
+  <div class="guests-modal" :class="{ active: isGuestModalShown }">
+    <guests-picker />
+  </div>
+
   <section class="stay-details" v-if="stay">
-    <app-header class="header-layout main-layout"/>
+    <app-header class="header-layout main-layout" />
     <div class="stay-info">
       <h2 class="stay-name">{{ stay.name }}</h2>
       <section class="short-info flex">
@@ -88,66 +99,33 @@
             <form class="order-form">
               <div class="dates-pick flex">
                 <div class="date-picker-container-left">
-                  <Popper class="btn-container">
-                    <button class="check-in">
-                      <div class="order-button">CHECK-IN</div>
-                      {{ checkInDate }}
-                    </button>
-                    <template #content>
-                      <div class="calendar-modal">
-                        <calender-spread
-                          @dateChange="dateUpdate"
-                          is-expanded
-                        ></calender-spread>
-                      </div>
-                    </template>
-                  </Popper>
-                </div>
-                <div class="date-picker-container-right">
-                  <Popper class="btn-container">
-                    <button class="check-out">
+                  <button
+                    @click.stop="isCalendarShown = !isCalendarShown"
+                    class="check-in"
+                  >
+                    <div class="order-button">CHECK-IN</div>
+                    {{ checkInDate }}
+                  </button>
+                  <div class="date-picker-container-right">
+                    <button
+                      @click.stop="isCalendarShown = !isCalendarShown"
+                      class="check-out"
+                    >
                       <div class="order-button">CHECKOUT</div>
                       {{ checkOutDate }}
                     </button>
-
-                    <template #content>
-                      <div class="calendar-modal">
-                        <calender-spread
-                          @dateChange="dateUpdate"
-                          is-expanded
-                        ></calender-spread>
-                      </div>
-                    </template>
-                  </Popper>
+                  </div>
                 </div>
               </div>
-              <div class="guest-input">
-                <Popper>
-                  <button class="guests">
-                    <div class="order-button">GUESTS</div>
-                    <span class="guest-num">{{ totalGuests }}</span>
-                  </button>
 
-                  <template #content>
-                    <div class="details-guests-modal">
-                      <num-input
-                        @updateItemsNum="updateAdults"
-                        title="Adults"
-                        subtitle="Ages 13 or over"
-                      />
-                      <num-input
-                        @updateItemsNum="updateKids"
-                        title="Children"
-                        subtitle="Ages 2-12"
-                      />
-                      <num-input
-                        @updateItemsNum="updateInfants"
-                        title="Infants"
-                        subtitle="under 2"
-                      />
-                    </div>
-                  </template>
-                </Popper>
+              <div class="guest-input">
+                <button
+                  @click.stop="isGuestModalShown = !isGuestModalShown"
+                  class="guests"
+                >
+                  <div class="order-button">GUESTS</div>
+                  <span class="guest-num">{{ totalGuests }}</span>
+                </button>
               </div>
               <button class="reserve-btn">
                 <span>Reserve</span>
@@ -267,23 +245,19 @@
 </template>
 <script>
 import { stayService } from "../services/stay-service";
-import Popper from "vue3-popper";
-import numInput from "../components/num-input.vue";
 import calenderSpread from "../components/calender-spread.vue";
-import 'v-calendar/dist/style.css'
+import guestsPicker from "../components/guests-picker.cmp.vue";
 import appHeader from "../components/app-header.vue";
 import appFooter from "../components/app-footer.vue";
 
 export default {
   props: [],
-  template: ``,
-  components: {
-    Popper,
-    numInput,
+  componentes: {
+    guestsPicker,
     calenderSpread,
     appHeader,
-    appFooter
-},
+    appFooter,
+  },
   data() {
     return {
       stay: null,
@@ -298,6 +272,7 @@ export default {
         infants: 0,
         total: 0,
       },
+      isCalendarShown: false,
     };
   },
   methods: {

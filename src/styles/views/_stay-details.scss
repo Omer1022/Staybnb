@@ -2,7 +2,7 @@
   .header {
     position: static;
   }
-  .footer{
+  .footer {
     position: static;
   }
 
@@ -168,15 +168,15 @@
     flex-basis: 40%;
   }
 
-.order-modal {
-  margin-top: 48px;
-  padding: 24px;
-  border-radius: 12px;
-  border: 1px solid #ddd;
-  box-shadow: 0 6px 16px rgb(0 0 0 / 12%);
-  justify-content: center;
-  flex-direction: column;
-}
+  .order-modal {
+    margin-top: 48px;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0 6px 16px rgb(0 0 0 / 12%);
+    justify-content: center;
+    flex-direction: column;
+  }
 
   .order-modal {
     margin-top: 48px;
@@ -214,9 +214,9 @@
   .order-form {
     text-align: center;
   }
-.container label {
-  display: block;
-}
+  .container label {
+    display: block;
+  }
 
   .container label {
     display: block;
@@ -227,13 +227,13 @@
     font-weight: 800;
     text-transform: uppercase;
   }
-.order-modal input {
-  display: block;
-  border: none;
-  box-shadow: none !important;
-  font-family: inherit;
-  background-color: transparent;
-}
+  .order-modal input {
+    display: block;
+    border: none;
+    box-shadow: none !important;
+    font-family: inherit;
+    background-color: transparent;
+  }
 
   .order-modal input {
     display: block;
@@ -369,74 +369,134 @@
     padding-bottom: 10px;
   }
 
-.details-guests-modal {
-  background-color: $clr3;
-  border-radius: 2rem;
-  padding: 1rem 2rem;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.15);
-}
+  .details-guests-modal {
+    background-color: $clr3;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
 
-.dates-pick {
-  display: flex;
-}
+  .dates-pick {
+    display: flex;
+  }
 
-.date-picker-container-left {
-  width: 50%;
-  border: 1px solid #b0b0b0;
-  border-bottom-color: hsla(0, 0%, 100%, 0);
-  border-right-color: hsla(0, 0%, 100%, 0);
-  border-top-left-radius: 13px;
-}
+  .date-picker-container-left {
+    width: 50%;
+    border: 1px solid #b0b0b0;
+    border-bottom-color: hsla(0, 0%, 100%, 0);
+    border-right-color: hsla(0, 0%, 100%, 0);
+    border-top-left-radius: 13px;
+  }
 
-.date-picker-container-right {
-  width: 50%;
-  border: 1px solid #b0b0b0;
-  border-bottom-color: hsla(0, 0%, 100%, 0);
-  border-top-right-radius: 13px;
-}
+  .date-picker-container-right {
+    width: 50%;
+    border: 1px solid #b0b0b0;
+    border-bottom-color: hsla(0, 0%, 100%, 0);
+    border-top-right-radius: 13px;
+  }
 
-.check-in {
-  border: none;
-  background-color: #fff;
-  padding: 10px;
-  text-align: left;
-}
+  .check-in {
+    border: none;
+    background-color: #fff;
+    padding: 10px;
+    text-align: left;
+  }
 
-.check-out {
-  border: none;
-  background-color: #fff;
-  padding: 10px;
-  text-align: left;
-}
+  .check-out {
+    border: none;
+    background-color: #fff;
+    padding: 10px;
+    text-align: left;
+  }
 
-.guests {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #b0b0b0;
-  padding: 10px 12px;
-  border-radius: 0 0 13px 13px;
-  width: 100%;
-}
+  .guests {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #b0b0b0;
+    padding: 10px 12px;
+    border-radius: 0 0 13px 13px;
+    width: 100%;
+  }
 
-.guest-input {
-  text-align: center;
-  position: relative;
-  margin-bottom: 15px;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
+  .guest-input {
+    text-align: center;
+    position: relative;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 
-.order-button {
-  font-size: 10px;
-  font-weight: 800;
-  text-transform: uppercase;
-}
+  .order-button {
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
 
-.order-form {
-  display: block;
-}
+  .order-form {
+    display: block;
+  }
 
-}
+  .dates-pick {
+    display: flex;
+  }
 
+  .date-picker-container-left {
+    width: 50%;
+    border: 1px solid #b0b0b0;
+    border-bottom-color: hsla(0, 0%, 100%, 0);
+    border-right-color: hsla(0, 0%, 100%, 0);
+    border-top-left-radius: 13px;
+  }
+
+  .date-picker-container-right {
+    width: 50%;
+    border: 1px solid #b0b0b0;
+    border-bottom-color: hsla(0, 0%, 100%, 0);
+    border-top-right-radius: 13px;
+  }
+
+  .check-in {
+    border: none;
+    background-color: #fff;
+    padding: 10px;
+    text-align: left;
+  }
+
+  .check-out {
+    border: none;
+    background-color: #fff;
+    padding: 10px;
+    text-align: left;
+  }
+
+  .guests {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #b0b0b0;
+    padding: 10px 12px;
+    border-radius: 0 0 13px 13px;
+    width: 100%;
+  }
+
+  .guest-input {
+    text-align: center;
+    position: relative;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .order-button {
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .order-form {
+    display: block;
+  }
+}
