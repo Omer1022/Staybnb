@@ -1,10 +1,8 @@
 <template>
-<transition>
+
   <main-filter-small @openLarge="openLargeFilter" v-show="defaultDisplay"></main-filter-small>
-</transition>
-<!-- <transition>
+
   <main-filter-large v-show="!defaultDisplay" ></main-filter-large>
-</transition> -->
 
 </template>
 <script>
@@ -26,7 +24,7 @@ return {
 created() {},
 methods: {
   openLargeFilter(){
-    // this.defaultDisplay = false
+    this.defaultDisplay = false
   }
 },
 computed: {},

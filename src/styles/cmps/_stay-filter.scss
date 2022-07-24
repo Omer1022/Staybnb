@@ -7,14 +7,13 @@
   margin-bottom: 0.75rem;
   overflow: hidden;
   align-items: center;
-  border: 1px solid lightgray;
+  border: 0.5px solid  $clr9;
   color: var(clr1);
   height: rem(48px);
   transition: box-shadow 2s;
-  box-shadow: 1px 1px 6px -1px #000000;
-
+  box-shadow: none;
   &:hover {
-    box-shadow: 1px 1px 8px 1px #000000;
+    box-shadow: 1px 1px 3px 1px $clr5;
   }
 
   .header-separator {
@@ -31,7 +30,7 @@
     padding-left: 8px;
     background: transparent;
     height: 3rem;
-    width: 10rem;
+    
     padding: 0 1rem;
     align-items: center;
     color: $clr2;

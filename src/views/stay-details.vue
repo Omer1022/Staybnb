@@ -11,7 +11,7 @@
   </div> -->
 
   <section class="stay-details" v-if="stay">
-    <app-header class="header-layout main-layout" />
+    <app-header class="header-layout" />
     <div class="stay-info">
       <h2 class="stay-name">{{ stay.name }}</h2>
       <section class="short-info flex">
