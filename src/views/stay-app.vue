@@ -1,6 +1,6 @@
 <template>
   <div class="stay-app">
-    <app-header class="header-layout "/>
+    <app-header class="header-layout"/>
 
     <stay-list @removeStay="removeStay" :stays="stays" />
 

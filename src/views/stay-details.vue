@@ -100,8 +100,8 @@
               <div class="dates-pick flex">
                 <div class="date-picker-container-left">
                   <button
-                    @click.stop="isCalendarShown = !isCalendarShown"
                     class="check-in"
+                    @click.stop="isCalendarShown = !isCalendarShown"
                   >
                     <div class="order-button">CHECK-IN</div>
                     {{ checkInDate }}
@@ -109,8 +109,8 @@
                 </div>
                 <div class="date-picker-container-right">
                   <button
-                    @click.stop="isCalendarShown = !isCalendarShown"
                     class="check-out"
+                    @click.stop="isCalendarShown = !isCalendarShown"
                   >
                     <div class="order-button">CHECKOUT</div>
                     {{ checkOutDate }}
@@ -122,7 +122,7 @@
                   @click.stop="isGuestModalShown = !isGuestModalShown"
                   class="guests"
                 >
-                  <div class="order-button">GUESTS</div>
+                  <label class="order-button">GUESTS</label>
                   <span class="guest-num">{{ totalGuests }}</span>
                 </button>
               </div>
@@ -251,7 +251,7 @@ import appFooter from "../components/app-footer.vue"
 
 export default {
   props: [],
-  componentes: {
+  components: {
     guestsPicker,
     calenderSpread,
     appHeader,
