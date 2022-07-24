@@ -58,13 +58,34 @@ function _createStays() {
           "Fantastic duplex apartment with three bedrooms, located in the historic area of Porto, Ribeira (Cube)...",
         capacity: 8,
         amenities: [
-          "Internet",
-          "Wifi",
-          "Air conditioning",
-          "Pets allowed",
-          "Kitchen",
-          "Iron",
-          "Laptop friendly workspace",
+          {
+            name: "Internet",
+            imgUrl: "internet-icon.png",
+          },
+          {
+            name: "Wifi",
+            imgUrl: "wifi-icon.png",
+          },
+          {
+            name: "Air conditioning",
+            imgUrl: "air-conditioner-icon.png",
+          },
+          {
+            name: "Pets allowed",
+            imgUrl: "pets-icon.png",
+          },
+          {
+            name: "Kitchen",
+            imgUrl: "kitchen-room-icon.png",
+          },
+          {
+            name: "Iron",
+            imgUrl: "iron-icon.png",
+          },
+          {
+            name: "Laptop",
+            imgUrl: "laptop-icon.png",
+          },
         ],
         host: {
           _id: "51399391",
@@ -103,13 +124,34 @@ function _createStays() {
           "A spacious, art-filled one-bedroom apartment near the express train (28 minutes to Times Square) and a Citibike station. Sample Bed-Stuy life at a nearby French restaurant,  a sunny Haitian cafe, a boutique grocery and more. We do NOT discriminate based on race, religion or sexual orientation.",
         capacity: 2,
         amenities: [
-          "Internet",
-          "Wifi",
-          "Air conditioning",
-          "Pets allowed",
-          "Kitchen",
-          "Iron",
-          "Laptop friendly workspace",
+          {
+            name: "Internet",
+            imgUrl: "internet-icon.png",
+          },
+          {
+            name: "Wifi",
+            imgUrl: "wifi-icon.png",
+          },
+          {
+            name: "Air conditioning",
+            imgUrl: "air-conditioner-icon.png",
+          },
+          {
+            name: "Pets allowed",
+            imgUrl: "pets-icon.png",
+          },
+          {
+            name: "Kitchen",
+            imgUrl: "kitchen-room-icon.png",
+          },
+          {
+            name: "Iron",
+            imgUrl: "iron-icon.png",
+          },
+          {
+            name: "Laptop",
+            imgUrl: "laptop-icon.png",
+          },
         ],
         host: {
           _id: "622f3402e36c59e6164fac46",
@@ -170,13 +212,34 @@ function _createStays() {
           "Chambre dans un bel appartement moderne avec balcon, ascenseur et terrasse. Private room in a beautiful modern apartment  with balcony, elevator and patio. La chambre est fermée avec une lit double. Vous aurez accès à une salle de bain avec une douche, terrasse. L'appartement est climatisé.  Votre chambre est équipé d'une connexion Wi-Fi illimité. Vous serez proche du centre ville, au pied du pont Jacques Cartier et à distance de marche de toutes les commodités (métro, supermarché, pharmacie",
         capacity: 2,
         amenities: [
-          "Internet",
-          "Wifi",
-          "Air conditioning",
-          "Pets allowed",
-          "Kitchen",
-          "Iron",
-          "Laptop friendly workspace",
+          {
+            name: "Internet",
+            imgUrl: "internet-icon.png",
+          },
+          {
+            name: "Wifi",
+            imgUrl: "wifi-icon.png",
+          },
+          {
+            name: "Air conditioning",
+            imgUrl: "air-conditioner-icon.png",
+          },
+          {
+            name: "Pets allowed",
+            imgUrl: "pets-icon.png",
+          },
+          {
+            name: "Kitchen",
+            imgUrl: "kitchen-room-icon.png",
+          },
+          {
+            name: "Iron",
+            imgUrl: "iron-icon.png",
+          },
+          {
+            name: "Laptop",
+            imgUrl: "laptop-icon.png",
+          },
         ],
         host: {
           _id: "622f3401e36c59e6164fabab",
@@ -246,13 +309,34 @@ function _createStays() {
           "Welcome if you want to stay at a cozy flat with local experience.:) It is in the center of Istanbul.The neighborhood is safe and close to attractions.Transportation is easy. I will help you always.",
         capacity: 2,
         amenities: [
-          "Internet",
-          "Wifi",
-          "Air conditioning",
-          "Pets allowed",
-          "Kitchen",
-          "Iron",
-          "Laptop friendly workspace",
+          {
+            name: "Internet",
+            imgUrl: "internet-icon.png",
+          },
+          {
+            name: "Wifi",
+            imgUrl: "wifi-icon.png",
+          },
+          {
+            name: "Air conditioning",
+            imgUrl: "air-conditioner-icon.png",
+          },
+          {
+            name: "Pets allowed",
+            imgUrl: "pets-icon.png",
+          },
+          {
+            name: "Kitchen",
+            imgUrl: "kitchen-room-icon.png",
+          },
+          {
+            name: "Iron",
+            imgUrl: "iron-icon.png",
+          },
+          {
+            name: "Laptop",
+            imgUrl: "laptop-icon.png",
+          },
         ],
         host: {
           _id: "622f3402e36c59e6164fae4d",
@@ -312,13 +396,34 @@ function _createStays() {
           "Fantastic duplex apartment with three bedrooms, located in the historic area of Porto, Ribeira (Cube)...",
         capacity: 8,
         amenities: [
-          "Internet",
-          "Wifi",
-          "Air conditioning",
-          "Pets allowed",
-          "Kitchen",
-          "Iron",
-          "Laptop friendly workspace",
+          {
+            name: "Internet",
+            imgUrl: "internet-icon.png",
+          },
+          {
+            name: "Wifi",
+            imgUrl: "wifi-icon.png",
+          },
+          {
+            name: "Air conditioning",
+            imgUrl: "air-conditioner-icon.png",
+          },
+          {
+            name: "Pets allowed",
+            imgUrl: "pets-icon.png",
+          },
+          {
+            name: "Kitchen",
+            imgUrl: "kitchen-room-icon.png",
+          },
+          {
+            name: "Iron",
+            imgUrl: "iron-icon.png",
+          },
+          {
+            name: "Laptop",
+            imgUrl: "laptop-icon.png",
+          },
         ],
         host: {
           _id: "51399391",
@@ -357,25 +462,34 @@ function _createStays() {
           "A spacious, art-filled one-bedroom apartment near the express train (28 minutes to Times Square) and a Citibike station. Sample Bed-Stuy life at a nearby French restaurant,  a sunny Haitian cafe, a boutique grocery and more. We do NOT discriminate based on race, religion or sexual orientation.",
         capacity: 2,
         amenities: [
-          "Internet",
-          "Wifi",
-          "Air conditioning",
-          "Kitchen",
-          "Heating",
-          "Family/kid friendly",
-          "Smoke detector",
-          "Carbon monoxide detector",
-          "Fire extinguisher",
-          "Essentials",
-          "Shampoo",
-          "24-hour check-in",
-          "Hangers",
-          "Hair dryer",
-          "Iron",
-          "Laptop friendly workspace",
-          "translation missing: en.hosting_amenity_49",
-          "Self check-in",
-          "Lockbox",
+          {
+            name: "Internet",
+            imgUrl: "internet-icon.png",
+          },
+          {
+            name: "Wifi",
+            imgUrl: "wifi-icon.png",
+          },
+          {
+            name: "Air conditioning",
+            imgUrl: "air-conditioner-icon.png",
+          },
+          {
+            name: "Pets allowed",
+            imgUrl: "pets-icon.png",
+          },
+          {
+            name: "Kitchen",
+            imgUrl: "kitchen-room-icon.png",
+          },
+          {
+            name: "Iron",
+            imgUrl: "iron-icon.png",
+          },
+          {
+            name: "Laptop",
+            imgUrl: "laptop-icon.png",
+          },
         ],
         host: {
           _id: "622f3402e36c59e6164fac46",
@@ -435,13 +549,34 @@ function _createStays() {
           "Chambre dans un bel appartement moderne avec balcon, ascenseur et terrasse. Private room in a beautiful modern apartment  with balcony, elevator and patio. La chambre est fermée avec une lit double. Vous aurez accès à une salle de bain avec une douche, terrasse. L'appartement est climatisé.  Votre chambre est équipé d'une connexion Wi-Fi illimité. Vous serez proche du centre ville, au pied du pont Jacques Cartier et à distance de marche de toutes les commodités (métro, supermarché, pharmacie",
         capacity: 2,
         amenities: [
-          "Internet",
-          "Wifi",
-          "Air conditioning",
-          "Pets allowed",
-          "Kitchen",
-          "Iron",
-          "Laptop friendly workspace",
+          {
+            name: "Internet",
+            imgUrl: "internet-icon.png",
+          },
+          {
+            name: "Wifi",
+            imgUrl: "wifi-icon.png",
+          },
+          {
+            name: "Air conditioning",
+            imgUrl: "air-conditioner-icon.png",
+          },
+          {
+            name: "Pets allowed",
+            imgUrl: "pets-icon.png",
+          },
+          {
+            name: "Kitchen",
+            imgUrl: "kitchen-room-icon.png",
+          },
+          {
+            name: "Iron",
+            imgUrl: "iron-icon.png",
+          },
+          {
+            name: "Laptop",
+            imgUrl: "laptop-icon.png",
+          },
         ],
         host: {
           _id: "622f3401e36c59e6164fabab",
@@ -510,13 +645,34 @@ function _createStays() {
           "Welcome if you want to stay at a cozy flat with local experience.:) It is in the center of Istanbul.The neighborhood is safe and close to attractions.Transportation is easy. I will help you always.",
         capacity: 2,
         amenities: [
-          "Internet",
-          "Wifi",
-          "Air conditioning",
-          "Pets allowed",
-          "Kitchen",
-          "Iron",
-          "Laptop friendly workspace",
+          {
+            name: "Internet",
+            imgUrl: "internet-icon.png",
+          },
+          {
+            name: "Wifi",
+            imgUrl: "wifi-icon.png",
+          },
+          {
+            name: "Air conditioning",
+            imgUrl: "air-conditioner-icon.png",
+          },
+          {
+            name: "Pets allowed",
+            imgUrl: "pets-icon.png",
+          },
+          {
+            name: "Kitchen",
+            imgUrl: "kitchen-room-icon.png",
+          },
+          {
+            name: "Iron",
+            imgUrl: "iron-icon.png",
+          },
+          {
+            name: "Laptop",
+            imgUrl: "laptop-icon.png",
+          },
         ],
         host: {
           _id: "622f3402e36c59e6164fae4d",
