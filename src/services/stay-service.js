@@ -9,6 +9,12 @@ export const stayService = {
   removeStay,
 };
 
+const gLables =[
+  {
+    title:name,
+    
+  }
+]
 const STAY_KEY = "keyDB";
 
 _createStays();

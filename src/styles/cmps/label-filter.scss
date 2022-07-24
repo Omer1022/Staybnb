@@ -1,0 +1,39 @@
+.labels-filter{
+// background-color: green;
+// position: relative;
+height: 95px;
+margin-bottom: 25px;
+align-items: center;
+justify-content: center;
+}
+
+.labels-control {
+    background-color: #f3f3f3;
+    height: 25px;
+    width: 25px;
+    border: 1px solid $clr8;
+    border-radius: 50%;
+    display: inline-block;
+    color: black;
+    cursor: pointer;
+    // top: calc(40%);
+    // position: absolute;
+    
+}
+
+  .labels-filter-btn{
+    height: 48px;
+    width: 76px;
+    padding: 7px 0;
+    margin: 0;
+    border-radius: 15%;
+    border : 1px solid $clr8;
+    align-items: center;
+    justify-content: space-evenly;
+
+
+    img{
+        width: 14px;
+        height: 14px;
+        }
+  }
