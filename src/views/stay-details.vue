@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ active: isCalendarShown }" class="calendar-modal">
+  <!-- <div :class="{ active: isCalendarShown }" class="calendar-modal">
     <calender-spread
       @dateChange="dateUpdate"
       @click.stop
@@ -8,7 +8,7 @@
   </div>
   <div class="guests-modal" :class="{ active: isGuestModalShown }">
     <guests-picker />
-  </div>
+  </div> -->
 
   <section class="stay-details" v-if="stay">
     <app-header class="header-layout main-layout" />
@@ -106,18 +106,17 @@
                     <div class="order-button">CHECK-IN</div>
                     {{ checkInDate }}
                   </button>
-                  <div class="date-picker-container-right">
-                    <button
-                      @click.stop="isCalendarShown = !isCalendarShown"
-                      class="check-out"
-                    >
-                      <div class="order-button">CHECKOUT</div>
-                      {{ checkOutDate }}
-                    </button>
-                  </div>
+                </div>
+                <div class="date-picker-container-right">
+                  <button
+                    @click.stop="isCalendarShown = !isCalendarShown"
+                    class="check-out"
+                  >
+                    <div class="order-button">CHECKOUT</div>
+                    {{ checkOutDate }}
+                  </button>
                 </div>
               </div>
-
               <div class="guest-input">
                 <button
                   @click.stop="isGuestModalShown = !isGuestModalShown"
