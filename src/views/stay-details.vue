@@ -73,11 +73,10 @@
               v-for="(amenities, idx) in stay.amenities"
               :key="idx"
             >
-              <!-- <img
-                :src="`../styles/icons/${amenities.imgUrl}`"
+              <img
+                :src="`/staybnb/src/styles/icons/${amenities.imgUrl}`"
                 class="amenitie-img"
-              /> -->
-              <img src="../styles/icons/wifi-icon.png" class="amenitie-img" />
+              />
               {{ amenities.name }}
             </li>
           </ul>
