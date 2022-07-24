@@ -219,14 +219,11 @@
 <script>
 import { stayService } from "../services/stay-service";
 import calenderSpread from "../components/calender-spread.vue";
-<<<<<<< HEAD
 import "v-calendar/dist/style.css";
 import guestsPicker from "../components/guests-picker.cmp.vue"
-=======
 import 'v-calendar/dist/style.css'
 import appHeader from "../components/app-header.vue";
 import appFooter from "../components/app-footer.vue";
->>>>>>> 16254d349aab5d644e4c1e02c35c32ce6c9ec880
 
 export default {
   props: [],
