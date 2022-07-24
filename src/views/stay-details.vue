@@ -1,10 +1,10 @@
 <template>
-  <div :class="{ active: isCalendarShown }" class="calendar-modal" >
+  <!-- <div :class="{ active: isCalendarShown }" class="calendar-modal" >
     <calender-spread @dateChange="dateUpdate" @click.stop is-expanded></calender-spread>
   </div>
   <div class="guests-modal" :class="{ active: isGuestModalShown }">
     <guests-picker />
-  </div>
+  </div> -->
 
   <section class="stay-details" v-if="stay">
     <app-header class="header-layout main-layout"/>
@@ -219,15 +219,12 @@
 <script>
 import { stayService } from "../services/stay-service";
 import calenderSpread from "../components/calender-spread.vue";
-import "v-calendar/dist/style.css";
 import guestsPicker from "../components/guests-picker.cmp.vue"
-import 'v-calendar/dist/style.css'
 import appHeader from "../components/app-header.vue";
 import appFooter from "../components/app-footer.vue";
 
 export default {
   props: [],
-  template: ``,
   components: {
     guestsPicker,
     calenderSpread,

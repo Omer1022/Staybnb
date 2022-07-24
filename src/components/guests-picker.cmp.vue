@@ -1,7 +1,7 @@
 <template>
     <div>
         <div>
-        <button class="x-btn">x</button>
+        <button class="x-btn" @click="$emit('close-guests-picker')">x</button>
         </div>
         <num-input @updateItemsNum="updateAdults" title="Adults" subtitle="Ages 13 or over" />
         <num-input @updateItemsNum="updateKids" title="Children" subtitle="Ages 2-12" />

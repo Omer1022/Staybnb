@@ -36,7 +36,7 @@
                     <img src="../styles/icons/search_white.png" alt="" />Search
                 </div>
             </button>
-            <div  class="guests-modal" :class="{active:isGuestModalShown}">
+            <div @closeGuestsPicker="isGuestModalShown = false" class="guests-modal" :class="{active:isGuestModalShown}">
                 <guests-picker />
             </div>
         </div>
