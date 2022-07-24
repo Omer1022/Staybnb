@@ -59,32 +59,28 @@ function _createStays() {
         capacity: 8,
         amenities: [
           {
-            name: "Internet",
-            imgUrl: "internet-icon.png",
-          },
-          {
-            name: "Wifi",
-            imgUrl: "wifi-icon.png",
-          },
-          {
-            name: "Air conditioning",
-            imgUrl: "air-conditioner-icon.png",
-          },
-          {
-            name: "Pets allowed",
-            imgUrl: "pets-icon.png",
+            name: "Sea view",
+            imgUrl: "sea-view-icon.svg",
           },
           {
             name: "Kitchen",
-            imgUrl: "kitchen-room-icon.png",
+            imgUrl: "kitchen-icon.svg",
           },
           {
-            name: "Iron",
-            imgUrl: "iron-icon.png",
+            name: "Beach access",
+            imgUrl: "beach-access-icon.svg",
           },
           {
-            name: "Laptop",
-            imgUrl: "laptop-icon.png",
+            name: "TV",
+            imgUrl: "tv-icon.svg",
+          },
+          {
+            name: "Backyard",
+            imgUrl: "backyard-icon.svg",
+          },
+          {
+            name: "Refrigerator",
+            imgUrl: "refrigerator-icon.svg",
           },
         ],
         host: {
@@ -125,32 +121,28 @@ function _createStays() {
         capacity: 2,
         amenities: [
           {
-            name: "Internet",
-            imgUrl: "internet-icon.png",
-          },
-          {
-            name: "Wifi",
-            imgUrl: "wifi-icon.png",
-          },
-          {
-            name: "Air conditioning",
-            imgUrl: "air-conditioner-icon.png",
-          },
-          {
-            name: "Pets allowed",
-            imgUrl: "pets-icon.png",
+            name: "Sea view",
+            imgUrl: "sea-view-icon.svg",
           },
           {
             name: "Kitchen",
-            imgUrl: "kitchen-room-icon.png",
+            imgUrl: "kitchen-icon.svg",
           },
           {
-            name: "Iron",
-            imgUrl: "iron-icon.png",
+            name: "Beach access",
+            imgUrl: "beach-access-icon.svg",
           },
           {
-            name: "Laptop",
-            imgUrl: "laptop-icon.png",
+            name: "TV",
+            imgUrl: "tv-icon.svg",
+          },
+          {
+            name: "Backyard",
+            imgUrl: "backyard-icon.svg",
+          },
+          {
+            name: "Refrigerator",
+            imgUrl: "refrigerator-icon.svg",
           },
         ],
         host: {
@@ -213,32 +205,28 @@ function _createStays() {
         capacity: 2,
         amenities: [
           {
-            name: "Internet",
-            imgUrl: "internet-icon.png",
-          },
-          {
-            name: "Wifi",
-            imgUrl: "wifi-icon.png",
-          },
-          {
-            name: "Air conditioning",
-            imgUrl: "air-conditioner-icon.png",
-          },
-          {
-            name: "Pets allowed",
-            imgUrl: "pets-icon.png",
+            name: "Sea view",
+            imgUrl: "sea-view-icon.svg",
           },
           {
             name: "Kitchen",
-            imgUrl: "kitchen-room-icon.png",
+            imgUrl: "kitchen-icon.svg",
           },
           {
-            name: "Iron",
-            imgUrl: "iron-icon.png",
+            name: "Beach access",
+            imgUrl: "beach-access-icon.svg",
           },
           {
-            name: "Laptop",
-            imgUrl: "laptop-icon.png",
+            name: "TV",
+            imgUrl: "tv-icon.svg",
+          },
+          {
+            name: "Backyard",
+            imgUrl: "backyard-icon.svg",
+          },
+          {
+            name: "Refrigerator",
+            imgUrl: "refrigerator-icon.svg",
           },
         ],
         host: {
@@ -310,32 +298,28 @@ function _createStays() {
         capacity: 2,
         amenities: [
           {
-            name: "Internet",
-            imgUrl: "internet-icon.png",
-          },
-          {
-            name: "Wifi",
-            imgUrl: "wifi-icon.png",
-          },
-          {
-            name: "Air conditioning",
-            imgUrl: "air-conditioner-icon.png",
-          },
-          {
-            name: "Pets allowed",
-            imgUrl: "pets-icon.png",
+            name: "Sea view",
+            imgUrl: "sea-view-icon.svg",
           },
           {
             name: "Kitchen",
-            imgUrl: "kitchen-room-icon.png",
+            imgUrl: "kitchen-icon.svg",
           },
           {
-            name: "Iron",
-            imgUrl: "iron-icon.png",
+            name: "Beach access",
+            imgUrl: "beach-access-icon.svg",
           },
           {
-            name: "Laptop",
-            imgUrl: "laptop-icon.png",
+            name: "TV",
+            imgUrl: "tv-icon.svg",
+          },
+          {
+            name: "Backyard",
+            imgUrl: "backyard-icon.svg",
+          },
+          {
+            name: "Refrigerator",
+            imgUrl: "refrigerator-icon.svg",
           },
         ],
         host: {
@@ -397,32 +381,28 @@ function _createStays() {
         capacity: 8,
         amenities: [
           {
-            name: "Internet",
-            imgUrl: "internet-icon.png",
-          },
-          {
-            name: "Wifi",
-            imgUrl: "wifi-icon.png",
-          },
-          {
-            name: "Air conditioning",
-            imgUrl: "air-conditioner-icon.png",
-          },
-          {
-            name: "Pets allowed",
-            imgUrl: "pets-icon.png",
+            name: "Sea view",
+            imgUrl: "sea-view-icon.svg",
           },
           {
             name: "Kitchen",
-            imgUrl: "kitchen-room-icon.png",
+            imgUrl: "kitchen-icon.svg",
           },
           {
-            name: "Iron",
-            imgUrl: "iron-icon.png",
+            name: "Beach access",
+            imgUrl: "beach-access-icon.svg",
           },
           {
-            name: "Laptop",
-            imgUrl: "laptop-icon.png",
+            name: "TV",
+            imgUrl: "tv-icon.svg",
+          },
+          {
+            name: "Backyard",
+            imgUrl: "backyard-icon.svg",
+          },
+          {
+            name: "Refrigerator",
+            imgUrl: "refrigerator-icon.svg",
           },
         ],
         host: {
@@ -463,32 +443,28 @@ function _createStays() {
         capacity: 2,
         amenities: [
           {
-            name: "Internet",
-            imgUrl: "internet-icon.png",
-          },
-          {
-            name: "Wifi",
-            imgUrl: "wifi-icon.png",
-          },
-          {
-            name: "Air conditioning",
-            imgUrl: "air-conditioner-icon.png",
-          },
-          {
-            name: "Pets allowed",
-            imgUrl: "pets-icon.png",
+            name: "Sea view",
+            imgUrl: "sea-view-icon.svg",
           },
           {
             name: "Kitchen",
-            imgUrl: "kitchen-room-icon.png",
+            imgUrl: "kitchen-icon.svg",
           },
           {
-            name: "Iron",
-            imgUrl: "iron-icon.png",
+            name: "Beach access",
+            imgUrl: "beach-access-icon.svg",
           },
           {
-            name: "Laptop",
-            imgUrl: "laptop-icon.png",
+            name: "TV",
+            imgUrl: "tv-icon.svg",
+          },
+          {
+            name: "Backyard",
+            imgUrl: "backyard-icon.svg",
+          },
+          {
+            name: "Refrigerator",
+            imgUrl: "refrigerator-icon.svg",
           },
         ],
         host: {
@@ -550,32 +526,28 @@ function _createStays() {
         capacity: 2,
         amenities: [
           {
-            name: "Internet",
-            imgUrl: "internet-icon.png",
-          },
-          {
-            name: "Wifi",
-            imgUrl: "wifi-icon.png",
-          },
-          {
-            name: "Air conditioning",
-            imgUrl: "air-conditioner-icon.png",
-          },
-          {
-            name: "Pets allowed",
-            imgUrl: "pets-icon.png",
+            name: "Sea view",
+            imgUrl: "sea-view-icon.svg",
           },
           {
             name: "Kitchen",
-            imgUrl: "kitchen-room-icon.png",
+            imgUrl: "kitchen-icon.svg",
           },
           {
-            name: "Iron",
-            imgUrl: "iron-icon.png",
+            name: "Beach access",
+            imgUrl: "beach-access-icon.svg",
           },
           {
-            name: "Laptop",
-            imgUrl: "laptop-icon.png",
+            name: "TV",
+            imgUrl: "tv-icon.svg",
+          },
+          {
+            name: "Backyard",
+            imgUrl: "backyard-icon.svg",
+          },
+          {
+            name: "Refrigerator",
+            imgUrl: "refrigerator-icon.svg",
           },
         ],
         host: {
@@ -646,32 +618,28 @@ function _createStays() {
         capacity: 2,
         amenities: [
           {
-            name: "Internet",
-            imgUrl: "internet-icon.png",
-          },
-          {
-            name: "Wifi",
-            imgUrl: "wifi-icon.png",
-          },
-          {
-            name: "Air conditioning",
-            imgUrl: "air-conditioner-icon.png",
-          },
-          {
-            name: "Pets allowed",
-            imgUrl: "pets-icon.png",
+            name: "Sea view",
+            imgUrl: "sea-view-icon.svg",
           },
           {
             name: "Kitchen",
-            imgUrl: "kitchen-room-icon.png",
+            imgUrl: "kitchen-icon.svg",
           },
           {
-            name: "Iron",
-            imgUrl: "iron-icon.png",
+            name: "Beach access",
+            imgUrl: "beach-access-icon.svg",
           },
           {
-            name: "Laptop",
-            imgUrl: "laptop-icon.png",
+            name: "TV",
+            imgUrl: "tv-icon.svg",
+          },
+          {
+            name: "Backyard",
+            imgUrl: "backyard-icon.svg",
+          },
+          {
+            name: "Refrigerator",
+            imgUrl: "refrigerator-icon.svg",
           },
         ],
         host: {
