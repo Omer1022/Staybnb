@@ -9,7 +9,6 @@
   <div class="guests-modal" :class="{ active: isGuestModalShown }">
     <guests-picker />
   </div> -->
-
   <app-header class="header header-layout main-layout" />
   <section class="stay-details main-layout" v-if="stay">
     <div class="stay-info">
@@ -213,9 +212,6 @@
                 </button>
               </div>
               <fancy-btn class="reserve-btn">Reserve</fancy-btn>
-              <!-- <button class="reserve-btn">
-                <span>Reserve</span>
-              </button> -->
             </form>
           </div>
         </div>
