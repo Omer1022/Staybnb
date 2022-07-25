@@ -16,7 +16,8 @@
       <h2 class="stay-name">{{ stay.name }}</h2>
       <section class="short-info flex">
         <section class="flex">
-          <h5 class="reviews-rating">★ 4.7 ·</h5>
+          <img class="star" src="../styles/icons/star.svg" />
+          <h5 class="reviews-rating">4.7 ·</h5>
           <h5 class="reviews-number">{{ stay.reviews.length }} reviews</h5>
           ·
           <h5 class="location">
@@ -174,9 +175,9 @@
                 </div>
                 <div class="reviews-preview flex">
                   <div class="star-preview">
-                    <span class="star-icon">★</span>
+                    <img src="../styles/icons/star.svg" class="star" />
                   </div>
-                  <span class="review-avg">4.7</span> ·
+                  <span class="review-avg"> 4.7</span> ·
                   <span class="total-reviews">3 Reviews</span>
                 </div>
               </div>
