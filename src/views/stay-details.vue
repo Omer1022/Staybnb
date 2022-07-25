@@ -52,6 +52,7 @@
         />
       </section>
     </div>
+
     <section class="stay-display flex">
       <div class="stay-info">
         <section class="host-summary flex align-center space-between">
@@ -59,7 +60,7 @@
             <h2 class="host-name">
               {{ stay.type }} Hosted by {{ stay.host.fullname }}
             </h2>
-            <p class="host-details">{{ stay.numOfBeds }} bedroom</p>
+            <p class="host-details">{{ stay.numOfBeds }} beds</p>
           </div>
           <img
             class="host-img"
@@ -163,6 +164,7 @@
           </ul>
         </div>
       </div>
+
       <div class="stay-order">
         <div class="order-modal-container">
           <div class="order-modal flex">
@@ -176,8 +178,11 @@
                   <div class="star-preview">
                     <img src="../styles/icons/star.svg" class="star" />
                   </div>
-                  <span class="review-avg"> 4.7</span> ·
-                  <span class="total-reviews">3 Reviews</span>
+                  <span class="review-avg"> 4.7</span>
+                  <pre>.</pre>
+                  <span class="total-reviews"
+                    >{{ stay.reviews.length }} reviews</span
+                  >
                 </div>
               </div>
             </div>
@@ -217,8 +222,9 @@
         </div>
       </div>
     </section>
+
     <div class="stay-reviews">
-      <h2>★ 4.7 · {{ stay.reviews.length }} Reviews</h2>
+      <h2>★ 4.7 · {{ stay.reviews.length }} reviews</h2>
       <div class="review-stats grid">
         <div class="review-ctg flex space-between">
           <label>Cleanliness</label>
