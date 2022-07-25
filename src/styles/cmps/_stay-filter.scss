@@ -1,12 +1,12 @@
 //small-filter
 .header-search {
   margin: 1.5rem auto;
-  font-weight: 600;
+  // font-weight: 600;
   display: inline-flex;
   border-radius: 3.2rem;
   overflow: hidden;
   align-items: center;
-  border: 0.5px solid  $clr9;
+  border: 0.5px solid $clr9;
   color: var(clr1);
   height: rem(48px);
   transition: box-shadow 2s;
@@ -23,13 +23,12 @@
   button {
     text-align: start;
     font-family: Circular;
-    ;
-    font-weight: 600;
+    // font-weight: 600;
     font-size: rem(14px);
     padding-left: 8px;
     background: transparent;
     height: 3rem;
-    
+
     padding: 0 1rem;
     align-items: center;
     color: $clr2;
@@ -57,50 +56,37 @@
     border-radius: 50%;
     background-color: $clr1;
     display: flex;
-    
   }
 }
 
-
-
-
-
-
-
 .filter-search-icon img {
-  
   color: white;
   width: 0.85rem;
   height: 0.85rem;
-
 }
-
 
 //large filter
 
 .header-filter {
   display: flex;
-  // flex: 1 1 0%;
-  margin-bottom: 0.75rem;
-  margin-top: 5rem;
-  border: 0.5px solid  $clr9;
+  margin-bottom: rem(23px);
+  margin-top: rem(23px);
+  border: 0.5px solid $clr9;
   border-radius: 50px;
-  text-align: start;
   padding-inline-start: 0;
-  max-width: rem(850px);
-  // border-radius:3.2rem solid black;
   overflow: hidden;
   align-items: center;
-  height: rem(70px);
+  height: rem(65px);
+  width: 600px;
   transition: box-shadow 2s;
-
+  justify-content: space-around;
   button {
     display: block;
- 
+
     height: 100%;
     // display: inline;
     background: transparent;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
     text-align: start;
     // align-items: center;
     border: none;
@@ -120,59 +106,58 @@
     color: $clr2;
     font-size: 0.75rem;
     font-family: Circular;
-    font-weight: 800;
+    font-weight: 600;
     line-height: 1rem;
   }
-
+  .button-sub {
+    min-width: rem(75px);
   }
-  .filter-search {
-    margin: 7px 7px 7px 0;
-    height: 80%;
-    padding: 1.3rem;
-    justify-self: end;
+}
+.filter-search {
+  margin: 7px 7px 7px 0;
+  height: 80%;
+  padding: 1.3rem;
+  justify-self: end;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1.2rem;
+  // justify-content: space-between;
+  border-radius: 3.2rem;
+  display: inline-flex;
+  color: white;
+  background-color: $clr1;
+  span {
+    padding-inline-start: 0.5rem;
+  }
+  img {
+    margin-inline-end: 0;
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  .guests-btn-warper {
     align-items: center;
-    font-weight: 500;
-    font-size: 1.2rem;
-    // justify-content: space-between;
-    border-radius: 3.2rem;
-    display: inline-flex;
-    color: white;
-    background-color: $clr1;
-    span{
-      padding-inline-start: 0.5rem;
-    }
-    img {
-      margin-inline-end: 0;
-      width: 1.1rem;
-      height: 1.1rem;
-    }
-
-    .guests-btn-warper {
-      align-items: center;
-      justify-content: center;
-    }
-    &:hover {
-      // background-color: $clr7;
-      cursor: pointer;
-  
-    }
+    justify-content: center;
   }
-
+  &:hover {
+    // background-color: $clr7;
+    cursor: pointer;
+  }
+}
 
 .destination-input {
-  
   // flex-grow: 1;
   padding-inline-start: 0;
   text-align: start;
 
   input {
     border: hidden;
-
+    width: 120px;
     // width: rem(260px);
     &:focus {
       outline: none;
     }
-    &:hover{
+    &:hover {
       cursor: pointer;
     }
     padding-bottom: 2px;
@@ -180,7 +165,6 @@
     border: 1px solid transparent;
     border-radius: 32px;
     background-color: inherit;
-
   }
 }
 
@@ -189,7 +173,6 @@
 }
 
 .guests-modal {
-
   margin-top: -37.25rem;
   opacity: 0%;
   transition: opacity 1s;
@@ -223,7 +206,6 @@
   background-color: transparent;
 }
 
-
 .btn-container {
   height: inherit;
 }
@@ -231,6 +213,7 @@
 .active-calendar {
   opacity: 100%;
   margin-top: 29.5rem;
+  z-index: 10;
 }
 
 .active-guest {
@@ -249,7 +232,6 @@
   }
 }
 
-
 .date-container {
   display: flex;
   justify-content: space-around;
@@ -264,11 +246,14 @@
 
 .guest-container {
   flex-direction: row;
-  &:hover{
+  &:hover {
     &:hover {
       background-color: $clr7;
       cursor: pointer;
     }
   }
   border-radius: 2rem;
+  .buttom-sub-gest {
+    width: 100px;
+  }
 }

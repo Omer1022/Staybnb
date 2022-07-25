@@ -1,8 +1,6 @@
 <template>
-  <router-link v-if="defaultDisplay" :to="'/explore'" class="link">
-  <main-filter-small @openLarge="openLargeFilter" ></main-filter-small>
-  <!-- <main-filter-large v-else="!defaultDisplay" ></main-filter-large> -->
-    </router-link>
+  <!-- <main-filter-small @openLarge="openLargeFilter" v-show="defaultDisplay"></main-filter-small> -->
+  <main-filter-large v-show="!defaultDisplay" ></main-filter-large>
 </template>
 <script>
 import mainFilterSmall from "./main-filter-small.cmp.vue";

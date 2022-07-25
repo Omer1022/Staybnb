@@ -1,8 +1,12 @@
 .labels-filter {
-  height: 95px;
-  margin-bottom: 25px;
+  height: 96px;
+  margin-bottom: 16px;
   align-items: center;
   justify-content: center;
+  position: sticky;
+  top: 96px;
+  z-index: 2;
+  background-color: white;
 }
 
 .labels-control {
@@ -74,20 +78,18 @@
   justify-content: space-evenly;
 }
 
-<<<<<<< HEAD
-.labels-container:hover{
+.labels-container:hover {
   border-bottom: 1px solid $clr5;
 
   .label-name {
     color: black;
   }
-  .label-img{
-    filter: invert(0%) sepia(18%) saturate(3285%) hue-rotate(260deg) brightness(100%) contrast(109%);
+  .label-img {
+    filter: invert(0%) sepia(18%) saturate(3285%) hue-rotate(260deg)
+      brightness(100%) contrast(109%);
   }
 }
 
-=======
->>>>>>> 68e89d123ac3dff1fd946e8610d2e97d9772a119
 .label-img {
   height: 25px;
   width: 25px;
@@ -95,20 +97,12 @@
     contrast(93%);
 }
 
-<<<<<<< HEAD
-
-
-
-.label-name {
-  font-size: 12px;
-  color: $clr5;
-=======
 .label-name {
   font-size: 12px;
   color: $clr5;
 }
 
-.label-name:hover {
-  color: black;
->>>>>>> 68e89d123ac3dff1fd946e8610d2e97d9772a119
+
+.mor{
+  height: 96px;
 }

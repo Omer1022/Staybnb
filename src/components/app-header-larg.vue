@@ -6,7 +6,8 @@
         <h1 class="logo-text">Staybnb</h1>
       </div>
     </router-link>
-    <stay-filter class="filter-header" @setFilter="setFilter" />
+    <!-- <stay-filter class="filter-header" @setFilter="setFilter" /> -->
+    <div class="space"></div>
     <section class="user-actions flex align-items space-between">
       <div class="host">
         <router-link :to="'/'" class="host-header link">Become a Host</router-link>
