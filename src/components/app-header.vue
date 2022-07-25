@@ -1,8 +1,8 @@
 <template>
   <main class="header">
     <router-link :to="'/'" class="link">
-      <div class="logo align-center flex">
-        <img class="logo-img" src="../styles/icons/logo.png" />
+      <div class="logo flex">
+        <img class="logo-img" src="../styles/icons/logo-bnb.png" />
         <h1 class="logo-text">Staybnb</h1>
       </div>
     </router-link>
@@ -11,9 +11,9 @@
       <div class="host">
         <router-link :to="'/'" class="host-header link">Become a Host</router-link>
       </div>
-      <button class="btn ">
+      <!-- <button class="btn ">
         <img src="/footer-imgs/lan.png" alt="" />
-      </button>
+      </button> -->
       <section class="user-info flex">
         <button class="menu-btn btn">
           <img class="menu-img" src="../../public/footer-imgs/menu.png" alt="" />

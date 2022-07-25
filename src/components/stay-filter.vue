@@ -18,13 +18,13 @@ export default {
 props: [],
 data() {
 return {
-  defaultDisplay:false
+  defaultDisplay:true
 };
 },
 created() {},
 methods: {
   openLargeFilter(){
-    // this.defaultDisplay = false
+    this.defaultDisplay = !this.defaultDisplay
   }
 },
 computed: {},

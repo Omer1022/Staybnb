@@ -1,11 +1,9 @@
 .header {
   position: sticky;
   top:0 ;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   background-color:$clr3;
-  // height: rem(80px);
-  // height: rem(80px);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -14,12 +12,16 @@
   margin-bottom: 1rem;
 }
 
-.logo-text {
-  margin: 0;
-}
-
 .logo {
-  height: 35px;
+  height: 30px;
+  align-items: center;
+  .logo-text {
+    margin: 0;
+    color:$clr1;
+  }
+  .logo-img{
+    height: 30px;
+  }
 }
 
 .link {
@@ -31,7 +33,7 @@
   border: 1px solid lightgray;
     border-radius: 50px;
     align-items: center;
-    height: rem(35px);
+    height: rem(48px);
     width: rem(70px);
     transition: box-shadow 2s;
     justify-content: space-evenly;

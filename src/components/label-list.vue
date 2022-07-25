@@ -4,7 +4,7 @@
       &#60;
     </button>
     <section  class="labels-list">
-      <div class="labels-container" v-for="(label, idx) in labels" :key="idx">
+      <div class="labels-container" v-for="(label, idx) in labels" :key="idx" @click="">
       <img class="label-img" :src="`${label.src}`" alt="">
         <p class="label-name">{{ label.name }}</p>
       </div>
@@ -55,13 +55,28 @@ export default {
           name: "creativ-spaces",
           src : "../../public/lable-img/creativ-spaces.jpg",
         },
+        {
+          name: "desert",
+          src : "../../public/lable-img/desert.jpg",
+        },
+        {
+          name: "golf",
+          src : "../../public/lable-img/golf.jpg",
+        },
+        {
+          name: "skiing",
+          src : "../../public/lable-img/skiing.jpg",
+        },
+        {
+          name: "surfing",
+          src : "../../public/lable-img/surfing.jpg",
+        },
       ],
     }
   },
   methods: {},
 
   created() {
-    labelService.query()
   },
   unmounted() {},
 }

@@ -1,6 +1,4 @@
 .labels-filter {
-  // background-color: green;
-  // position: relative;
   height: 95px;
   margin-bottom: 25px;
   align-items: center;
@@ -76,6 +74,16 @@
   justify-content: space-evenly;
 }
 
+.labels-container:hover{
+  border-bottom: 1px solid $clr5;
+
+  .label-name {
+    color: black;
+  }
+  .label-img{
+    filter: invert(0%) sepia(18%) saturate(3285%) hue-rotate(260deg) brightness(100%) contrast(109%);
+  }
+}
 
 .label-img {
   height: 25px;
@@ -85,12 +93,8 @@
 
 
 
+
 .label-name {
   font-size: 12px;
   color: $clr5;
-
-}
-
-.label-name :hover {
-  color: black;
 }
