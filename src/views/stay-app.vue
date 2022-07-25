@@ -1,12 +1,12 @@
 <template>
-  <div class="stay-app">
-    <app-header class="header-layout"/>
+  <div class="stay-app ">
+    <app-header class="header-layout main-layout"/>
+    <!-- <horizontal-line/> -->
+    <label-list :labels="labels" class="main-layout"/>
 
-    <label-list :labels="labels"/>
-
-    <stay-list @removeStay="removeStay" :stays="stays" />
-
-    <app-footer class="footer-layout "/>
+    <stay-list @removeStay="removeStay" :stays="stays"  class="main-layout"/>
+    <!-- <horizontal-line/> -->
+    <app-footer class="footer-layout main-layout"/>
   </div>
 
 
@@ -14,19 +14,19 @@
 
 <script>
 import stayList from "../components/stay-list.vue";
-import carouseApp from "../components/carousel/carouse-app.vue";
 import appHeader from "../components/app-header.vue";
 import appFooter from "../components/app-footer.vue";
 import labelList from "../components/label-list.vue";
+import horizontalLine from "../components/horizontal-line.cmp.vue";
 
 export default {
   template: ``,
   components: {
     stayList,
-    carouseApp,
     appHeader,
     appFooter,
     labelList,
+    horizontalLine
 },
   data() {
     return {};

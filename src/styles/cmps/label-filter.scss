@@ -74,6 +74,7 @@
   justify-content: space-evenly;
 }
 
+<<<<<<< HEAD
 .labels-container:hover{
   border-bottom: 1px solid $clr5;
 
@@ -85,16 +86,29 @@
   }
 }
 
+=======
+>>>>>>> 68e89d123ac3dff1fd946e8610d2e97d9772a119
 .label-img {
   height: 25px;
   width: 25px;
-  filter: invert(47%) sepia(7%) saturate(12%) hue-rotate(355deg) brightness(92%) contrast(93%);
+  filter: invert(47%) sepia(7%) saturate(12%) hue-rotate(355deg) brightness(92%)
+    contrast(93%);
 }
 
+<<<<<<< HEAD
 
 
 
 .label-name {
   font-size: 12px;
   color: $clr5;
+=======
+.label-name {
+  font-size: 12px;
+  color: $clr5;
+}
+
+.label-name:hover {
+  color: black;
+>>>>>>> 68e89d123ac3dff1fd946e8610d2e97d9772a119
 }

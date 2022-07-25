@@ -2,7 +2,7 @@
     <form class="header-filter">
 
         <div class="destination-input btn-container">
-            <button @click.stop="clickedButton">
+            <button @click.prevent="clickedButton">
                 <label>
                     <div class="button-title">Where</div>
                     <input v-model="filter.destination" name="destination-input" type="text"
@@ -15,7 +15,7 @@
 
         <div class="date-container">
             <div class="btn-container flex">
-                <button @click.stop="isCalendarShown = !isCalendarShown">
+                <button @click.prevent="isCalendarShown = !isCalendarShown">
                     <div class="button-title">Check in</div>
                     {{ checkInDate }}
                 </button>
@@ -24,7 +24,7 @@
             <!-- <span>|</span> -->
 
             <div class="btn-container flex">
-                <button @click.stop="isCalendarShown = !isCalendarShown">
+                <button @click.prevent="isCalendarShown = !isCalendarShown">
                     <div class="button-title">Check out</div>
                     {{ checkOutDate }}
                 </button>
@@ -34,16 +34,16 @@
         <span>|</span>
         
         <div class="calendar-modal" :class="{ 'active-calendar': isCalendarShown }">
-            <calender-spread @closeCalendar="isCalendarShown = false" @dateChange="dateUpdate" @click.stop is-expanded>
+            <calender-spread @closeCalendar="isCalendarShown = false" @dateChange="dateUpdate" @click.prevent is-expanded>
             </calender-spread>
         </div>
 
         <div class="guest-container  btn-container flex">
-            <button @click.stop="isGuestModalShown = !isGuestModalShown">
+            <button @click.prevent="isGuestModalShown = !isGuestModalShown">
                 <div class="button-title">Who</div>
                 <span class="guests-sum">{{ totalGuests }}</span>
             </button>
-                <div @click.stop="runSearch" class="filter-search">
+                <div @click.prevent="runSearch" class="filter-search">
                     <img src="../styles/icons/search_white.png" alt="" /> <span>Search</span>
                 </div>
             <div class="guests-modal" :class="{ 'active-guest': isGuestModalShown }">

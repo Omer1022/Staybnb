@@ -9,14 +9,14 @@
   <div class="guests-modal" :class="{ active: isGuestModalShown }">
     <guests-picker />
   </div> -->
-
-  <section class="stay-details" v-if="stay">
-    <app-header class="header-layout" />
+  <app-header class="header header-layout main-layout" />
+  <section class="stay-details main-layout" v-if="stay">
     <div class="stay-info">
       <h2 class="stay-name">{{ stay.name }}</h2>
       <section class="short-info flex">
         <section class="flex">
-          <h5 class="reviews-rating">★ 4.7 ·</h5>
+          <img class="star" src="../styles/icons/star.svg" />
+          <h5 class="reviews-rating">4.7 ·</h5>
           <h5 class="reviews-number">{{ stay.reviews.length }} reviews</h5>
           ·
           <h5 class="location">
@@ -174,9 +174,9 @@
                 </div>
                 <div class="reviews-preview flex">
                   <div class="star-preview">
-                    <span class="star-icon">★</span>
+                    <img src="../styles/icons/star.svg" class="star" />
                   </div>
-                  <span class="review-avg">4.7</span> ·
+                  <span class="review-avg"> 4.7</span> ·
                   <span class="total-reviews">3 Reviews</span>
                 </div>
               </div>
@@ -212,9 +212,6 @@
                 </button>
               </div>
               <fancy-btn class="reserve-btn">Reserve</fancy-btn>
-              <!-- <button class="reserve-btn">
-                <span>Reserve</span>
-              </button> -->
             </form>
           </div>
         </div>
@@ -328,8 +325,8 @@
     </div>
     <!-- <router-link to="/">Back</router-link> -->
     <!-- <button @click="removeStay">Delete</button> -->
-    <app-footer class="footer-layout footer" />
   </section>
+  <app-footer class="footer footer-layout main-layout" />
 </template>
 <script>
 import { stayService } from "../services/stay-service";
