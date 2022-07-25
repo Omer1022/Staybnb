@@ -1,7 +1,6 @@
 <template>
 
   <main-filter-small @openLarge="openLargeFilter" v-show="defaultDisplay"></main-filter-small>
-
   <main-filter-large v-show="!defaultDisplay" ></main-filter-large>
 
 </template>
@@ -18,13 +17,13 @@ export default {
 props: [],
 data() {
 return {
-  defaultDisplay:false
+  defaultDisplay:true
 };
 },
 created() {},
 methods: {
   openLargeFilter(){
-    // this.defaultDisplay = false
+    this.defaultDisplay = false
   }
 },
 computed: {},
