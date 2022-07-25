@@ -13,7 +13,7 @@
 }
 
 .flex {
-  display: flex;;
+  display: flex;
 }
 
 .space-around {
@@ -27,8 +27,8 @@
 .align-items {
   align-items: center;
 }
-.justify-content{
-  justify-content:center
+.justify-content {
+  justify-content: center;
 }
 
 .hiden {
@@ -37,6 +37,10 @@
 
 .bold {
   font-weight: 700;
+}
+
+.relative {
+  position: relative;
 }
 
 .stay-name {
@@ -51,12 +55,6 @@
 
 .stay-rate img {
   height: 1.5rem;
-}
-
-.stay-header {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
 }
 
 // Aspect ratios

@@ -9,7 +9,7 @@
   <div class="guests-modal" :class="{ active: isGuestModalShown }">
     <guests-picker />
   </div> -->
-  <app-header class="header header-layout main-layout" />
+  <app-header class="details-header header-layout main-layout" />
   <section class="stay-details main-layout" v-if="stay">
     <div class="stay-info">
       <h2 class="stay-name">{{ stay.name }}</h2>
@@ -18,7 +18,7 @@
           <img class="star" src="../styles/icons/star.svg" />
           <h5 class="reviews-rating">4.7 ·</h5>
           <h5 class="reviews-number">{{ stay.reviews.length }} reviews</h5>
-          ·
+          <pre> .</pre>
           <h5 class="location">
             {{ stay.loc.city }},
             {{ stay.loc.country }}
@@ -326,7 +326,7 @@
     <!-- <router-link to="/">Back</router-link> -->
     <!-- <button @click="removeStay">Delete</button> -->
   </section>
-  <app-footer class="footer footer-layout main-layout" />
+  <app-footer class="footer footer-layout main-layout relative" />
 </template>
 <script>
 import { stayService } from "../services/stay-service";
@@ -403,7 +403,7 @@ export default {
             month: "2-digit",
             day: "2-digit",
           })
-        : "Add dates";
+        : "Add date";
     },
 
     checkOutDate() {
@@ -413,13 +413,13 @@ export default {
             month: "2-digit",
             day: "2-digit",
           })
-        : "Add dates";
+        : "Add date";
     },
     totalGuests() {
-      return this.guests.total > 0 ? this.guests.total : "Add guests";
+      return this.guests.total > 0 ? this.guests.total : "1 guest";
     },
     totalGuests() {
-      return this.guests.total > 0 ? this.guests.total : "Add guests";
+      return this.guests.total > 0 ? this.guests.total : "1 guest";
     },
   },
   created() {
