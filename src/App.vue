@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="layout">
-    <router-view class="body-layout main-layout"/>
+    <router-view class="body-layout"/>
   </div>
 </template>
 
