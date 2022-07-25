@@ -57,6 +57,8 @@ unmounted() {},
   <main-filter-small @openLarge="openLargeFilter" ></main-filter-small>
   <main-filter-large v-else="!defaultDisplay" ></main-filter-large> toooo delet
     </router-link>
+
+
 </template>
 <script>
 import mainFilterSmall from "./main-filter-small.cmp.vue";
@@ -71,13 +73,18 @@ export default {
 props: [],
 data() {
 return {
-  defaultDisplay:true
+  defaultDisplay:true,
+  filterMode: null
 };
 },
 created() {},
 methods: {
-  openLargeFilter(){
-    this.defaultDisplay = !this.defaultDisplay
+  openLargeFilter(mode){
+    this.defaultDisplay = false
+    this.filterMode = mode
+  },
+  filterUpdate(filterBy){
+    console.log('filterBy- in the stay filer cmp', filterBy)
   }
 },
 computed: {},
