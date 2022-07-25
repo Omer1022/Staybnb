@@ -27,6 +27,7 @@ export default {
   created() { },
   methods: {
     openSearch(mode) {
+      console.log('mode', mode)
       this.$emit('openLarge', mode)
     }
   },

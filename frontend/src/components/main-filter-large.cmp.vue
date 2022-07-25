@@ -1,11 +1,10 @@
 <template>
     <form class="header-filter">
-
         <div class="destination-input btn-container">
             <button @click.prevent="clickedButton">
                 <label>
                     <div class="button-title">Where</div>
-                    <input v-model="filter.destination" name="destination-input" type="text"
+                    <input v-model="filterBy.destination" name="destination-input" type="text"
                         placeholder="Search detonations" />
                 </label>
             </button>
@@ -30,11 +29,12 @@
                 </button>
             </div>
         </div>
-        
+
         <span>|</span>
-        
+
         <div class="calendar-modal" :class="{ 'active-calendar': isCalendarShown }">
-            <calender-spread @closeCalendar="isCalendarShown = false" @dateChange="dateUpdate" @click.prevent is-expanded>
+            <calender-spread @closeCalendar="isCalendarShown = false" @dateChange="dateUpdate" @click.prevent
+                is-expanded>
             </calender-spread>
         </div>
 
@@ -43,9 +43,9 @@
                 <div class="button-title">Who</div>
                 <span class="guests-sum">{{ totalGuests }}</span>
             </button>
-                <div @click.prevent="runSearch" class="filter-search">
-                    <img src="../styles/icons/search_white.png" alt="" /> <span>Search</span>
-                </div>
+            <div @click.prevent="runSearch" class="filter-search">
+                <img src="../styles/icons/search_white.png" alt="" /> <span>Search</span>
+            </div>
             <div class="guests-modal" :class="{ 'active-guest': isGuestModalShown }">
                 <guests-picker @guestsUpdate="updateGuests" @closeGuestsModal="isGuestModalShown = false" />
             </div>
@@ -56,18 +56,19 @@
 <script>
 import guestsPicker from "./guests-picker.cmp.vue";
 import calenderSpread from "./calender-spread.vue";
-import "v-calendar/dist/style.css";
+
 
 export default {
-    props: {},
+    props: {
+        mode: String
+    },
     components: {
         guestsPicker,
         calenderSpread,
-
     },
     data() {
         return {
-            filter: {
+            filterBy: {
                 destination: "",
                 numOfBeds: 0,
             },
@@ -75,15 +76,16 @@ export default {
                 start: null,
                 end: null,
             },
-
             guests: {
                 adults: 0,
                 kids: 0,
                 infants: 0,
                 total: 0,
             },
+
             isCalendarShown: false,
-            isGuestModalShown: false
+            isGuestModalShown: false,
+            mode: 'destination',
         };
     },
     methods: {
@@ -91,7 +93,10 @@ export default {
             console.log('clicked')
         },
         runSearch() {
-            console.log("searching");
+            if (!this.filterBy.destination.length) return
+            if (this.guests.total === 0) this.filterBy.numOfBeds = 1
+            const copyFilter = JSON.parse(JSON.stringify(this.filterBy))
+            this.$store.dispatch({ type: "setFilter", filterBy: copyFilter })
         },
 
         dateUpdate(newDate) {
@@ -99,7 +104,8 @@ export default {
         },
         updateGuests(NewGuests) {
             this.guests = NewGuests
-        }
+            this.filterBy.numOfBeds = this.guests.total
+        },
     },
     actions: {},
     computed: {
@@ -131,8 +137,15 @@ export default {
             }
         },
     },
+    watch: {
+        // guests(){
+        //     console.log(this.guests.total)
+        //     this.filterBy.numOfBeds = this.guests.total 
+        // }
+    },
+    created() {
 
-    created() { },
+    },
     unmounted() { },
 };
 </script>

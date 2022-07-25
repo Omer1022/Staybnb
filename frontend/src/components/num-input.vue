@@ -6,9 +6,9 @@
     <span class="sub-title">{{subtitle}}</span>
    </div>
     <div class="plus-minus-btn">
-        <button @click="updateNumOfItems(-1)" :disabled="numOfItems === 0">-</button>
+        <button @click.prevent="updateNumOfItems(-1)" :disabled="numOfItems === 0">-</button>
         <input type="number" v-model="numOfItems">
-        <button @click="updateNumOfItems(1)">+</button>
+        <button @click.prevent="updateNumOfItems(1)">+</button>
     </div>
         </section>
 

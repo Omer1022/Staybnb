@@ -4,6 +4,7 @@ export const utilService = {
   makeId,
   getRandomIntInclusive,
   getRandomColor,
+  debounce
 };
 
 function saveToStorage(key, value) {
@@ -38,4 +39,19 @@ function getRandomColor() {
     color += letters[Math.floor(Math.random() * 16)];
   }
   return color;
+}
+
+
+function debounce(func, wait = 1000) {
+  let timeout
+
+  return function (...args) {
+    const later = () => {
+      clearTimeout(timeout)
+      func(...args)
+    }
+
+    clearTimeout(timeout)
+    timeout = setTimeout(later, wait)
+  }
 }
