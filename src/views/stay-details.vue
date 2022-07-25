@@ -10,8 +10,8 @@
     <guests-picker />
   </div> -->
 
-  <section class="stay-details" v-if="stay">
-    <app-header class="header-layout" />
+  <app-header class="header header-layout main-layout" />
+  <section class="stay-details main-layout" v-if="stay">
     <div class="stay-info">
       <h2 class="stay-name">{{ stay.name }}</h2>
       <section class="short-info flex">
@@ -330,8 +330,8 @@
     </div>
     <!-- <router-link to="/">Back</router-link> -->
     <!-- <button @click="removeStay">Delete</button> -->
-    <app-footer class="footer-layout footer" />
   </section>
+  <app-footer class="footer footer-layout main-layout" />
 </template>
 <script>
 import { stayService } from "../services/stay-service";
