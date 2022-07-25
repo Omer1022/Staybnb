@@ -8,7 +8,6 @@
 
           </el-carousel-item>
         </el-carousel>
-    
         <button class="btn like-btn" @click.stop="LikeStay()">
           <img src="../styles/icons/save-icon.svg" alt="" />
         </button>
@@ -31,17 +30,14 @@
   </section>
 </template>
 <script>
-import carouseApp from "./carousel/carouse-app.vue";
-import CarouseApp from "./carousel/carouse-app.vue";
-import CarouselCmp from "./carousel.cmp.vue";
+
 
 export default {
   props: {
     stay: Object,
   },
   components: {
-    carouseApp,
-    CarouselCmp
+ 
   },
   data() {
     return {
