@@ -356,7 +356,7 @@
   }
 
   .review-stats {
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px 100px;
@@ -366,8 +366,7 @@
   .reviews-list-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 40px 1px;
-    grid-gap: 10px 100px;
+    grid-gap: 40px 100px;
   }
 
   .gray-scale {
