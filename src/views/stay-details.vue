@@ -38,6 +38,7 @@
           </div>
           <div class="save-container">
             <button class="info-btn">
+              <img class="save-icon" src="../styles/icons/" />
               <span class="save-icon">♡</span>
               <h5 class="save-btn">Save</h5>
             </button>
