@@ -29,7 +29,7 @@
             <button class="info-btn">
               <img
                 class="share-icon"
-                src="../styles/icons/share-icon.svg"
+                src="../styles/icons/details-icons/share-icon.svg"
                 alt=""
               />
               <h5 class="share-btn">Share</h5>
