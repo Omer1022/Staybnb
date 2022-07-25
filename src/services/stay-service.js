@@ -1,5 +1,5 @@
-import { storageService } from "./storage-service.js"
-import { utilService } from "./util-service.js"
+import { storageService } from "./storage-service.js";
+import { utilService } from "./util-service.js";
 
 export const stayService = {
   query,
@@ -8,22 +8,20 @@ export const stayService = {
   saveStay,
   removeStay,
   // getLabel,
-}
+};
 
-
-
-const STAY_KEY = "keyDB"
+const STAY_KEY = "keyDB";
 // const Label_key = "labelDB"
 
-_createStays()
+_createStays();
 // getLabel()
 
 function query() {
-  return storageService.query(STAY_KEY)
+  return storageService.query(STAY_KEY);
 }
 
 function getById(stayId) {
-  return storageService.get(STAY_KEY, stayId)
+  return storageService.get(STAY_KEY, stayId);
 }
 
 function getEmptyStay() {
@@ -34,22 +32,22 @@ function getEmptyStay() {
     imgUrls,
     price: utilService.getRandomIntInclusive(0, 300),
     amenities: ["TV", "Wifi", "Kitchen"],
-  }
+  };
 }
 
 function saveStay(stay) {
   const savedStay = stay._id
     ? storageService.put(STAY_KEY, stay)
-    : storageService.post(STAY_KEY, stay)
-  return savedStay
+    : storageService.post(STAY_KEY, stay);
+  return savedStay;
 }
 
 function removeStay(stay) {
-  return storageService.remove(STAY_KEY, stay)
+  return storageService.remove(STAY_KEY, stay);
 }
 
 function _createStays() {
-  let stays = JSON.parse(localStorage.getItem(STAY_KEY))
+  let stays = JSON.parse(localStorage.getItem(STAY_KEY));
   if (!stays || !stays.length) {
     stays = [
       {
@@ -91,7 +89,7 @@ function _createStays() {
         host: {
           _id: "51399391",
           fullname: "Davit Pok",
-          imgUrl: "https://robohash.org/123605344?set=set1",
+          imgUrl: "39.jpg",
         },
         loc: {
           country: "Portugal",
@@ -109,7 +107,7 @@ function _createStays() {
             by: {
               _id: "u102",
               fullname: "user2",
-              imgUrl: "https://robohash.org/123605344?set=set1",
+              imgUrl: "21.jpg",
             },
           },
         ],
@@ -154,7 +152,7 @@ function _createStays() {
           _id: "622f3402e36c59e6164fac46",
           numOfBeds: 4,
           fullname: "Shaila & Alex",
-          imgUrl: "https://robohash.org/123605344?set=set1",
+          imgUrl: "56.jpg",
         },
         loc: {
           country: "US",
@@ -172,7 +170,7 @@ function _createStays() {
             by: {
               _id: "622f3407e36c59e6164fbfd2",
               fullname: "Nicolas",
-              imgUrl: "https://robohash.org/4523027?set=set1",
+              imgUrl: "36.jpg",
               id: "4523027",
             },
           },
@@ -181,7 +179,7 @@ function _createStays() {
             by: {
               _id: "622f3403e36c59e6164fb048",
               fullname: "Jeff",
-              imgUrl: "https://robohash.org/6443424?set=set1",
+              imgUrl: "22.jpg",
               id: "6443424",
             },
             txt: "Great, quiet place to stay. It is great having Shaila just upstairs to answer any questions, and especially to give great tips on places to go. ",
@@ -191,7 +189,7 @@ function _createStays() {
             by: {
               _id: "622f3406e36c59e6164fba55",
               fullname: "Carla",
-              imgUrl: "https://robohash.org/6121036?set=set1",
+              imgUrl: "36.jpg",
               id: "6121036",
             },
             txt: "Shaila and Alex are wonderful hosts really, they helped us every time we needed with directions, the internet, the supermarket, the post office !!! (thank you guys !!!).The place and the neighbord are great, 8 blocks far from the apartment you have the subway and 30 min. later you are in the island, we moved early in the morning, late at night (sometimes we came back at 2am) and everything turned out great.Definetly I would come back to their apartment, It's bigger than ours in Argentina !!! I look forward to stay there again and, next time, go out with you guys and have a beer or anything.\r\nBye !!! - Guido and Carla - ",
@@ -237,7 +235,7 @@ function _createStays() {
         host: {
           _id: "622f3401e36c59e6164fabab",
           fullname: "Angel",
-          imgUrl: "https://robohash.org/123605344?set=set1",
+          imgUrl: "33.jpg",
         },
         loc: {
           country: "Canada",
@@ -254,7 +252,7 @@ function _createStays() {
             by: {
               _id: "622f3407e36c59e6164fc058",
               fullname: "Rowan",
-              imgUrl: "https://robohash.org/81703602?set=set1",
+              imgUrl: "31.jpg",
               id: "81703602",
             },
             txt: "The place was great, as was the host! I would recommend staying here.",
@@ -264,7 +262,7 @@ function _createStays() {
             by: {
               _id: "622f3403e36c59e6164fb274",
               fullname: "Adriana",
-              imgUrl: "https://robohash.org/64310987?set=set1",
+              imgUrl: "40.jpg",
               id: "64310987",
             },
             txt: "J'ai adoré rester là. Très acceuillant.",
@@ -274,7 +272,7 @@ function _createStays() {
             by: {
               _id: "622f3405e36c59e6164fb87c",
               fullname: "Emma",
-              imgUrl: "https://robohash.org/23709900?set=set1",
+              imgUrl: "21.jpg",
               id: "23709900",
             },
             txt: "Angel est un hôte très sympa et arrangeant ! L'appartement est agréable à vivre et propre. Proche du métro et du centre ville. Nous avons passé un très bon séjour !",
@@ -284,7 +282,7 @@ function _createStays() {
             by: {
               _id: "622f3408e36c59e6164fc082",
               fullname: "Jeffery",
-              imgUrl: "https://robohash.org/44882622?set=set1",
+              imgUrl: "19.jpg",
               id: "44882622",
             },
             txt: "Angel was warm and welcoming and has a beautiful apartment. I'd recommend his place to anyone visiting downtown Montreal!",
@@ -330,7 +328,7 @@ function _createStays() {
         host: {
           _id: "622f3402e36c59e6164fae4d",
           fullname: "Nihat",
-          imgUrl: "https://robohash.org/123605344?set=set1",
+          imgUrl: "11.jpg",
         },
         loc: {
           country: "Turkey",
@@ -347,7 +345,7 @@ function _createStays() {
             by: {
               _id: "622f3406e36c59e6164fbcc7",
               fullname: "Quentin",
-              imgUrl: "https://robohash.org/12424603?set=set1",
+              imgUrl: "07.jpg",
               id: "12424603",
             },
             txt: "I greatly appreciated both the location of the place (very central) and the appartment per se (clean and comfortable, with a very cosy room and with Wi-Fi). \r\n\r\nNihat was perfect host, quite welcoming and helpful about places to go (or avoid) and things to do in town. \r\n\r\nHosça kal!\r\n\r\n\r\n",
@@ -357,7 +355,7 @@ function _createStays() {
             by: {
               _id: "622f3405e36c59e6164fb7f6",
               fullname: "Steve",
-              imgUrl: "https://robohash.org/10300292?set=set1",
+              imgUrl: "01.jpg",
               id: "10300292",
             },
             txt: "Nice room in a flat well located. Nihat is very nce and helpful. Good experience.",
@@ -367,7 +365,7 @@ function _createStays() {
             by: {
               _id: "622f3404e36c59e6164fb624",
               fullname: "Jess",
-              imgUrl: "https://robohash.org/8641944?set=set1",
+              imgUrl: "05.jpg",
               id: "8641944",
             },
             txt: "We had a fantastic stay in this charming apartment. The location was perfect and Nihat welcomed us even when we made a late reservation and arrived early. He works at a bar no far from there- a great place to have a drink after seeing the sites! I highly recommend this place!",
@@ -413,7 +411,7 @@ function _createStays() {
         host: {
           _id: "51399391",
           fullname: "Davit Pok",
-          imgUrl: "https://robohash.org/123605344?set=set1",
+          imgUrl: "55.jpg",
         },
         loc: {
           country: "Portugal",
@@ -431,7 +429,7 @@ function _createStays() {
             by: {
               _id: "u102",
               fullname: "user2",
-              imgUrl: "https://robohash.org/123605344?set=set1",
+              imgUrl: "52.jpg",
             },
           },
         ],
@@ -476,7 +474,7 @@ function _createStays() {
           _id: "622f3402e36c59e6164fac46",
           numOfBeds: 4,
           fullname: "Shaila & Alex",
-          imgUrl: "https://robohash.org/123605344?set=set1",
+          imgUrl: "27.jpg",
         },
         loc: {
           country: "US",
@@ -492,7 +490,7 @@ function _createStays() {
             by: {
               _id: "622f3407e36c59e6164fbfd2",
               fullname: "Nicolas",
-              imgUrl: "https://robohash.org/4523027?set=set1",
+              imgUrl: "51.jpg",
               id: "4523027",
             },
             txt: "Shaila's place is amazing! It's new, it's clean and it's big! And Shaila is very accommodating, we found everything we needed (cooking, coffee) and more. Given that we were the first guests she hosted through airbnb I can say that she did an amazing job! \r\n",
@@ -502,7 +500,7 @@ function _createStays() {
             by: {
               _id: "622f3403e36c59e6164fb048",
               fullname: "Jeff",
-              imgUrl: "https://robohash.org/6443424?set=set1",
+              imgUrl: "47.jpg",
               id: "6443424",
             },
             txt: "Great, quiet place to stay. It is great having Shaila just upstairs to answer any questions, and especially to give great tips on places to go. ",
@@ -512,7 +510,7 @@ function _createStays() {
             by: {
               _id: "622f3406e36c59e6164fba55",
               fullname: "Carla",
-              imgUrl: "https://robohash.org/6121036?set=set1",
+              imgUrl: "63.jpg",
               id: "6121036",
             },
             txt: "Shaila and Alex are wonderful hosts really, they helped us every time we needed with directions, the internet, the supermarket, the post office !!! (thank you guys !!!).The place and the neighbord are great, 8 blocks far from the apartment you have the subway and 30 min. later you are in the island, we moved early in the morning, late at night (sometimes we came back at 2am) and everything turned out great.Definetly I would come back to their apartment, It's bigger than ours in Argentina !!! I look forward to stay there again and, next time, go out with you guys and have a beer or anything.\r\nBye !!! - Guido and Carla - ",
@@ -558,7 +556,7 @@ function _createStays() {
         host: {
           _id: "622f3401e36c59e6164fabab",
           fullname: "Angel",
-          imgUrl: "https://robohash.org/123605344?set=set1",
+          imgUrl: "64.jpg",
         },
         loc: {
           country: "Canada",
@@ -574,7 +572,7 @@ function _createStays() {
             by: {
               _id: "622f3407e36c59e6164fc058",
               fullname: "Rowan",
-              imgUrl: "https://robohash.org/81703602?set=set1",
+              imgUrl: "03.jpg",
               id: "81703602",
             },
             txt: "The place was great, as was the host! I would recommend staying here.",
@@ -584,7 +582,7 @@ function _createStays() {
             by: {
               _id: "622f3403e36c59e6164fb274",
               fullname: "Adriana",
-              imgUrl: "https://robohash.org/64310987?set=set1",
+              imgUrl: "08.jpg",
               id: "64310987",
             },
             txt: "J'ai adoré rester là. Très acceuillant.",
@@ -594,7 +592,7 @@ function _createStays() {
             by: {
               _id: "622f3405e36c59e6164fb87c",
               fullname: "Emma",
-              imgUrl: "https://robohash.org/23709900?set=set1",
+              imgUrl: "05.jpg",
               id: "23709900",
             },
             txt: "Angel est un hôte très sympa et arrangeant ! L'appartement est agréable à vivre et propre. Proche du métro et du centre ville. Nous avons passé un très bon séjour !",
@@ -604,7 +602,7 @@ function _createStays() {
             by: {
               _id: "622f3408e36c59e6164fc082",
               fullname: "Jeffery",
-              imgUrl: "https://robohash.org/44882622?set=set1",
+              imgUrl: "13.jpg",
               id: "44882622",
             },
             txt: "Angel was warm and welcoming and has a beautiful apartment. I'd recommend his place to anyone visiting downtown Montreal!",
@@ -650,7 +648,7 @@ function _createStays() {
         host: {
           _id: "622f3402e36c59e6164fae4d",
           fullname: "Nihat",
-          imgUrl: "https://robohash.org/123605344?set=set1",
+          imgUrl: "16.jpg",
         },
         loc: {
           country: "Turkey",
@@ -666,7 +664,7 @@ function _createStays() {
             by: {
               _id: "622f3406e36c59e6164fbcc7",
               fullname: "Quentin",
-              imgUrl: "https://robohash.org/12424603?set=set1",
+              imgUrl: "22.jpg",
               id: "12424603",
             },
             txt: "I greatly appreciated both the location of the place (very central) and the appartment per se (clean and comfortable, with a very cosy room and with Wi-Fi). \r\n\r\nNihat was perfect host, quite welcoming and helpful about places to go (or avoid) and things to do in town. \r\n\r\nHosça kal!\r\n\r\n\r\n",
@@ -676,7 +674,7 @@ function _createStays() {
             by: {
               _id: "622f3405e36c59e6164fb7f6",
               fullname: "Steve",
-              imgUrl: "https://robohash.org/10300292?set=set1",
+              imgUrl: "35.jpg",
               id: "10300292",
             },
             txt: "Nice room in a flat well located. Nihat is very nce and helpful. Good experience.",
@@ -686,17 +684,17 @@ function _createStays() {
             by: {
               _id: "622f3404e36c59e6164fb624",
               fullname: "Jess",
-              imgUrl: "https://robohash.org/8641944?set=set1",
+              imgUrl: "44.jpg",
               id: "8641944",
             },
             txt: "We had a fantastic stay in this charming apartment. The location was perfect and Nihat welcomed us even when we made a late reservation and arrived early. He works at a bar no far from there- a great place to have a drink after seeing the sites! I highly recommend this place!",
           },
         ],
       },
-    ]
-    localStorage.setItem(STAY_KEY, JSON.stringify(stays))
+    ];
+    localStorage.setItem(STAY_KEY, JSON.stringify(stays));
   }
-  return stays
+  return stays;
 }
 
 // function getLabel() {
