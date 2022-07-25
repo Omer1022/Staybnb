@@ -102,7 +102,7 @@
       <div class="cell"></div>
       <div class="content">
         <button class="action-btn">
-          <span class=".fancy-span"><slot>Check availability</slot></span>
+          <span class="fancy-span"><slot></slot></span>
         </button>
       </div>
     </div>

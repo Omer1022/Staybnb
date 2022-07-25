@@ -208,8 +208,8 @@
                   <span class="guest-num">{{ totalGuests }}</span>
                 </button>
               </div>
-              <fancy-btn>Reserve</fancy-btn>
-              <!-- <button class="reserve-btn">
+              <fancy-btn class="reserve-btn">Reserve</fancy-btn>
+              <!-- <button class="">
                 <span>Reserve</span>
               </button> -->
             </form>
