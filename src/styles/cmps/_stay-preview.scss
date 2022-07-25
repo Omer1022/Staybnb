@@ -4,7 +4,7 @@
   flex-direction: column;
   align-content: center;
   // width: rem(265px);
-  
+
 }
 
 .stay-name-preview {
@@ -32,10 +32,49 @@
   cursor: pointer;
 }
 
-.card-img .liked{
+.card-img .liked {
   position: absolute;
   top: 5%;
   left: 170%;
   background: none;
   cursor: pointer;
 }
+
+.el-carousel__button {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.el-carousel__arrow {
+  background-color: $clr3;
+  color: $clr10;
+  font-size: 1.25rem;
+  border-radius: 50%;
+
+  &:hover {
+    box-shadow: 0 0 3px $clr3;
+    background-color: $clr1;
+    color: $clr2;
+  }
+}
+
+// .el-carousel__button{
+//     height: 6px;
+//     width: 6px;
+//     margin-bottom: 15px;
+//     border-radius: 50%;
+// }
+
+// .el-carousel__arrow {
+//     background-color: $clr3;
+//     color: $clr10;
+//     font-size: 1.25rem;
+//     border-radius: 50%;
+
+//     &:hover{
+//         box-shadow: 0 0 3px $clr3;
+//         background-color: $clr1;
+//         color: $clr2;
+//     }
+// }
