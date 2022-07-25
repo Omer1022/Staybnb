@@ -29,7 +29,7 @@
             <button class="info-btn">
               <img
                 class="share-icon"
-                src="../styles/icons/share-icon.svg"
+                src="../styles/icons/details-icons/share-icon.svg"
                 alt=""
               />
               <h5 class="share-btn">Share</h5>
@@ -61,14 +61,17 @@
             </h2>
             <p class="host-details">{{ stay.numOfBeds }} bedroom</p>
           </div>
-          <img class="host-img" v-bind:src="`${stay.host.imgUrl}`" />
+          <img
+            class="host-img"
+            v-bind:src="`../../public/user-img/${stay.host.imgUrl}`"
+          />
         </section>
         <section class="stay-feature-container">
           <div class="feature-block flex">
             <div class="feature-logo">
               <img
                 class="material-icons"
-                src="../styles/icons/park-icon.svg"
+                src="../styles/icons/details-icons/park-icon.svg"
                 alt=""
               />
             </div>
@@ -87,7 +90,7 @@
             <div class="feature-logo">
               <img
                 class="material-icons"
-                src="../styles/icons/check-in-icon.svg"
+                src="../styles/icons/details-icons/check-in-icon.svg"
                 alt=""
               />
             </div>
@@ -106,7 +109,7 @@
             <div class="feature-logo">
               <img
                 class="material-icons"
-                src="../styles/icons/location-icon.svg"
+                src="../styles/icons/details-icons/location-icon.svg"
                 alt=""
               />
             </div>
@@ -125,7 +128,7 @@
             <div class="feature-logo">
               <img
                 class="material-icons"
-                src="../styles/icons/cancel-icon.svg"
+                src="../styles/icons/details-icons/cancel-icon.svg"
                 alt=""
               />
             </div>
@@ -152,7 +155,7 @@
               :key="idx"
             >
               <img
-                :src="`/staybnb/src/styles/icons/${amenities.imgUrl}`"
+                :src="`/staybnb/src/styles/icons/details-icons/${amenities.imgUrl}`"
                 class="amenitie-img"
               />
               {{ amenities.name }}
@@ -208,7 +211,7 @@
                   <span class="guest-num">{{ totalGuests }}</span>
                 </button>
               </div>
-              <fancy-btn>Reserve</fancy-btn>
+              <fancy-btn class="reserve-btn">Reserve</fancy-btn>
               <!-- <button class="reserve-btn">
                 <span>Reserve</span>
               </button> -->
@@ -308,7 +311,10 @@
           >
             <section class="review-details">
               <div class="review-details-header flex">
-                <img v-bind:src="`${review.by.imgUrl}`" class="review-img" />
+                <img
+                  :src="`/staybnb/public/user-img/${review.by.imgUrl}`"
+                  class="review-img"
+                />
                 <div class="review-preview-details">
                   <h4 class="review-name">{{ review.by.fullname }}</h4>
                   <h5 class="review-time">{{ review.at }}</h5>
@@ -340,7 +346,7 @@ export default {
     calenderSpread,
     appHeader,
     appFooter,
-    fancyBtn
+    fancyBtn,
   },
   data() {
     return {
