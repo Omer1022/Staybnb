@@ -1,6 +1,6 @@
 import { createStore } from 'vuex'
-import stayStore from './modules/stay-moduel'
-import labelStore from './modules/labels-moduel'
+import stayStore from './modules/stay-module'
+import labelStore from './modules/labels-module'
 
 const store = createStore({
   strict: true,

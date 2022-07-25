@@ -1,6 +1,6 @@
 <template>
   <main-filter-small @openLarge="openLargeFilter" v-show="defaultDisplay"></main-filter-small>
-  <main-filter-large v-show="!defaultDisplay" ></main-filter-large>=
+  <main-filter-large v-show="!defaultDisplay" ></main-filter-large>
 </template>
 <script>
 import mainFilterSmall from "./main-filter-small.cmp.vue";
@@ -15,7 +15,7 @@ export default {
 props: [],
 data() {
 return {
-  defaultDisplay:true
+  defaultDisplay:false
 };
 },
 created() {},

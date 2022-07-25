@@ -8,50 +8,50 @@ export default {
     filterBy: null,
   },
   getters: {
-    staysToDisplay({ txt, byAmenitie, bySort, stays }) {
+    staysToDisplay({ txt, byAmenity, stays }) {
       if (!stays) return;
 
       const regex = new RegExp(txt, "i");
       let filteredStays = stays.filter((stay) => regex.test(stay.name));
 
-      // byAmenitie
-      if (byAmenitie && byAmenitie.length) {
-        console.log(byAmenitie);
+      // byAmenity
+      if (byAmenity && byAmenity.length) {
+        console.log(byAmenity);
         filteredStays = filteredStays.filter((stay) =>
-          byAmenitie.some((amenitie) => stay.amenities.includes(amenitie))
+          byAmenity.some((amenity) => stay.amenities.includes(amenity))
         );
       }
 
-      // bySort
-      if (bySort) {
-        const sort = bySort.split(" - ");
-        // name
-        if (sort[0] === "Name") {
-          console.log(1);
-          if (sort[1] === "Increasing")
-            filteredStays = filteredStays.sort((t1, t2) =>
-              t1.name.localeCompare(t2.name)
-            );
-          else
-            filteredStays = filteredStays.sort((t1, t2) =>
-              t2.name.localeCompare(t1.name)
-            );
-        }
-        // price
-        if (sort[0] === "Price") {
-          if (sort[1] === "Increasing")
-            filteredStays = filteredStays.sort((t1, t2) => t1.price - t2.price);
-          else
-            filteredStays = filteredStays.sort((t1, t2) => t2.price - t1.price);
-        }
-        // Type
-        if (sort[0] === "Type") {
-          if (sort[1] === "Increasing")
-            filteredStays = filteredStays.sort((t1, t2) => t1.type - t2.type);
-          else
-            filteredStays = filteredStays.sort((t1, t2) => t2.type - t1.type);
-        }
-      }
+     
+      // if (bySort) {
+      //   const sort = bySort.split(" - ");
+        
+      //   if (sort[0] === "Name") {
+      //     console.log(1);
+      //     if (sort[1] === "Increasing")
+      //       filteredStays = filteredStays.sort((t1, t2) =>
+      //         t1.name.localeCompare(t2.name)
+      //       );
+      //     else
+      //       filteredStays = filteredStays.sort((t1, t2) =>
+      //         t2.name.localeCompare(t1.name)
+      //       );
+      //   }
+   
+      //   if (sort[0] === "Price") {
+      //     if (sort[1] === "Increasing")
+      //       filteredStays = filteredStays.sort((t1, t2) => t1.price - t2.price);
+      //     else
+      //       filteredStays = filteredStays.sort((t1, t2) => t2.price - t1.price);
+      //   }
+     
+      //   if (sort[0] === "Type") {
+      //     if (sort[1] === "Increasing")
+      //       filteredStays = filteredStays.sort((t1, t2) => t1.type - t2.type);
+      //     else
+      //       filteredStays = filteredStays.sort((t1, t2) => t2.type - t1.type);
+      //   }
+      // }
 
       return filteredStays;
   },
