@@ -6,7 +6,7 @@
         <h1 class="logo-text">Staybnb</h1>
       </div>
     </router-link>
-    <stay-filter class="filter-header" @setFilter="setFilter" />
+    <stay-filter class="filter-header" @setFilter="setFilter"  @opemLargeModal="openLarge(isOpen)"/>
     <section class="user-actions flex align-items space-between">
       <div class="host">
         <router-link :to="'/'" class="host-header link">Become a Host</router-link>
@@ -25,21 +25,39 @@
     </section>
 
   </section>
+  <section class="search-modal">
+    <div class="open-modal" > 
+  <div :class="{ 'large-search-modal': isLargeOpen }">
+    <main-filter-large class="large-search"/>
+  </div>
+  </div>
+    <!-- <pre>mor revah mor revah</pre> -->
+  </section>
    
   
 </template>
 <script>
 import stayFilter from "./stay-filter.vue"
+import mainFilterLarge from "./main-filter-large.cmp.vue"
 export default {
   props: [],
   template: ``,
   components: {
     stayFilter,
+    mainFilterLarge,
   },
   data() {
-    return {}
+    return {
+      isLargeOpen:false,
+    }
   },
-  methods: {},
+  methods: {
+    openLarge(isOpen){
+      this.isLargeOpen=!this.isLargeOpen
+      console.log("from header",isOpen)
+
+    }
+  },
   computed: {},
   created() { },
   unmounted() { },

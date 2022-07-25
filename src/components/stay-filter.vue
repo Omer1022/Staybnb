@@ -1,11 +1,11 @@
 <template>
   <main-filter-small 
   @openLarge="openLargeFilter"/>
-  <div class="open-modal" > 
-  <div class="large-search" :class="{ 'large-search-modal': defaultDisplay }">
+  <!-- <div class="open-modal" > 
+  <div :class="{ 'large-search-modal': defaultDisplay }">
     <main-filter-large class="large-search"/>
   </div>
-  </div>
+  </div> -->
   <!-- </main-filter-small>  -->
 </template>
 <script>
@@ -28,7 +28,10 @@ created() {},
 methods: {
   openLargeFilter(){
     this.defaultDisplay = !this.defaultDisplay
+    let isOpen = this.defaultDisplay
     console.log(this.defaultDisplay)
+    this.$emit('opemLargeModal',isOpen)
+
   }
 },
 computed: {},

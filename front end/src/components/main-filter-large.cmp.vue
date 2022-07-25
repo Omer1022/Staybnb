@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD:frontend/src/components/main-filter-large.cmp.vue
     <form class="header-filter">
         <div class="destination-input btn-container">
             <button @click.prevent="clickedButton">
@@ -10,24 +9,6 @@
                 </label>
             </button>
         </div>
-=======
-  <form class="header-filter">
-    <div class="destination-input btn-container">
-      <button @click.prevent="clickedButton">
-        <label>
-          <div class="button-title">Where</div>
-          <input
-            v-model="filter.destination"
-            name="destination-input"
-            type="text"
-            placeholder="Search detonations"
-          />
-        </label>
-      </button>
-    </div>
-
-    <span>|</span>
->>>>>>> 9ecf5c7f8d0a9751dda9742fbcdaf4d15ff2e7f3:src/components/main-filter-large.cmp.vue
 
     <div class="date-container">
       <div class="btn-container flex">
@@ -47,14 +28,13 @@
 
     <span>|</span>
 
-<<<<<<< HEAD:frontend/src/components/main-filter-large.cmp.vue
             <div class="btn-container flex">
                 <button @click.prevent="isCalendarShown = !isCalendarShown">
                     <div class="button-title">Check out</div>
                     {{ checkOutDate }}
                 </button>
             </div>
-        </div>
+        
 
         <span>|</span>
 
@@ -162,74 +142,6 @@ export default {
                     return `${this.guests.total} guests`
             }
         },
-=======
-    <div class="calendar-modal" :class="{ 'active-calendar': isCalendarShown }">
-      <calender-spread
-        @closeCalendar="isCalendarShown = false"
-        @dateChange="dateUpdate"
-        @click.prevent
-        is-expanded
-      >
-      </calender-spread>
-    </div>
-
-    <div class="guest-container btn-container flex">
-      <button @click.prevent="isGuestModalShown = !isGuestModalShown">
-        <div class="button-title">Who</div>
-        <p class="buttom-sub">{{ totalGuests }}</p>
-      </button>
-      <div class="guests-modal" :class="{ 'active-guest': isGuestModalShown }">
-        <guests-picker
-          @guestsUpdate="updateGuests"
-          @closeGuestsModal="isGuestModalShown = false"
-        />
-      </div>
-    </div>
-    <div @click.prevent="runSearch" class="filter-search">
-      <img src="../styles/icons/search_white.png" alt="" /> <span>Search</span>
-    </div>
-  </form>
-</template>
-
-<script>
-import guestsPicker from "./guests-picker.cmp.vue"
-import calenderSpread from "./calender-spread.vue"
-import "v-calendar/dist/style.css"
-
-export default {
-  props: {},
-  components: {
-    guestsPicker,
-    calenderSpread,
-  },
-  data() {
-    return {
-      filter: {
-        destination: "",
-        numOfBeds: 0,
-      },
-      date: {
-        start: null,
-        end: null,
-      },
-
-      guests: {
-        adults: 0,
-        kids: 0,
-        infants: 0,
-        total: 0,
-      },
-      isCalendarShown: false,
-      isGuestModalShown: false,
-    }
-  },
-  methods: {
-    clickedButton() {
-      console.log("clicked")
-    },
-    runSearch() {
-      console.log("searching")
->>>>>>> 9ecf5c7f8d0a9751dda9742fbcdaf4d15ff2e7f3:src/components/main-filter-large.cmp.vue
     },
     watch: {
         // guests(){
@@ -239,55 +151,7 @@ export default {
     },
     created() {
 
-<<<<<<< HEAD:frontend/src/components/main-filter-large.cmp.vue
     },
     unmounted() { },
 };
-=======
-    dateUpdate(newDate) {
-      this.date = newDate
-    },
-    updateGuests(NewGuests) {
-      this.guests = NewGuests
-    },
-  },
-  actions: {},
-  computed: {
-    checkInDate() {
-      return this.date.start
-        ? this.date.start.toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "2-digit",
-            day: "2-digit",
-          })
-        : "Add dates"
-    },
-
-    checkOutDate() {
-      return this.date.end
-        ? this.date.end.toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "2-digit",
-            day: "2-digit",
-          })
-        : "Add dates"
-    },
-    totalGuests() {
-      switch (this.guests.total) {
-        case 0:
-          return "Add guests"
-          break
-        case 1:
-          return "1 guest"
-          break
-        default:
-          return `${this.guests.total} guests`
-      }
-    },
-  },
-
-  created() {},
-  unmounted() {},
-}
->>>>>>> 9ecf5c7f8d0a9751dda9742fbcdaf4d15ff2e7f3:src/components/main-filter-large.cmp.vue
 </script>
