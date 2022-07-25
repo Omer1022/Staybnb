@@ -2,10 +2,9 @@
   <section class="stay-previews" v-if="stay">
     <div @click="$router.push(`/${stay._id}`)" class="stay-preview-card">
       <div class="card-img">
-        <el-carousel arrow="hover" trigger="click" interval=0>
-          <el-carousel-item v-for="img in stay.imgUrls" >
-          <img class="carousel-img" :src="`../../img/${img}`">
-
+        <el-carousel arrow="hover" trigger="click" interval="0">
+          <el-carousel-item v-for="img in stay.imgUrls">
+            <img class="carousel-img" :src="`../../img/${img}`" />
           </el-carousel-item>
         </el-carousel>
         <button class="btn like-btn" @click.stop="LikeStay()">
@@ -15,12 +14,13 @@
       <div>
         <div class="card-details">
           <div class="stay-header">
-            <span class="star-rate">★4.3</span>
+            <span class="star-rate">★4.3 ({{ stay.reviews.length }})</span>
             <p class="stay-name-preview bold">
               {{ stay.loc.city }}, {{ stay.loc.country }}
             </p>
           </div>
           <p class="stay-type-preview">{{ stay.type }}</p>
+          <p class="beds-num-preview">{{ stay.numOfBeds }} beds</p>
           <p class="stay-price-preview">
             <span class="bold">${{ stay.price }} </span> night
           </p>
@@ -30,18 +30,13 @@
   </section>
 </template>
 <script>
-
-
 export default {
   props: {
     stay: Object,
   },
-  components: {
- 
-  },
+  components: {},
   data() {
-    return {
-    };
+    return {};
   },
   methods: {
     LikeStay() {
@@ -49,7 +44,7 @@ export default {
     },
   },
   computed: {},
-  created() { },
-  unmounted() { },
+  created() {},
+  unmounted() {},
 };
 </script>
