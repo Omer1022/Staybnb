@@ -3,11 +3,12 @@
     <button class="labels-control prev" @click.stop="$emit('prev')">
       &#60;
     </button>
-    <section v-if="labels" class="labels-list">
-    <div class="cards-container" v-for="(label,idx) in labels" :key="idx">
-      {{label.name}}
-    </div>
-  </section>
+    <section  class="labels-list">
+      <div class="labels-container" v-for="(label, idx) in labels" :key="idx">
+      <img class="label-img" :src="`${label.src}`" alt="">
+        <p class="label-name">{{ label.name }}</p>
+      </div>
+    </section>
     <!-- <div class="lable-container">here comes lables</div> -->
 
     <button class="labels-control next" @click.stop="$emit('next')">
@@ -24,16 +25,38 @@
 </template>
 
 <script>
-import { labelService } from '../services/label-service.js'
+import { labelService } from "../services/label-service.js"
 export default {
   name: "label-filter",
   props: {
-    labels: Array,
+    // labels: Array,
   },
-  components: {
-  },
+  components: {},
   data() {
-    return {}
+    return {
+      labels: [
+        {
+          name: "beach",
+          src : "../../public/lable-img/beach.jpg",
+        },
+        {
+          name: "castles",
+          src : "../../public/lable-img/castles.jpg",
+        },
+        {
+          name: "caves",
+          src : "../../public/lable-img/caves.jpg",
+        },
+        {
+          name: "containers",
+          src : "../../public/lable-img/containers.jpg",
+        },
+        {
+          name: "creativ-spaces",
+          src : "../../public/lable-img/creativ-spaces.jpg",
+        },
+      ],
+    }
   },
   methods: {},
 
