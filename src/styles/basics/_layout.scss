@@ -1,11 +1,14 @@
 .layout {
   height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
+  max-width: 1600px;
+  margin: 0 auto;
+
+  // display: grid;
+  // grid-template-rows: auto 1fr auto;
+  // grid-template-areas:
+  //   "header"
+  //   "main"
+  //   "footer";
 }
 .header-layout {
   grid-area: header;
@@ -74,3 +77,8 @@
   }
 
 }
+
+// .stay-app{
+//   max-width: 1600px;
+//   // margin: 0 auto;
+// }

@@ -1,5 +1,5 @@
 <template>
-  <main class="header">
+  <section class="header">
     <router-link :to="'/'" class="link">
       <div class="logo flex">
         <img class="logo-img" src="../styles/icons/air-logo.png" />
@@ -23,7 +23,10 @@
         </button>
       </section>
     </section>
-  </main>
+
+  </section>
+   
+  
 </template>
 <script>
 import stayFilter from "./stay-filter.vue"
