@@ -7,10 +7,7 @@ export default {
     labels:null,
   },
   getters: {
-    // labelToDisplay(){
-    //   console.log("from getters",labels)
-    //   // return ;
-    // }
+    
 },
 actions: {
     loadLabels({ commit }) {
