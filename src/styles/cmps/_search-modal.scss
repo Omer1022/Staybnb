@@ -1,9 +1,9 @@
 .large-search{
     // display: none;
-    top: -50rem;
+    top: 20%;
     opacity: 50%;
     transition: opacity 1s;
-    // position: fixed;
+    position: absolute;
     z-index: 0;
   
     background-color: $clr3;
@@ -14,5 +14,9 @@
 .large-search-modal{
     // display: block;
     opacity: 100%;
-    margin-top: 4.75rem;
+    top: 50%;
+}
+
+.open-modal{
+    position: relative;
 }

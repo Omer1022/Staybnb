@@ -5,7 +5,7 @@
         <label>
           <div class="button-title">Where</div>
           <input
-            v-model="filter.destination"
+            v-model="filterBy.destination"
             name="destination-input"
             type="text"
             placeholder="Search detonations"
