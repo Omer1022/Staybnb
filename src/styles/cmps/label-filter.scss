@@ -76,21 +76,18 @@
   justify-content: space-evenly;
 }
 
-
 .label-img {
   height: 25px;
   width: 25px;
-  filter: invert(47%) sepia(7%) saturate(12%) hue-rotate(355deg) brightness(92%) contrast(93%);
+  filter: invert(47%) sepia(7%) saturate(12%) hue-rotate(355deg) brightness(92%)
+    contrast(93%);
 }
-
-
 
 .label-name {
   font-size: 12px;
   color: $clr5;
-
 }
 
-.label-name :hover {
+.label-name:hover {
   color: black;
 }
