@@ -4,7 +4,7 @@
       <div class="card-img">
         <el-carousel arrow="hover" trigger="click" interval=0>
           <el-carousel-item v-for="img in stay.imgUrls" >
-          <img :src="`../../img/${img}`">
+          <img class="carousel-img" :src="`../../img/${img}`">
 
           </el-carousel-item>
         </el-carousel>
