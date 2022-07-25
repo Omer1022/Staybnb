@@ -4,7 +4,27 @@
   flex-direction: column;
   align-content: center;
   // width: rem(265px);
-
+  .el-carousel__button {
+    width: 6px ; 
+    height: 6px ;
+    // width: 6px !important; 
+    // height: 6px !important;
+    border-radius: 50%;
+  }
+  .el-carousel__arrow {
+    background-color: $clr3;
+    opacity: 90%;
+    color: $clr10;
+    font-size: 1rem;
+    border-radius: 50%;
+    transition: font-size 1s opacity 1s;
+    &:hover{
+        opacity: 100%;
+        box-shadow: 0 0 4px $clr3;
+        background-color: $clr3;
+        color: $clr2;
+    }
+} 
 }
 
 .stay-name-preview {
@@ -40,41 +60,3 @@
   cursor: pointer;
 }
 
-.el-carousel__button {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-}
-
-.el-carousel__arrow {
-  background-color: $clr3;
-  color: $clr10;
-  font-size: 1.25rem;
-  border-radius: 50%;
-
-  &:hover {
-    box-shadow: 0 0 3px $clr3;
-    background-color: $clr1;
-    color: $clr2;
-  }
-}
-
-// .el-carousel__button{
-//     height: 6px;
-//     width: 6px;
-//     margin-bottom: 15px;
-//     border-radius: 50%;
-// }
-
-// .el-carousel__arrow {
-//     background-color: $clr3;
-//     color: $clr10;
-//     font-size: 1.25rem;
-//     border-radius: 50%;
-
-//     &:hover{
-//         box-shadow: 0 0 3px $clr3;
-//         background-color: $clr1;
-//         color: $clr2;
-//     }
-// }
