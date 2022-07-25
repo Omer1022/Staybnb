@@ -2,16 +2,13 @@
   <section class="stay-previews" v-if="stay">
     <div @click="$router.push(`/${stay._id}`)" class="stay-preview-card">
       <div class="card-img">
-        <el-carousel arrow="hover" trigger="click">
+        <el-carousel arrow="hover" trigger="click" interval=0>
           <el-carousel-item v-for="img in stay.imgUrls" >
           <img :src="`../../img/${img}`">
-            <!-- <h3 text="2xl" justify="center">{{ item }}</h3> -->
+
           </el-carousel-item>
         </el-carousel>
-        <!-- <carouse-app class="preview-img" :slides="stay.imgUrls"
-        /> -->
-        <!-- <carousel-cmp class="preview-img" :slides="stay.imgUrls"
-        /> -->
+    
         <button class="btn like-btn" @click.stop="LikeStay()">
           <img src="../styles/icons/save-icon.svg" alt="" />
         </button>
