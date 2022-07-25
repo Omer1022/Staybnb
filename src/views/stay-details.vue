@@ -212,11 +212,7 @@
                 </button>
               </div>
               <fancy-btn class="reserve-btn">Reserve</fancy-btn>
-<<<<<<< HEAD
               <!-- <button class="reserve-btn">
-=======
-              <!-- <button class="">
->>>>>>> 153d8fd4ee3aa5e6ec2d807dc773d96f6c97eafe
                 <span>Reserve</span>
               </button> -->
             </form>
