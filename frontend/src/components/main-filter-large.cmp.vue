@@ -1,20 +1,14 @@
 <template>
-  <form class="header-filter">
-    <div class="destination-input btn-container">
-      <button @click.prevent="clickedButton">
-        <label>
-          <div class="button-title">Where</div>
-          <input
-            v-model="filterBy.destination"
-            name="destination-input"
-            type="text"
-            placeholder="Search detonations"
-          />
-        </label>
-      </button>
-    </div>
-
-    <span>|</span>
+    <form class="header-filter">
+        <div class="destination-input btn-container">
+            <button @click.prevent="clickedButton">
+                <label>
+                    <div class="button-title">Where</div>
+                    <input v-model="filterBy.destination" name="destination-input" type="text"
+                        placeholder="Search detonations" />
+                </label>
+            </button>
+        </div>
 
     <div class="date-container">
       <div class="btn-container flex">
@@ -40,7 +34,7 @@
                     {{ checkOutDate }}
                 </button>
             </div>
-        <!-- </div> -->
+        
 
         <span>|</span>
 
@@ -71,7 +65,6 @@ import calenderSpread from "./calender-spread.vue";
 
 
 export default {
-    name:'filter-large',
     props: {
         mode: String
     },
@@ -98,7 +91,7 @@ export default {
 
             isCalendarShown: false,
             isGuestModalShown: false,
-            currMode: 'destination',
+            mode: 'destination',
         };
     },
     methods: {
@@ -151,7 +144,10 @@ export default {
         },
     },
     watch: {
-
+        // guests(){
+        //     console.log(this.guests.total)
+        //     this.filterBy.numOfBeds = this.guests.total 
+        // }
     },
     created() {
 
