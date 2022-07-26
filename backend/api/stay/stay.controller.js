@@ -1,71 +1,86 @@
-const stayService = require("./stay.service.js.js");
-const logger = require("../../services/logger.service");
+const logger = require('../../services/logger.service')
+// const userService = require('../user/user.service')
+// const authService = require('../auth/auth.service')
+// const socketService = require('../../services/socket.service')
+const stayService = require('./stay.service')
 
-// GET LIST
 async function getStays(req, res) {
-  try {
-    logger.debug("Getting Stays");
-    var queryParams = req.query;
-    const stays = await stayService.query(queryParams);
-    res.json(stays);
-  } catch (err) {
-    logger.error("Failed to get stays", err);
-    res.status(500).send({ err: "Failed to get stays" });
-  }
+    try {
+        const stays = await stayService.query(req.query)
+        res.send(stays)
+    } catch (err) {
+        logger.error('Cannot get stays', err)
+        res.status(500).send({ err: 'Failed to get stays' })
+    }
 }
 
-// GET BY ID
-async function getStayById(req, res) {
-  try {
-    const stayId = req.params.id;
-    const stay = await stayService.getById(stayId);
-    res.json(stay);
-  } catch (err) {
-    logger.error("Failed to get stay", err);
-    res.status(500).send({ err: "Failed to get stay" });
-  }
+async function getById(req, res){
+    try {
+        const stayId = req.params.id
+        const stay = await stayService.getById(stayId)
+        res.send(stay)
+    } catch (err) {
+        logger.error('Cannot get stay by id', err)
+        res.status(500).send({ err: 'Failed to get the stay'})
+    }
 }
+// async function deleteStay(req, res) {
+//     try {
+//         const deletedCount = await stayService.remove(req.params.id)
+//         if (deletedCount === 1) {
+//             res.send({ msg: 'Deleted successfully' })
+//         } else {
+//             res.status(400).send({ err: 'Cannot remove stay' })
+//         }
+//     } catch (err) {
+//         logger.error('Failed to delete stay', err)
+//         res.status(500).send({ err: 'Failed to delete stay' })
+//     }
+// }
 
-// POST (add stay)
-async function addstay(req, res) {
-  try {
-    const stay = req.body;
-    const addedStay = await stayService.add(stay);
-    return res.json(addedStay);
-  } catch (err) {
-    logger.error("Failed to add stay", err);
-    res.status(500).send({ err: "Failed to add stay" });
-  }
-}
 
-// PUT (Update stay)
-async function updateStay(req, res) {
-  try {
-    const stay = req.body;
-    const updatedStay = await stayService.update(stay);
-    res.json(updatedStay);
-  } catch (err) {
-    logger.error("Failed to update stay", err);
-    res.status(500).send({ err: "Failed to update stay" });
-  }
-}
+// async function addStay(req, res) {
 
-// DELETE (Remove stay)
-async function removeStay(req, res) {
-  try {
-    const stayId = req.params.id;
-    await stayService.remove(stayId);
-    res.send("Removed");
-  } catch (err) {
-    logger.error("Failed to remove stay", err);
-    res.status(500).send({ err: "Failed to remove stay" });
-  }
-}
+//     var loggedinUser = authService.validateToken(req.cookies.loginToken)
+ 
+//     try {
+//         var stay = req.body
+//         stay.byUserId = loggedinUser._id
+//         stay = await stayService.add(stay)
+        
+        // prepare the updated stay for sending out
+        // stay.aboutUser = await userService.getById(stay.aboutUserId)
+        
+        // Give the user credit for adding a stay
+        // var user = await userService.getById(stay.byUserId)
+        // user.score += 10
+//         loggedinUser.score += 10
+
+//         loggedinUser = await userService.update(loggedinUser)
+//         stay.byUser = loggedinUser
+
+//         // User info is saved also in the login-token, update it
+//         const loginToken = authService.getLoginToken(loggedinUser)
+//         res.cookie('loginToken', loginToken)
+
+
+//         socketService.broadcast({type: 'stay-added', data: stay, userId: loggedinUser._id.toString()})
+//         socketService.emitToUser({type: 'stay-about-you', data: stay, userId: stay.aboutUserId})
+        
+//         const fullUser = await userService.getById(loggedinUser._id)
+//         socketService.emitTo({type: 'user-updated', data: fullUser, label: fullUser._id})
+
+//         res.send(stay)
+
+//     } catch (err) {
+//         logger.error('Failed to add stay', err)
+//         res.status(500).send({ err: 'Failed to add stay' })
+//     }
+// }
 
 module.exports = {
-  getStays,
-  getStayById,
-  addStay,
-  updateStay,
-  removeStay,
-};
+    getStays,
+    getById
+    // deleteStay,
+    // addStay
+}

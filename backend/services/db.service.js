@@ -7,7 +7,7 @@ module.exports = {
 }
 
 // Database Name
-const dbName = 'staybnb_db'
+const dbName = 'bnb_db'
 
 var dbConn = null
 
@@ -15,6 +15,7 @@ async function getCollection(collectionName) {
     try {
         const db = await connect()
         const collection = await db.collection(collectionName)
+        console.log('got', collectionName, 'collection')
         return collection
     } catch (err) {
         logger.error('Failed to get Mongo collection', err)
