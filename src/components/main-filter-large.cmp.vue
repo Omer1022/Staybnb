@@ -35,15 +35,6 @@
 
       <span>|</span>
 
-      <div class="btn-container flex">
-        <button @click.prevent="isCalendarShown = !isCalendarShown">
-          <div class="button-title">Check out</div>
-          {{ checkOutDate }}
-        </button>
-      </div>
-      <!-- </div> -->
-
-      <span>|</span>
 
       <div
         class="calendar-modal"

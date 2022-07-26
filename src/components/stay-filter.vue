@@ -29,7 +29,7 @@ methods: {
   openLargeFilter(){
     this.defaultDisplay = !this.defaultDisplay
     let isOpen = this.defaultDisplay
-    console.log(this.defaultDisplay)
+    console.log("from stay filter",isOpen)
     this.$emit('opemLargeModal',isOpen)
 
   }

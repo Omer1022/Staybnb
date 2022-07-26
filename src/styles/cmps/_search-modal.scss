@@ -1,7 +1,8 @@
+
 .large-search{
     // display: none;
     // margin-top: -5rem;
-    opacity: 50%;
+    opacity: 100%;
     transition: opacity 1s;
     // position: fixed;
     z-index: 3;
@@ -13,14 +14,12 @@
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 .large-search-modal{
-    // display: block;
-    // opacity: 100%;
-    margin-top: 4.75rem;
+    position: absolute;
+    opacity: 100%;
 }
 
 
-.open-modal{
-}
+
 
 .filter-large-modal{
 width: 100%;

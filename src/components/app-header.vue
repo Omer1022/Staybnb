@@ -6,7 +6,7 @@
         <h1 class="logo-text">Staybnb</h1>
       </div>
     </router-link>
-    <stay-filter class="filter-header" @setFilter="setFilter"  @opemLargeModal="openLarge(isOpen)"/>
+    <stay-filter class="filter-header" @setFilter="setFilter"  @opem-large-modal="(isOpen)=>openLarge(isOpen)"/>
     <section class="user-actions flex align-items space-between">
       <div class="host">
         <router-link :to="'/'" class="host-header link">Become a Host</router-link>
@@ -27,11 +27,10 @@
   </section>
   <section class="search-modal">
     <div class="open-modal" > 
-  <div :class="{ 'large-search-modal': isLargeOpen }">
-    <main-filter-large class="large-search"/>
+  <div >
+    <main-filter-large :class="isLargeOpen ? 'large-search-modal' : 'large-search'"/>
   </div>
   </div>
-    <!-- <pre>mor revah mor revah</pre> -->
   </section>
    
   
@@ -53,8 +52,10 @@ export default {
   },
   methods: {
     openLarge(isOpen){
-      this.isLargeOpen=!this.isLargeOpen
-      console.log("from header",isOpen)
+      console.log("from app header",isOpen)
+      this.isLargeOpen=isOpen
+      // this.isLargeOpen=!this.isLargeOpen
+      console.log("from header",this.isLargeOpen)
 
     }
   },
