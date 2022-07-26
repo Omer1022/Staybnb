@@ -90,13 +90,11 @@
   }
 
   .save-container :hover {
-    background-color: rgb(233, 233, 233);
-    border-radius: 10px;
+    background-color: #f7f7f7;
   }
 
   .share-container :hover {
-    background-color: rgb(233, 233, 233);
-    border-radius: 10px;
+    background-color: #f7f7f7;
   }
 
   .info-btn {
@@ -251,6 +249,7 @@
   }
 
   .total-reviews {
+    margin-top: 1px;
     text-decoration: underline;
     font-size: 0.875rem;
     margin-left: 5px;
