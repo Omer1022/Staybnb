@@ -1,22 +1,27 @@
 <template>
   <main-filter-small 
+  v-if="!defaultDisplay"
   @openLarge="openLargeFilter"/>
-  <div class="open-modal" > 
-  <div class="large-search" :class="{ 'large-search-modal': defaultDisplay }">
+
+  <SmallNavBar v-else @toggelModal="openLargeFilter"/>
+  <!-- <div class="open-modal" > 
+  <div :class="{ 'large-search-modal': defaultDisplay }">
     <main-filter-large class="large-search"/>
   </div>
-  </div>
+  </div> -->
   <!-- </main-filter-small>  -->
 </template>
 <script>
 import mainFilterSmall from "./main-filter-small.cmp.vue";
-import mainFilterLarge from "./main-filter-large.cmp.vue";
+import smallNavBar from "./small-nav-bar.vue";
+import SmallNavBar from "./small-nav-bar.vue";
 
 export default {
   components: {
     mainFilterSmall,
-    mainFilterLarge
-  },
+    smallNavBar,
+    SmallNavBar
+},
 
 props: [],
 data() {
@@ -28,7 +33,10 @@ created() {},
 methods: {
   openLargeFilter(){
     this.defaultDisplay = !this.defaultDisplay
-    console.log(this.defaultDisplay)
+    let isOpen = this.defaultDisplay
+    console.log("from stay filter",isOpen)
+    this.$emit('opemLargeModal',isOpen)
+
   }
 },
 computed: {},
