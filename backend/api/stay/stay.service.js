@@ -23,7 +23,7 @@ async function getById(id) {
         console.log('id', id)
         const collection = await dbService.getCollection('stay')
         // console.log('collection', collection)
-        let stay = await collection.findoNE({"_id":ObjectId(id)})//FIXME: 
+        let stay = await collection.findOne({"_id":ObjectId(id)})//FIXME: 
         console.log('stay', stay)
         // let stays = await collection.find().toArray()
         // console.log('stays', stays)

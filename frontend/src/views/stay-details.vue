@@ -17,7 +17,7 @@
         <section class="flex">
           <img class="star" src="../styles/icons/star.svg" />
           <h5 class="reviews-rating">4.7 ·</h5>
-          <h5 class="reviews-number">{{ stay.numOfReviews }} reviews</h5>
+          <h5 class="reviews-number">{{ stay.numOfReviews}} reviews</h5>
           <pre> .</pre>
           <h5 class="location">
             {{ stay.address.city }},
@@ -52,7 +52,6 @@
         />
       </section>
     </div>
-
     <section class="stay-display flex">
       <div class="stay-info">
         <section class="host-summary flex align-center space-between">
@@ -60,11 +59,11 @@
             <h2 class="host-name">
               {{ stay.propertyType }} Hosted by {{ stay.host.fullname }}
             </h2>
-            <p class="host-details">{{ stay.beds }} beds</p>
+            <p class="host-details">{{ stay.beds }} bedroom</p>
           </div>
           <img
             class="host-img"
-            v-bind:src="`../../public/user-img/${stay.host.imgUrl}`"
+            v-bind:src="`../../public/user-img/${stay.host.pictureUrl}`"
           />
         </section>
         <section class="stay-feature-container">
@@ -164,7 +163,6 @@
           </ul>
         </div>
       </div>
-
       <div class="stay-order">
         <div class="order-modal-container">
           <div class="order-modal flex">
@@ -178,11 +176,8 @@
                   <div class="star-preview">
                     <img src="../styles/icons/star.svg" class="star" />
                   </div>
-                  <span class="review-avg"> 4.7</span>
-                  <pre>.</pre>
-                  <span class="total-reviews"
-                    >{{ stay.numOfReviews }} reviews</span
-                  >
+                  <span class="review-avg"> 4.7</span> ·
+                  <span class="total-reviews">3 Reviews</span>
                 </div>
               </div>
             </div>
@@ -222,9 +217,8 @@
         </div>
       </div>
     </section>
-
     <div class="stay-reviews">
-      <h2>★ 4.7 · {{ stay.numOfReviews }} reviews</h2>
+      <h2>★ 4.7 · {{ stay.numOfReviews }} Reviews</h2>
       <div class="review-stats grid">
         <div class="review-ctg flex space-between">
           <label>Cleanliness</label>
